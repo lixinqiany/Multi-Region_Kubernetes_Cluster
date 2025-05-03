@@ -1,0 +1,10 @@
+[Unit]
+Description=https://github.com/hnlq715/nginx-vts-exporter
+After=network-online.target
+
+[Service]
+Restart=on-failure
+ExecStart=/usr/local/nginx-vts-exporter -nginx.scrape_uri http://localhost/status/format/json
+
+[Install]
+WantedBy=multi-user.target
