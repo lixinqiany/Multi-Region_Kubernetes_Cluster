@@ -1,5 +1,8 @@
 # 使用 Ubuntu 22.04 作为基础镜像
-FROM ubuntu:22.04 AS builder
+FROM --platform=$BUILDPLATFORM ubuntu:22.04 AS builder
+
+ARG TARGETARCH
+ARG TARGETOS=linux
 
 # 安装编译依赖
 RUN apt-get update && \
