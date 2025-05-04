@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: lixinqiany/long-running:nginx
+        image: lixinqiany/long-running:nginx_win_1.0
         ports:
         - containerPort: 80
         resources:

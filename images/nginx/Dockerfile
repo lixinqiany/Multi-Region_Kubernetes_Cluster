@@ -1,10 +1,6 @@
 # 使用 Ubuntu 22.04 作为基础镜像
 FROM ubuntu:22.04 AS builder
 
-ARG TARGETARCH=amd64
-ARG TARGETOS=linux
-ENV CFLAGS="-march=x86-64-v3"
-
 # 安装编译依赖
 RUN apt-get update && \
     apt-get install -y \

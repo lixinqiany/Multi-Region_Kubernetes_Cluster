@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Multi-Region.iml" filepath="$PROJECT_DIR$/.idea/Multi-Region.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Multi-Region_Kubernetes_Cluster.iml" filepath="$PROJECT_DIR$/.idea/Multi-Region_Kubernetes_Cluster.iml" />
     </modules>
   </component>
 </project>
