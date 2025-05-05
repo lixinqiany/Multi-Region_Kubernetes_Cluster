@@ -1,0 +1,21 @@
+# ServiceMonitor：Prometheus Operator 会根据该对象配置抓取 9913 端口的数据
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: nginx-serviceMonitor
+  namespace: monitoring
+  labels:
+    app: nginx
+    release: prometheus  # 请根据你的Prometheus Operator实际部署的label要求进行调整
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+      component: exporter
+  namespaceSelector:
+    matchNames:
+      - default
+  endpoints:
+    - port: metrics
+      interval: 15s
+      scrapeTimeout: 5s
