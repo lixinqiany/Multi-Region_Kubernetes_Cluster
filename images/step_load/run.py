@@ -77,7 +77,7 @@ async def fetch(session, url):
         return None
 
 async def run_phase(session, url, rate, duration, stats: PhaseStats):
-    batch_interval = 0.01  # 每 10ms 发一批
+    batch_interval = 0.05  # 每 10ms 发一批
     batch_size = max(1, int(rate * batch_interval))  # 每批多少个请求
     start_time = time.time()
     end_time = start_time + duration
@@ -134,9 +134,9 @@ def plot_qps_and_error_rate(qps_records, error_rate_records):
 
 def main():
     parser = argparse.ArgumentParser(description="Async stepped load generator with infinite loop")
-    parser.add_argument('--url', type=str, default='http://192.168.1.155:80', help='Target URL')
-    parser.add_argument('--high', type=int, default=1000, help='High QPS')
-    parser.add_argument('--low', type=int, default=700, help='Low QPS')
+    parser.add_argument('--url', type=str, default='http://34.129.107.238:30080', help='Target URL')
+    parser.add_argument('--high', type=int, default=700, help='High QPS')
+    parser.add_argument('--low', type=int, default=300, help='Low QPS')
     parser.add_argument('--duration', type=int, default=60, help='Phase duration in seconds')
 
     args = parser.parse_args()
