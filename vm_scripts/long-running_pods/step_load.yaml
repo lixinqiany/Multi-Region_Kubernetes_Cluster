@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: step-load
+  labels:
+    app: step-load
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: step-load
+  template:
+    metadata:
+      labels:
+        app: step-load
+    spec:
+      containers:
+      - name: step-load
+        image: lixinqiany/long-running:step_load_win_1.1
+  # 请替换为实际镜像名称
+        env:
+        - name: NODE_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.hostIP
+        args: # 只追加参数部分
+          - "--url"
+          - "http://$(NODE_IP):30080"  # 使用环境变量替换
+        resources:
+          limits:
+            cpu: "1"
+            memory: "1Gi"
+          requests:
+            cpu: "500m"
+            memory: "512Mi"
