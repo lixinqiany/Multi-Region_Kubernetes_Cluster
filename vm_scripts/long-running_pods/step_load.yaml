@@ -25,7 +25,11 @@ spec:
               fieldPath: status.hostIP
         args: # 只追加参数部分
           - "--url"
-          - "http://$(NODE_IP):30080"  # 使用环境变量替换
+          - "http://$(NODE_IP):30080"
+          - "--peak"# 使用环境变量替换
+          - 600
+          - "--base"
+          - 400
         resources:
           limits:
             cpu: "1.2"
