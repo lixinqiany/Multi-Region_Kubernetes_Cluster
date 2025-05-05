@@ -236,7 +236,7 @@ def print_final_summary_and_exit():
 def main():
     # 使用 argparse 来解析命令行参数
     parser = argparse.ArgumentParser(description="Infinite load test script with high-low stepping.")
-    parser.add_argument("--url", type=str, default="http://localhost:80",
+    parser.add_argument("--url", type=str, default="http://34.129.107.238:30080",
                         help="Target URL for load testing.")
     parser.add_argument("--low", type=int, default=150,
                         help="Low request rate (requests per second).")
