@@ -16,6 +16,7 @@ WORKDIR /app
 
 # 如果你有 requirements.txt，就先复制并安装依赖
 RUN pip install --no-cache-dir matplotlib
+RUN pip install --no-cache-dir requests
 
 # 复制你上面提供的脚本到容器内
 COPY run.py .

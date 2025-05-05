@@ -240,9 +240,9 @@ def main():
                         help="Target URL for load testing.")
     parser.add_argument("--low", type=int, default=150,
                         help="Low request rate (requests per second).")
-    parser.add_argument("--high", type=int, default=500,
+    parser.add_argument("--high", type=int, default=450,
                         help="High request rate (requests per second).")
-    parser.add_argument("--duration", type=int, default=30,
+    parser.add_argument("--duration", type=int, default=120,
                         help="Duration (in seconds) for each stage (high or low).")
     parser.add_argument("--interval", type=int, default=10,
                         help="Record interval (in seconds) for printing partial stats.")
