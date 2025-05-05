@@ -6,6 +6,7 @@ import argparse
 import matplotlib.pyplot as plt
 import signal
 import sys
+import math
 
 # Setup logging
 logging.basicConfig(
@@ -23,39 +24,39 @@ class PhaseStats:
         self.total_requests = 0
         self.success_requests = 0
         self.error_requests = 0
-        self.last_10s_success = 0
-        self.last_10s_errors = 0
-        self.last_10s_requests = 0
+        self.last_success = 0
+        self.last_errors = 0
+        self.last_requests = 0
 
     def record_result(self, status):
         self.total_requests += 1
-        self.last_10s_requests += 1
+        self.last_requests += 1
         if status and 200 <= status < 300:
             self.success_requests += 1
-            self.last_10s_success += 1
+            self.last_success += 1
         else:
             self.error_requests += 1
-            self.last_10s_errors += 1
+            self.last_errors += 1
 
     def snapshot(self, interval_sec):
-        qps = self.last_10s_success / interval_sec
-        total = self.last_10s_requests
-        err_rate = (self.last_10s_errors / total * 100) if total > 0 else 0.0
+        qps = self.last_success / interval_sec
+        total = self.last_requests
+        err_rate = (self.last_errors / total * 100) if total > 0 else 0.0
         self.qps_records.append(qps)
         self.error_rate_records.append(err_rate)
         return qps, err_rate
 
     def log_interval_summary(self, interval_sec):
-        total = self.last_10s_requests
-        succ = self.last_10s_success
-        err = self.last_10s_errors
+        total = self.last_requests
+        succ = self.last_success
+        err = self.last_errors
         qps, err_rate = self.snapshot(interval_sec)
         succ_rate = (succ / total * 100) if total > 0 else 0.0
-        logging.info(f"[10s Summary] Total: {total}, Success: {succ} ({succ_rate:.1f}%), "
+        logging.info(f"[Interval Summary] Total: {total}, Success: {succ} ({succ_rate:.1f}%), "
                      f"Errors: {err} ({err_rate:.1f}%), QPS: {qps:.2f}")
-        self.last_10s_success = 0
-        self.last_10s_errors = 0
-        self.last_10s_requests = 0
+        self.last_success = 0
+        self.last_errors = 0
+        self.last_requests = 0
 
     def log_phase_summary(self, duration_sec):
         total = self.total_requests
@@ -76,40 +77,38 @@ async def fetch(session, url):
     except:
         return None
 
-async def run_phase(session, url, rate, duration, stats: PhaseStats):
-    batch_interval = 0.05  # 每 10ms 发一批
-    batch_size = max(1, int(rate * batch_interval))  # 每批多少个请求
+async def run_sine_load(session, url, peak, base, period, stats: PhaseStats):
+    interval = 2  # 每2秒采样一次正弦曲线
+    slices = 10  # 每2秒内分成10批，每批间隔200ms发请求
+    slice_interval = interval / slices
     start_time = time.time()
-    end_time = start_time + duration
 
     async def ticker():
-        while time.time() < end_time:
+        while True:
             await asyncio.sleep(10)
             stats.log_interval_summary(10)
 
     asyncio.create_task(ticker())
 
-    while time.time() < end_time:
-        tasks = []
-        for _ in range(batch_size):
-            task = asyncio.create_task(fetch(session, url))
-            task.add_done_callback(lambda fut: stats.record_result(fut.result()))
-            tasks.append(task)
-        await asyncio.sleep(batch_interval)
+    while True:
+        t = time.time() - start_time
+        # 用 2π 控制完整周期
+        qps = base + (peak - base) * math.sin(2 * math.pi * t / period)
+        qps = max(0, qps)
+        total_requests = int(qps * interval)
+        batch_size = total_requests // slices
 
-    stats.log_phase_summary(duration)
+        logging.info(f"[Wave] t={int(t)}s  -> QPS Target ≈ {int(qps)} -> Requests in next 2s = {total_requests}")
 
+        for _ in range(slices):
+            for _ in range(batch_size):
+                task = asyncio.create_task(fetch(session, url))
+                task.add_done_callback(lambda fut: stats.record_result(fut.result()))
+            await asyncio.sleep(slice_interval)
 
-async def run_forever(url, high_rate, low_rate, phase_duration, stats: PhaseStats):
+async def run(url, peak, base, period, stats: PhaseStats):
     async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(limit=None)) as session:
-        while True:
-            logging.info(f"--- High Rate Phase ({high_rate} r/s) ---")
-            stats.reset()
-            await run_phase(session, url, high_rate, phase_duration, stats)
-
-            logging.info(f"--- Low Rate Phase ({low_rate} r/s) ---")
-            stats.reset()
-            await run_phase(session, url, low_rate, phase_duration, stats)
+        await run_sine_load(session, url, peak, base, period, stats)
 
 def plot_qps_and_error_rate(qps_records, error_rate_records):
     times = list(range(1, len(qps_records) + 1))
@@ -125,7 +124,7 @@ def plot_qps_and_error_rate(qps_records, error_rate_records):
     ax2.set_ylabel('Error Rate (%)', color='tab:red')
     ax2.plot(times, error_rate_records, label='Error Rate (%)', color='tab:red')
     ax2.tick_params(axis='y', labelcolor='tab:red')
-    ax2.set_ylim(0,100)
+    ax2.set_ylim(0, 100)
 
     fig.tight_layout()
     plt.title('QPS and Error Rate Over Time')
@@ -133,11 +132,11 @@ def plot_qps_and_error_rate(qps_records, error_rate_records):
     logging.info("Saved plot to qps_error_rate_plot.png")
 
 def main():
-    parser = argparse.ArgumentParser(description="Async stepped load generator with infinite loop")
-    parser.add_argument('--url', type=str, default='http://34.129.107.238:30080', help='Target URL')
-    parser.add_argument('--high', type=int, default=700, help='High QPS')
-    parser.add_argument('--low', type=int, default=300, help='Low QPS')
-    parser.add_argument('--duration', type=int, default=60, help='Phase duration in seconds')
+    parser = argparse.ArgumentParser(description="Sine wave smoothed load generator")
+    parser.add_argument('--url', type=str, default='http://34.129.107.238:30080/', help='Target URL')
+    parser.add_argument('--peak', type=int, default=500, help='Peak QPS')
+    parser.add_argument('--base', type=int, default=300, help='Base QPS')
+    parser.add_argument('--period', type=int, default=120, help='Sine wave period in seconds')
 
     args = parser.parse_args()
     stats = PhaseStats()
@@ -149,8 +148,8 @@ def main():
 
     signal.signal(signal.SIGINT, signal_handler)
 
-    logging.info(f"Starting stepped load test to {args.url}")
-    asyncio.run(run_forever(args.url, args.high, args.low, args.duration, stats))
+    logging.info(f"Starting sine wave load test to {args.url}")
+    asyncio.run(run(args.url, args.peak, args.base, args.period, stats))
 
 if __name__ == '__main__':
     main()

@@ -27,11 +27,11 @@ spec:
             name: metrics
         resources:
           requests:
-            cpu: "200m"
-            memory: "128Mi"
+            cpu: "150m"
+            memory: "256Mi"
           limits:
-            cpu: "200m"
-            memory: "128Mi"
+            cpu: "150m"
+            memory: "256Mi"
 ---
 # 保留原有的 NodePort Service（端口 80）
 apiVersion: v1
