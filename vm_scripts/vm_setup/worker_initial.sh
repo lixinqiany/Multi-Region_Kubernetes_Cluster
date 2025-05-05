@@ -44,5 +44,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y nfs-common rpcbind
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y kubelet=1.32.3-1.1 kubeadm=1.32.3-1.1 kubectl=1.32.3-1.1
 sudo DEBIAN_FRONTEND=noninteractive apt-mark hold kubelet kubeadm kubectl
 
-kubeadm join 10.192.0.2:6443 --token x40ik0.jkmqlqtrhd6578pz \
-        --discovery-token-ca-cert-hash sha256:01d90eede05983350531420a401e040560870f36ab8ddb9e031936107a906ac1
+systemctl enable kubelet
+
+kubeadm join 10.192.0.2:6443 --token 2tk7uf.r5lg4pr4xln8ap4i --discovery-token-ca-cert-hash sha256:01d90eede05983350531420a401e040560870f36ab8ddb9e031936107a906ac1
