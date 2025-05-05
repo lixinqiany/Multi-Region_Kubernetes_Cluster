@@ -28,10 +28,10 @@ spec:
         resources:
           requests:
             cpu: "300m"
-            memory: "256Mi"
+            memory: "128Mi"
           limits:
             cpu: "300m"
-            memory: "256Mi"
+            memory: "128Mi"
 ---
 # 保留原有的 NodePort Service（端口 80）
 apiVersion: v1
