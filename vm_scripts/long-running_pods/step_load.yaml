@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: step-load
-        image: lixinqiany/long-running:step_load_win_1.2
+        image: lixinqiany/long-running:step_load_win_1.3
   # 请替换为实际镜像名称
         env:
         - name: NODE_IP
@@ -26,10 +26,6 @@ spec:
         args: # 只追加参数部分
           - "--url"
           - "http://$(NODE_IP):30080"
-          - "--peak"# 使用环境变量替换
-          - 600
-          - "--base"
-          - 400
         resources:
           limits:
             cpu: "1.2"
