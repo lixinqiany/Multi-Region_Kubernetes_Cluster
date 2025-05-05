@@ -134,8 +134,8 @@ def plot_qps_and_error_rate(qps_records, error_rate_records):
 def main():
     parser = argparse.ArgumentParser(description="Sine wave smoothed load generator")
     parser.add_argument('--url', type=str, default='http://34.129.107.238:30080/', help='Target URL')
-    parser.add_argument('--peak', type=int, default=600, help='Peak QPS')
-    parser.add_argument('--base', type=int, default=400, help='Base QPS')
+    parser.add_argument('--peak', type=int, default=1000, help='Peak QPS')
+    parser.add_argument('--base', type=int, default=600, help='Base QPS')
     parser.add_argument('--period', type=int, default=120, help='Sine wave period in seconds')
 
     args = parser.parse_args()
