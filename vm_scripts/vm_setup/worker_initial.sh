@@ -37,7 +37,7 @@ sudo sed -i 's/SystemdCgroup = false/SystemdCgroup = true/' /etc/containerd/conf
 
 systemctl restart containerd
 systemctl enable containerd
-systemctl status containerd
+#systemctl status containerd
 
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y nfs-common rpcbind
 
