@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: step-load
-        image: lixinqiany/long-running:step_load_win_1.1
+        image: lixinqiany/long-running:step_load_win_1.2
   # 请替换为实际镜像名称
         env:
         - name: NODE_IP
