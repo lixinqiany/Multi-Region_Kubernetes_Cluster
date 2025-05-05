@@ -28,8 +28,8 @@ spec:
           - "http://$(NODE_IP):30080"  # 使用环境变量替换
         resources:
           limits:
-            cpu: "1.5"
+            cpu: "1.2"
             memory: "256Mi"
           requests:
-            cpu: "1.5"
+            cpu: "1.2"
             memory: "256Mi"
