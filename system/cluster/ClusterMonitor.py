@@ -32,3 +32,23 @@ class ClusterMonitor:
             self.logger.error(f"在获取{namespace}空间下正在running的pod名字集合时发生报错\n{e}")
 
         return pod_set
+
+    def get_pod_node_map(self, namespace: str = "default"):
+        """
+        返回指定命名空间下每个节点(node)对应的 Running Pod 名称集合：
+            { node_name: { pod1, pod2, ... }, ... }
+
+        被NodePodMonitor调用
+        """
+        mapping = {}
+        try:
+            resp = self.core_v1.list_namespaced_pod(
+                namespace=namespace,
+                field_selector="status.phase=Running"
+            )
+            for p in resp.items:
+                node = p.spec.node_name or "<unknown>"
+                mapping.setdefault(node, set()).add(p.metadata.name)
+        except Exception as e:
+            self.logger.error(f"获取 Pod-Node 映射失败: {e}")
+        return mapping
