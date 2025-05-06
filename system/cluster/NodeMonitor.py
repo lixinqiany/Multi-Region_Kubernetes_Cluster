@@ -31,6 +31,9 @@ class NodeMonitor:
         # 内存使用量 (bytes)
         self.mem_usage_q = 'node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes'
         # 内存总量 (bytes)
+
+        # 监控节点变化
+        self.prev_nodes = set()
         self.mem_total_q = 'node_memory_MemTotal_bytes'
         # Logger设置
         self.logger = logging.getLogger(f"{__name__}.{self.__class__.__name__}")
@@ -60,6 +63,8 @@ class NodeMonitor:
         self.logger.info("节点性能监控器 NodeMonitor started.")
         # 表头定义
         header = "timestamp,cpu_usage(core),cpu_capacity(core),cpu_util_percent,memory_usage_bytes,memory_total_bytes,memory_util_percent"
+        # 集群节点信息的表头
+        cluster_header = "timestamp, node_count, added, removed, detailed_nodes"
         while True:
             timestamp = time.strftime("%Y-%m-%d %H:%M:%S")  # 当前时间
             # 查询 CPU 和 内存 利用率
@@ -104,7 +109,22 @@ class NodeMonitor:
                     f"[{node}] CPU usage={cpu_use} cores, capacity={cpu_cap} cores, util={cpu_pct}%; "
                     f"MEM usage={mem_use} bytes, total={mem_tot} bytes, util={mem_pct}%"
                 )
+            # 集群节点数量变动
+            curr_nodes = set(usage_cpu.keys())
+            added = curr_nodes - self.prev_nodes
+            removed = self.prev_nodes - curr_nodes
+            added_str = ";".join(f"{n} 节点被新增" for n in added) if added else ""
+            removed_str = ";".join(f"{n} 节点被移除" for n in removed) if removed else ""
+            cluster_line = [timestamp,
+                            len(curr_nodes),
+                            added_str,
+                            removed_str,
+                            curr_nodes]
+            self.write_csv("data/node/cluster-info.csv", cluster_header, cluster_line)
+            if added or removed:
+                self.logger.info(f"Cluster Change at {timestamp}: 新增节点={added}, 移除节点={removed}")
             # 等待下一个采样周期
+            self.prev_nodes = curr_nodes
             time.sleep(self.interval)
 
 if __name__ == "__main__":
