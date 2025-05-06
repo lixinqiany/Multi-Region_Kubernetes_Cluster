@@ -206,7 +206,8 @@ class NginxSLOMonitor:
                 for name in self.THRESHOLDS:
                     row_i += [str(int(inst_slow_vals[name])),
                               f"{inst_slow_pcts[name]:.2f}"]
-                self._write_csv(f"data/slo/{ip}-nginx.csv", header_line, row_i)
+                safe_ip = "all-ip" if ip.strip() == "*" else ip
+                self._write_csv(f"data/slo/{safe_ip}-nginx.csv", header_line, row_i)
 
                 self.logger.debug(
                     f"[{ip}] total={tot}, non2xx={non}({non_pct_i:.2f}%), " +
