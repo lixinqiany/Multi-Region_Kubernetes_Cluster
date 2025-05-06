@@ -37,7 +37,7 @@ class NodeMonitor:
         self.mem_total_q = 'node_memory_MemTotal_bytes'
         # Logger设置
         self.logger = logging.getLogger(f"{__name__}.{self.__class__.__name__}")
-        self.logger.info(f"连接prometheus服务器{self.prom.check_prometheus_connection()}")
+        self.logger.info(f"node监控器 连接prometheus服务器{self.prom.check_prometheus_connection()}")
 
     def query(self, query):
         """向 Prometheus 发送即时查询，返回结果中的value列表。"""
@@ -116,10 +116,10 @@ class NodeMonitor:
             added_str = ";".join(f"{n} 节点被新增" for n in added) if added else ""
             removed_str = ";".join(f"{n} 节点被移除" for n in removed) if removed else ""
             cluster_line = [timestamp,
-                            len(curr_nodes),
+                            str(len(curr_nodes)),
                             added_str,
                             removed_str,
-                            curr_nodes]
+                            ";".join(curr_nodes)]
             self.write_csv("data/node/cluster-info.csv", cluster_header, cluster_line)
             if added or removed:
                 self.logger.info(f"Cluster Change at {timestamp}: 新增节点={added}, 移除节点={removed}")
