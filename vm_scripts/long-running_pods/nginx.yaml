@@ -52,21 +52,20 @@ spec:
       targetPort: http
       nodePort: 30080
 ---
-# 新增一个用于暴露 metrics (9913) 的 ClusterIP Service
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-svc-metrics
+  name: nginx-svc-status
   namespace: default
   labels:
     app: nginx
-    component: exporter
+    component: status
 spec:
   type: ClusterIP
   selector:
     app: nginx
   ports:
-    - name: metrics
+    - name: metrics            # ← ServicePort 的 name，用于 ServiceMonitor.endpoints.port
       protocol: TCP
-      port: 9913
-      targetPort: metrics
+      port: 80                 # ← 暴露 Pod 上的 80
+      targetPort: http
