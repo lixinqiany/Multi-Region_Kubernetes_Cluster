@@ -52,3 +52,25 @@ class ClusterMonitor:
         except Exception as e:
             self.logger.error(f"获取 Pod-Node 映射失败: {e}")
         return mapping
+
+    def get_node_internal_ips(self) -> dict[str, str]:
+        """
+        获取集群中每个 Node 的 InternalIP：
+        返回  { node_name: internal_ip, ... }
+
+        被NodePodMonitor调用
+        """
+        ip_map: dict[str, str] = {}
+        try:
+            nodes = self.core_v1.list_node().items
+            for n in nodes:
+                name = n.metadata.name
+                ip = "<unknown>"
+                for a in n.status.addresses:
+                    if a.type == "InternalIP":
+                        ip = a.address
+                        break
+                ip_map[name] = ip
+        except Exception as exc:
+            self.logger.error(f"获取 Node IP 失败: {exc}")
+        return ip_map

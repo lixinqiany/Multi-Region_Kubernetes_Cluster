@@ -2,6 +2,7 @@ import logging, threading, argparse, os, time
 from cluster.NodeMonitor import NodeMonitor
 from cluster.PodMonitor import PodMonitor
 from cluster.NodePodMonitor import NodePodMonitor
+from cluster.NginxSLOMonitor import NginxSLOMonitor
 
 def main():
     # 入口参数
@@ -35,8 +36,8 @@ def main():
     node_monitor = NodeMonitor(prom_url, interval)
     pod_monitor = PodMonitor(prom_url, interval)
     dist_monitor = NodePodMonitor(prom_url, interval)
-    #slo_monitor = NginxSLOMonitor(prom_url, interval)
-    monitors = [node_monitor, pod_monitor, dist_monitor]
+    slo_monitor = NginxSLOMonitor(prom_url, interval)
+    monitors = [node_monitor, pod_monitor, dist_monitor, slo_monitor]
 
     # 创建并启动线程
     threads = []

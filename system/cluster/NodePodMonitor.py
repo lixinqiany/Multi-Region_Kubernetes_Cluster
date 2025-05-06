@@ -65,9 +65,9 @@ class NodePodMonitor:
                         # 之前有Pod的节点现在无数据，表示该节点上Pod全无
                         for pod in prev_pods:
                             filename = f"data/plan/{node}-pod-history.csv"
-                            line = [timestamp, "DEL", pod+"原因是节点被删除，节点数据不存在"]
+                            line = [timestamp, "DEL", pod]
                             self.write_csv(filename, header, line)
-                            self.logger.info(f"[{node}] DEL {pod}, 原因是节点移除")
+                            self.logger.info(f"[{node}] DEL {pod}")
                 # 更新 prev_distribution
                 self.prev_distribution = {node: pods.copy() for node, pods in current_dist.items()}
             time.sleep(self.interval)
