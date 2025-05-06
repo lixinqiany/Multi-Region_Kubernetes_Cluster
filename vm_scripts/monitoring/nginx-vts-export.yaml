@@ -16,6 +16,8 @@ spec:
     matchNames:
       - default
   endpoints:
-    - port: metrics
+    - port: http
+      path: /status/format/prometheus
+      scheme: http
       interval: 15s
       scrapeTimeout: 5s
