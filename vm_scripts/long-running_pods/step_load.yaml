@@ -27,7 +27,7 @@ spec:
           - "--url"
           - "http://$(NODE_IP):30080"
           - "--period"
-          - "300"
+          - "600"
         resources:
           limits:
             cpu: "600m"
