@@ -26,6 +26,8 @@ spec:
         args: # 只追加参数部分
           - "--url"
           - "http://$(NODE_IP):30080"
+          - "--period"
+          - "300"
         resources:
           limits:
             cpu: "600m"
