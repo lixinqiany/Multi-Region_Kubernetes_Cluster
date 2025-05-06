@@ -11,7 +11,6 @@ spec:
   selector:
     matchLabels:
       app: nginx
-      component: exporter
   namespaceSelector:
     matchNames:
       - default
