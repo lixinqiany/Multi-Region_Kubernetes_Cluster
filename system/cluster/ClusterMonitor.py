@@ -15,6 +15,8 @@ class ClusterMonitor:
             self.logger.info(f"在本地连接到远程集群")
 
         self.core_v1 = client.CoreV1Api()
+        self.batch_v1 = client.BatchV1Api()
+        self.apps_v1 = client.AppsV1Api()
 
     def get_running_pods(self, namespace):
         """
@@ -74,3 +76,51 @@ class ClusterMonitor:
         except Exception as exc:
             self.logger.error(f"获取 Node IP 失败: {exc}")
         return ip_map
+
+    def list_deployments(self, namespace: str = "default"):
+        """
+        列出 Namespace 下所有 Deployment 并返回状态字典：
+          { name: {"desired": int, "available": int, "ready": int}, ... }
+        """
+        out = {}
+        try:
+            resp = self.apps_v1.list_namespaced_deployment(namespace)
+            for d in resp.items:
+                name = d.metadata.name
+                out[name] = {
+                    "desired": d.spec.replicas or 0,
+                    "available": d.status.available_replicas or 0,
+                    "ready": d.status.ready_replicas or 0
+                }
+        except Exception as e:
+            self.logger.error(f"list_deployments failed: {e}")
+        return out
+
+    def list_jobs(self, namespace: str = "default"):
+        """
+        列出 Namespace 下所有 Job 并返回状态字典：
+          { name: {
+                "completions": spec.completions,
+                "succeeded": status.succeeded,
+                "active": status.active,
+                "failed": status.failed,
+                "start_time": status.start_time (datetime),
+                "completion_time": status.completion_time (datetime)
+            }, ... }
+        """
+        out = {}
+        try:
+            resp = self.batch_v1.list_namespaced_job(namespace)
+            for j in resp.items:
+                name = j.metadata.name
+                out[name] = {
+                    "completions": j.spec.completions or 0,
+                    "succeeded": j.status.succeeded or 0,
+                    "active": j.status.active or 0,
+                    "failed": j.status.failed or 0,
+                    "start_time": j.status.start_time,
+                    "completion_time": j.status.completion_time
+                }
+        except Exception as e:
+            self.logger.error(f"list_jobs failed: {e}")
+        return out
