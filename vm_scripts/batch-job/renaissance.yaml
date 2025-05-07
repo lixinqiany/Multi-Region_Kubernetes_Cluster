@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: renaissance
-          image: lixinqiany/job:renaissance_1.0
+          image: lixinqiany/job:renaissance_1.1
           resources:
             requests:
               cpu: "4"
