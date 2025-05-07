@@ -54,7 +54,12 @@ class NginxSLOMonitor:
     def __init__(self, prom_url: str, interval: int):
         self.prom = PrometheusConnect(url=prom_url, disable_ssl=True)
         self.interval = interval
-        self.cluster = ClusterMonitor()  # 保留以备扩展
+        # 初始化 ClusterMonitor 并获取 Node→IP 映射
+        self.cluster = ClusterMonitor()
+        # MODIFIED: 建立 IP→NodeName 映射，用于文件名替换
+        node_ip_map = self.cluster.get_node_internal_ips()  # {node: ip}
+        # 反转为 {ip: node}
+        self.ip_to_node = {ip: node for node, ip in node_ip_map.items()}
         self.logger = logging.getLogger(f"{__name__}.{self.__class__.__name__}")
 
         win = f"[1m]"
@@ -198,6 +203,9 @@ class NginxSLOMonitor:
                 }
 
                 ip = inst.split(":")[0]
+                name = self.ip_to_node.get(ip, ip)
+                name = "all-ip" if name.strip() == "*" else name
+                path = f"data/slo/{name}-nginx.csv"
                 row_i = [
                     ts,
                     str(int(non)), f"{non_pct_i:.2f}",
@@ -206,8 +214,7 @@ class NginxSLOMonitor:
                 for name in self.THRESHOLDS:
                     row_i += [str(int(inst_slow_vals[name])),
                               f"{inst_slow_pcts[name]:.2f}"]
-                safe_ip = "all-ip" if ip.strip() == "*" else ip
-                self._write_csv(f"data/slo/{safe_ip}-nginx.csv", header_line, row_i)
+                self._write_csv(path, header_line, row_i)
 
                 self.logger.debug(
                     f"[{ip}] total={tot}, non2xx={non}({non_pct_i:.2f}%), " +
