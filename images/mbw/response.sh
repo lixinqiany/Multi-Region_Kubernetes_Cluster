@@ -1,62 +1,52 @@
 #!/usr/bin/expect -f
 
-# 启动 Phoronix Test Suite 测试
-spawn phoronix-test-suite run mbw
+# 生成唯一时间戳，用于结果文件名和描述
+set ts [clock format [clock seconds] -format {%Y%m%d%H%M%S}]
 
-# 设置全局超时（用于初始交互）
+# 启动 MBW 测试
+spawn phoronix-test-suite run mbw
 set timeout 30
 
-# 处理预测试交互
+# 预交互：选择测试、数组大小、保存选项、命名
 expect {
     "Test:" {
-        send "3\r"
-        exp_continue
+        send "3\r"; exp_continue
     }
     "Array Size:" {
-        send "3\r"
-        exp_continue
+        send "3\r"; exp_continue
     }
     "Would you like to save these test results (Y/n):" {
-        send "Y\r"
-        exp_continue
+        send "Y\r"; exp_continue
     }
     "Enter a name for the result file:" {
-        send "mbw-copy-autotest\r"
-        exp_continue
+        send "mbw-copy-autotest-${ts}\r"; exp_continue
     }
     "Enter a unique name to describe this test run / configuration:" {
-        send "mbw-AutoTest\r"
-        exp_continue
+        send "mbw-AutoTest-${ts}\r"; exp_continue
     }
     "New Description:" {
-        send "\r"
-        exp_continue
+        send "\r"; exp_continue
     }
 }
 
-# 等待两个测试依次运行
+# 等待两个子测试依次完成
 for {set i 1} {$i <= 2} {incr i} {
     expect {
         -re "Test $i of 2" {
-            puts "Starting Test $i..."
             set timeout -1
             expect {
                 -re "Average:.*MiB/s" {
-                    puts "Test $i Success\n"
+                    # 捕获到平均值，继续
                 }
                 timeout {
-                    puts "\nTest $i Timeout"
-                    exit 1
+                    puts "\n[ERROR] Test $i 超时"; exit 1
                 }
                 eof {
-                    puts "\nTest $i Unexpected EOF"
-                    exit 1
+                    puts "\n[ERROR] Test $i 未料想 EOF"; exit 1
                 }
                 -re "ERROR|FAILED" {
-                    puts "\nTest $i Fail"
-                    exit 1
+                    puts "\n[ERROR] Test $i 失败"; exit 1
                 }
-                # 保持活跃直到捕获到Average
                 -re "Started Run \\d+ @ \\d+:\\d+:\\d+" {
                     exp_continue
                 }
@@ -65,19 +55,18 @@ for {set i 1} {$i <= 2} {incr i} {
     }
 }
 
-# 处理测试后交互
+# 测试后交互：不查看文本、不上传
 set timeout 30
 expect {
     "Do you want to view the text results of the testing (Y/n):" {
-        send "n\r"
-        exp_continue
+        send "n\r"; exp_continue
     }
     "Would you like to upload the results to OpenBenchmarking.org (y/n):" {
-        send "n\r"
-        exp_continue
+        send "n\r"; exp_continue
     }
     eof {
-        puts "\nDone"
+        # 正常退出
+        exit 0
     }
 }
 

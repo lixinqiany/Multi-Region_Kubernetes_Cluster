@@ -8,7 +8,7 @@ metadata:
     app: pts
 spec:
   parallelism: 1
-  completions: 1
+  completions: 2
   backoffLimit: 3
   template:
     metadata:
@@ -20,9 +20,9 @@ spec:
           image: lixinqiany/job:renaissance_1.0
           resources:
             requests:
-              cpu: "5"
+              cpu: "4"
               memory: "512Mi"
             limits:
-              cpu: "5"
+              cpu: "4"
               memory: "512Mi"
       restartPolicy: Never
