@@ -1,0 +1,80 @@
+2025-05-09 02:02:06,181 [root] INFO: Starting monitors with interval=5s, Prometheus=http://34.129.107.238:32501
+2025-05-09 02:02:06,251 [cluster.NodeMonitor.NodeMonitor] INFO: node监控器 连接prometheus服务器True
+2025-05-09 02:02:06,262 [cluster.ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-09 02:02:06,342 [cluster.PodMonitor.PodMonitor] INFO: pod监控器 连接prometheus服务器True
+2025-05-09 02:02:06,352 [cluster.ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-09 02:02:06,422 [cluster.NodePodMonitor.NodePodMonitor] INFO: pod分布监控器 连接prometheus服务器True
+2025-05-09 02:02:06,442 [cluster.ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-09 02:02:07,157 [cluster.ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-09 02:02:07,163 [cluster.ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-09 02:02:07,164 [cluster.NodeMonitor.NodeMonitor] INFO: 节点性能监控器 NodeMonitor started.
+2025-05-09 02:02:07,165 [cluster.PodMonitor.PodMonitor] INFO: PodMonitor started.
+2025-05-09 02:02:07,165 [cluster.NodePodMonitor.NodePodMonitor] INFO: Pod分布监控器 NodePodMonitor started.
+2025-05-09 02:02:07,166 [cluster.NginxSLOMonitor.NginxSLOMonitor] INFO: NginxSLOMonitor (multi-threshold) started.
+2025-05-09 02:02:07,169 [cluster.DeploymentMonitor.DeploymentMonitor] INFO: deployment资源监控器 DeploymentMonitor started.
+2025-05-09 02:02:07,170 [cluster.JobMonitor.JobMonitor] INFO: Job资源监控器JobMonitor started.
+2025-05-09 02:02:07,170 [root] INFO: All monitoring threads started.
+2025-05-09 02:02:07,323 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-09 02:02:07: 新增节点={'master', 'node-3', 'node-4', 'node-6', 'node-5', 'node-2', 'node-1'}, 移除节点=set()
+2025-05-09 02:02:07,990 [cluster.DeploymentMonitor.DeploymentMonitor] INFO: Deployment ADD step-load
+2025-05-09 02:02:07,991 [cluster.DeploymentMonitor.DeploymentMonitor] INFO: Deployment ADD nginx
+2025-05-09 02:02:08,001 [cluster.JobMonitor.JobMonitor] INFO: Job ADD mbw
+2025-05-09 02:02:08,002 [cluster.JobMonitor.JobMonitor] INFO: Job ADD renaissance
+2025-05-09 02:02:08,004 [cluster.JobMonitor.JobMonitor] INFO: Job COMPLETE mbw, duration=2987s
+2025-05-09 02:02:08,005 [cluster.JobMonitor.JobMonitor] INFO: Job COMPLETE renaissance, duration=3556s
+2025-05-09 02:02:08,264 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-6] ADD nginx-7c4b4649d-56ntm
+2025-05-09 02:02:08,266 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] ADD nginx-7c4b4649d-lvn2s
+2025-05-09 02:02:08,266 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] ADD step-load-55f75d64b6-rfvx8
+2025-05-09 02:02:08,267 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] ADD nginx-7c4b4649d-pb6sd
+2025-05-09 02:02:08,268 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] ADD step-load-55f75d64b6-d2b4l
+2025-05-09 02:02:08,270 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] ADD step-load-55f75d64b6-w5v4k
+2025-05-09 02:02:08,270 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] ADD nginx-7c4b4649d-qhrb4
+2025-05-09 02:02:08,274 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-2] ADD step-load-55f75d64b6-26929
+2025-05-09 02:02:43,321 [cluster.DeploymentMonitor.DeploymentMonitor] INFO: Deployment DEL step-load
+2025-05-09 02:02:43,324 [cluster.DeploymentMonitor.DeploymentMonitor] INFO: Deployment DEL nginx
+2025-05-09 02:02:45,465 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] DEL nginx-7c4b4649d-pb6sd
+2025-05-09 02:02:45,466 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] DEL nginx-7c4b4649d-lvn2s
+2025-05-09 02:02:45,468 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] DEL nginx-7c4b4649d-qhrb4
+2025-05-09 02:02:45,470 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-6] DEL nginx-7c4b4649d-56ntm
+2025-05-09 02:03:11,699 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:03:11,776 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-2] DEL step-load-55f75d64b6-26929
+2025-05-09 02:03:11,778 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] DEL step-load-55f75d64b6-d2b4l
+2025-05-09 02:03:11,781 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] DEL step-load-55f75d64b6-rfvx8
+2025-05-09 02:03:11,783 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] DEL step-load-55f75d64b6-w5v4k
+2025-05-09 02:03:16,736 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:03:21,754 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:03:26,781 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:03:31,794 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:03:36,808 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:03:41,825 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:03:46,852 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:03:51,872 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:03:56,902 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:04:01,930 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:04:06,958 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:04:11,992 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:04:17,015 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:04:22,039 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:04:27,067 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:04:32,091 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:04:37,112 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:04:42,136 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:04:47,160 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:04:52,184 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:04:57,209 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:05:02,235 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:05:07,290 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:05:12,314 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:05:17,332 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:05:22,359 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:05:27,371 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:05:32,390 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:05:37,437 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:05:42,454 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:05:47,469 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:05:52,490 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:05:57,516 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:06:02,533 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:06:07,550 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:06:12,578 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:06:17,596 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 02:06:19,914 [root] INFO: Stopping monitors...

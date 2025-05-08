@@ -1,0 +1,138 @@
+2025-05-08 23:59:52,517 [root] INFO: Starting monitors with interval=5s, Prometheus=http://34.129.107.238:32501
+2025-05-08 23:59:52,593 [cluster.NodeMonitor.NodeMonitor] INFO: node监控器 连接prometheus服务器True
+2025-05-08 23:59:52,606 [cluster.ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-08 23:59:52,676 [cluster.PodMonitor.PodMonitor] INFO: pod监控器 连接prometheus服务器True
+2025-05-08 23:59:52,685 [cluster.ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-08 23:59:52,798 [cluster.NodePodMonitor.NodePodMonitor] INFO: pod分布监控器 连接prometheus服务器True
+2025-05-08 23:59:52,807 [cluster.ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-08 23:59:53,505 [cluster.ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-08 23:59:53,512 [cluster.ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-08 23:59:53,513 [cluster.NodeMonitor.NodeMonitor] INFO: 节点性能监控器 NodeMonitor started.
+2025-05-08 23:59:53,514 [cluster.PodMonitor.PodMonitor] INFO: PodMonitor started.
+2025-05-08 23:59:53,515 [cluster.NodePodMonitor.NodePodMonitor] INFO: Pod分布监控器 NodePodMonitor started.
+2025-05-08 23:59:53,516 [cluster.NginxSLOMonitor.NginxSLOMonitor] INFO: NginxSLOMonitor (multi-threshold) started.
+2025-05-08 23:59:53,517 [cluster.DeploymentMonitor.DeploymentMonitor] INFO: deployment资源监控器 DeploymentMonitor started.
+2025-05-08 23:59:53,518 [cluster.JobMonitor.JobMonitor] INFO: Job资源监控器JobMonitor started.
+2025-05-08 23:59:53,519 [root] INFO: All monitoring threads started.
+2025-05-08 23:59:53,681 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-08 23:59:53: 新增节点={'node-2', 'node-1', 'node-5', 'node-4', 'master', 'node-6', 'node-3'}, 移除节点=set()
+2025-05-08 23:59:54,412 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-08 23:59:59,431 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 00:00:04,452 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-09 00:00:09,512 [cluster.DeploymentMonitor.DeploymentMonitor] INFO: Deployment ADD step-load
+2025-05-09 00:00:09,513 [cluster.DeploymentMonitor.DeploymentMonitor] INFO: Deployment ADD nginx
+2025-05-09 00:00:09,600 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-2] ADD step-load-55f75d64b6-26929
+2025-05-09 00:00:09,602 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] ADD step-load-55f75d64b6-d2b4l
+2025-05-09 00:00:09,604 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] ADD step-load-55f75d64b6-rfvx8
+2025-05-09 00:00:09,605 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] ADD step-load-55f75d64b6-w5v4k
+2025-05-09 00:00:19,827 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-6] ADD nginx-7c4b4649d-56ntm
+2025-05-09 00:00:19,828 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] ADD nginx-7c4b4649d-lvn2s
+2025-05-09 00:05:16,902 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] ADD nginx-7c4b4649d-pb6sd
+2025-05-09 00:14:05,501 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] ADD nginx-7c4b4649d-f8r9w
+2025-05-09 00:15:28,228 [cluster.JobMonitor.JobMonitor] INFO: Job ADD renaissance
+2025-05-09 00:15:56,488 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-6] ADD renaissance-vn9dg
+2025-05-09 00:15:56,490 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-2] ADD renaissance-2zpjj
+2025-05-09 00:15:56,490 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD renaissance-km726
+2025-05-09 00:20:15,914 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] DEL nginx-7c4b4649d-f8r9w
+2025-05-09 00:20:31,509 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] ADD step-load-55f75d64b6-lmwjx
+2025-05-09 00:20:31,509 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] ADD step-load-55f75d64b6-27xmj
+2025-05-09 00:20:31,511 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] ADD step-load-55f75d64b6-nn7xx
+2025-05-09 00:20:31,511 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] ADD step-load-55f75d64b6-mm6nw
+2025-05-09 00:20:31,513 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] ADD step-load-55f75d64b6-x7rcc
+2025-05-09 00:20:31,513 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] ADD step-load-55f75d64b6-f4gz2
+2025-05-09 00:21:03,020 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] ADD nginx-7c4b4649d-44z8g
+2025-05-09 00:21:03,022 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] ADD nginx-7c4b4649d-dcv55
+2025-05-09 00:22:01,349 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] ADD nginx-7c4b4649d-r7nlw
+2025-05-09 00:22:32,870 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] ADD nginx-7c4b4649d-w2fzv
+2025-05-09 00:27:59,387 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-6] ADD renaissance-v5d8q
+2025-05-09 00:27:59,388 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-6] DEL renaissance-vn9dg
+2025-05-09 00:27:59,389 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL renaissance-km726
+2025-05-09 00:28:04,665 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD renaissance-72wsx
+2025-05-09 00:28:04,666 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-2] ADD renaissance-9m8hw
+2025-05-09 00:28:04,668 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-2] DEL renaissance-2zpjj
+2025-05-09 00:30:32,114 [cluster.JobMonitor.JobMonitor] INFO: Job ADD mbw
+2025-05-09 00:30:32,725 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] ADD mbw-fpz4p
+2025-05-09 00:30:32,726 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] ADD mbw-nd9mb
+2025-05-09 00:30:54,029 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] ADD mbw-b7k92
+2025-05-09 00:31:36,436 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-6] ADD nginx-7c4b4649d-kgtvm
+2025-05-09 00:40:04,249 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-6] ADD mbw-j6hsn
+2025-05-09 00:40:04,249 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-6] DEL renaissance-v5d8q
+2025-05-09 00:40:09,686 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-2] ADD renaissance-2nnxc
+2025-05-09 00:40:09,688 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-2] DEL renaissance-9m8hw
+2025-05-09 00:40:09,689 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD renaissance-l69p8
+2025-05-09 00:40:09,690 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL renaissance-72wsx
+2025-05-09 00:40:36,494 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] ADD mbw-hrjpm
+2025-05-09 00:40:36,496 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] DEL mbw-nd9mb
+2025-05-09 00:40:36,496 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-6] ADD mbw-kwhjh
+2025-05-09 00:40:36,498 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] DEL mbw-fpz4p
+2025-05-09 00:40:52,736 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] DEL mbw-b7k92
+2025-05-09 00:40:58,064 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] ADD mbw-5xld8
+2025-05-09 00:40:58,066 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] DEL step-load-55f75d64b6-nn7xx
+2025-05-09 00:40:58,066 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] DEL step-load-55f75d64b6-mm6nw
+2025-05-09 00:40:58,068 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] DEL step-load-55f75d64b6-lmwjx
+2025-05-09 00:40:58,068 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] DEL step-load-55f75d64b6-27xmj
+2025-05-09 00:40:58,070 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] DEL step-load-55f75d64b6-x7rcc
+2025-05-09 00:40:58,070 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] DEL step-load-55f75d64b6-f4gz2
+2025-05-09 00:46:44,093 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-6] DEL nginx-7c4b4649d-kgtvm
+2025-05-09 00:48:40,637 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] DEL nginx-7c4b4649d-w2fzv
+2025-05-09 00:49:44,817 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] DEL nginx-7c4b4649d-44z8g
+2025-05-09 00:50:06,076 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-6] DEL mbw-j6hsn
+2025-05-09 00:50:11,389 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] ADD mbw-hjjms
+2025-05-09 00:50:38,095 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] ADD mbw-4qjd7
+2025-05-09 00:50:38,096 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] DEL mbw-hrjpm
+2025-05-09 00:50:38,097 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-6] ADD renaissance-rn5fj
+2025-05-09 00:50:38,098 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-6] DEL mbw-kwhjh
+2025-05-09 00:50:43,413 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] DEL nginx-7c4b4649d-r7nlw
+2025-05-09 00:50:43,414 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] ADD mbw-kzd9x
+2025-05-09 00:50:59,383 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] ADD mbw-rv6v5
+2025-05-09 00:50:59,384 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] DEL mbw-5xld8
+2025-05-09 00:52:08,526 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL renaissance-l69p8
+2025-05-09 00:52:13,905 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-2] ADD renaissance-cd8fz
+2025-05-09 00:52:13,906 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-2] DEL renaissance-2nnxc
+2025-05-09 00:52:13,907 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD renaissance-jtjth
+2025-05-09 00:52:29,979 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] ADD nginx-7c4b4649d-m5fr8
+2025-05-09 00:59:44,325 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] DEL nginx-7c4b4649d-m5fr8
+2025-05-09 01:00:11,240 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] ADD mbw-r7hph
+2025-05-09 01:00:11,242 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] DEL mbw-hjjms
+2025-05-09 01:00:32,891 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] ADD step-load-55f75d64b6-hg98x
+2025-05-09 01:00:32,893 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] ADD step-load-55f75d64b6-nnct7
+2025-05-09 01:00:32,893 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] ADD step-load-55f75d64b6-kv5wp
+2025-05-09 01:00:32,895 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] ADD step-load-55f75d64b6-xdhlc
+2025-05-09 01:00:43,659 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] ADD mbw-ktltj
+2025-05-09 01:00:43,659 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] DEL mbw-kzd9x
+2025-05-09 01:00:43,661 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] ADD mbw-pgvzt
+2025-05-09 01:00:43,661 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] DEL mbw-4qjd7
+2025-05-09 01:00:59,990 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] DEL mbw-rv6v5
+2025-05-09 01:01:05,455 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] ADD mbw-285nl
+2025-05-09 01:01:16,391 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] ADD nginx-7c4b4649d-4swp7
+2025-05-09 01:01:16,391 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] ADD nginx-7c4b4649d-7nxmq
+2025-05-09 01:01:49,150 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] ADD nginx-7c4b4649d-rm5xf
+2025-05-09 01:02:44,018 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-6] ADD renaissance-g6hks
+2025-05-09 01:02:44,020 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-6] DEL renaissance-rn5fj
+2025-05-09 01:02:49,574 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-6] ADD nginx-7c4b4649d-rwkk4
+2025-05-09 01:04:15,501 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-2] DEL renaissance-cd8fz
+2025-05-09 01:04:15,502 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL renaissance-jtjth
+2025-05-09 01:10:14,842 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-2] ADD mbw-6njs8
+2025-05-09 01:10:14,844 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] DEL mbw-r7hph
+2025-05-09 01:10:42,802 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] DEL mbw-pgvzt
+2025-05-09 01:10:48,290 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] DEL mbw-ktltj
+2025-05-09 01:11:04,883 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] DEL mbw-285nl
+2025-05-09 01:14:47,095 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-6] DEL renaissance-g6hks
+2025-05-09 01:14:47,566 [cluster.JobMonitor.JobMonitor] INFO: Job COMPLETE renaissance, duration=3556s
+2025-05-09 01:20:15,416 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-2] DEL mbw-6njs8
+2025-05-09 01:20:20,504 [cluster.JobMonitor.JobMonitor] INFO: Job COMPLETE mbw, duration=2987s
+2025-05-09 01:20:59,568 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] DEL step-load-55f75d64b6-hg98x
+2025-05-09 01:20:59,570 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] DEL step-load-55f75d64b6-nnct7
+2025-05-09 01:28:27,895 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-6] DEL nginx-7c4b4649d-rwkk4
+2025-05-09 01:30:27,774 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-3] DEL nginx-7c4b4649d-4swp7
+2025-05-09 01:30:44,324 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] DEL nginx-7c4b4649d-rm5xf
+2025-05-09 01:33:05,120 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-2] ADD nginx-7c4b4649d-9l7tj
+2025-05-09 01:33:15,844 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD nginx-7c4b4649d-8rxfq
+2025-05-09 01:40:43,215 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] DEL nginx-7c4b4649d-7nxmq
+2025-05-09 01:40:43,217 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] DEL nginx-7c4b4649d-dcv55
+2025-05-09 01:40:59,218 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-5] DEL step-load-55f75d64b6-kv5wp
+2025-05-09 01:40:59,218 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] DEL step-load-55f75d64b6-xdhlc
+2025-05-09 01:45:45,366 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL nginx-7c4b4649d-8rxfq
+2025-05-09 01:50:33,723 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-2] DEL nginx-7c4b4649d-9l7tj
+2025-05-09 01:52:36,537 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] ADD nginx-7c4b4649d-b4lnr
+2025-05-09 02:00:21,770 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-4] DEL nginx-7c4b4649d-b4lnr
+2025-05-09 02:01:24,888 [root] INFO: Stopping monitors...
