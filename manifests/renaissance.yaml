@@ -1,0 +1,28 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: renaissance
+  namespace: default
+  labels:
+    type: batch-job
+    app: pts
+spec:
+  parallelism: 20
+  completions: 2
+  backoffLimit: 3
+  template:
+    metadata:
+      labels:
+        app: pts
+    spec:
+      containers:
+        - name: renaissance
+          image: lixinqiany/job:renaissance_1.1
+          resources:
+            requests:
+              cpu: "4"
+              memory: "512Mi"
+            limits:
+              cpu: "4"
+              memory: "512Mi"
+      restartPolicy: Never
