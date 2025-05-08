@@ -15,7 +15,7 @@ spec:
       labels:
         app: pts
     spec:
-      restartPolicy: Never
+      restartPolicy: OnFailure
       containers:
         - name: mbw
           image: lixinqiany/job:mbw_1.5
