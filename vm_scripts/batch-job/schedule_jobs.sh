@@ -7,8 +7,8 @@ echo "🕒 $(date): 脚本开始执行。将于 15 分钟后部署 renaissance-j
 sleep 900
 
 # 应用 renaissance job
-echo "🚀 $(date): 正在部署 renaissance-job.yaml..."
-kubectl apply -f renaissance-job.yaml
+echo "🚀 $(date): 正在部署 renaissance.yaml..."
+kubectl apply -f renaissance.yaml
 
 # 等待 30 分钟（1800 秒）
 echo "🕒 $(date): 等待 30 分钟再部署 mbw-job..."
@@ -16,6 +16,6 @@ sleep 900
 
 # 应用 mbw job
 echo "🚀 $(date): 正在部署 mbw-job.yaml..."
-kubectl apply -f mbw-job.yaml
+kubectl apply -f mbw.yaml
 
 echo "✅ $(date): 所有作业部署完成。"

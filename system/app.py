@@ -21,6 +21,7 @@ def main():
         logging.basicConfig(
             filename=log_file,
             level=logging.INFO,
+            encoding="utf-8",
             format="%(asctime)s [%(name)s] %(levelname)s: %(message)s"
         )
     else:
