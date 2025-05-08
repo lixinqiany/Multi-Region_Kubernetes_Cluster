@@ -7,9 +7,9 @@ metadata:
     type: batch-job
     app: pts
 spec:
-  parallelism: 1
-  completions: 2
-  backoffLimit: 3
+  parallelism: 4
+  completions: 16
+  backoffLimit: 6
   template:
     metadata:
       labels:
