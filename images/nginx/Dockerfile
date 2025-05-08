@@ -63,12 +63,13 @@ RUN mkdir -p /var/log/nginx \
     && chown -R www-data:www-data /var/log/nginx
 
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY start.sh /start.sh
-RUN chmod +x /start.sh
+COPY start.sh /root/start.sh
+RUN chmod +x /root/start.sh
 COPY nginx-vts-exporter.service  /usr/lib/systemd/system/
 
+WORKDIR /
 # 暴露端口
 EXPOSE 80 8080 9913
 
 # 指定运行用户和启动命令
-CMD ["/start.sh"]
+CMD ["/root/start.sh"]
