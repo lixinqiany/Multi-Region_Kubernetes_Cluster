@@ -47,7 +47,7 @@ class NodePodMonitor:
                     pending_header,
                     [timestamp, str(pending_count)]
                 )
-                self.logger.info(f"Pending Pods: {pending_count}")
+                self.logger.debug(f"Pending Pods: {pending_count}")
             except Exception as e:
                 self.logger.error(f"统计 Pending Pods 失败: {e}")
 

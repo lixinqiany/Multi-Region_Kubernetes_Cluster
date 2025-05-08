@@ -10,7 +10,7 @@ memory: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 10
 - node_memory_MemTotal_bytes 是内存总量。
 
 """
-
+import csv
 import os, time, requests, logging
 from prometheus_api_client import PrometheusConnect
 
@@ -52,10 +52,8 @@ class NodeMonitor:
         os.makedirs(os.path.dirname(filepath), exist_ok=True)
         file_exists = os.path.isfile(filepath)
         with open(filepath, 'a') as f:
-            # 文件新建时写入表头
             if not file_exists:
                 f.write(header + "\n")
-            # 写入CSV行数据
             f.write(",".join(line_data) + "\n")
 
     def run(self):
@@ -64,7 +62,7 @@ class NodeMonitor:
         # 表头定义
         header = "timestamp,cpu_usage(core),cpu_capacity(core),cpu_util_percent,memory_usage_bytes,memory_total_bytes,memory_util_percent"
         # 集群节点信息的表头
-        cluster_header = "timestamp, node_count, added, removed, detailed_nodes"
+        cluster_header = "timestamp,node_count,added,removed"
         while True:
             timestamp = time.strftime("%Y-%m-%d %H:%M:%S")  # 当前时间
             # 查询 CPU 和 内存 利用率
@@ -113,13 +111,14 @@ class NodeMonitor:
             curr_nodes = set(usage_cpu.keys())
             added = curr_nodes - self.prev_nodes
             removed = self.prev_nodes - curr_nodes
-            added_str = ";".join(f"{n} 节点被新增" for n in added) if added else ""
-            removed_str = ";".join(f"{n} 节点被移除" for n in removed) if removed else ""
+            added_str = "//".join(sorted(added)) if added else ""
+            removed_str = "//".join(sorted(removed)) if removed else ""
+            detailed_nodes_str = "//".join(sorted(curr_nodes))
+
             cluster_line = [timestamp,
                             str(len(curr_nodes)),
                             added_str,
-                            removed_str,
-                            ";".join(curr_nodes)]
+                            removed_str]
             self.write_csv("data/node/cluster-info.csv", cluster_header, cluster_line)
             if added or removed:
                 self.logger.info(f"Cluster Change at {timestamp}: 新增节点={added}, 移除节点={removed}")

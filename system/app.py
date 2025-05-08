@@ -10,7 +10,7 @@ def main():
     # 入口参数
     parser = argparse.ArgumentParser(description="K8s Cluster Monitoring")
     parser.add_argument("--interval", type=int, default=5, help="采样间隔（秒）")
-    parser.add_argument("--log", action="store_true", help="启用日志记录到文件")
+    parser.add_argument("--log", action="store_false", help="启用日志记录到文件")
     parser.add_argument("--prom", type=str, default="http://34.129.107.238:32501", help="Prometheus地址URL")
     args = parser.parse_args()
 
