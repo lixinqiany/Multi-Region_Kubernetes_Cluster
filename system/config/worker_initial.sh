@@ -39,8 +39,6 @@ systemctl restart containerd
 systemctl enable containerd
 #systemctl status containerd
 
-sudo DEBIAN_FRONTEND=noninteractive apt-get install -y nfs-common rpcbind
-
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y kubelet=1.32.3-1.1 kubeadm=1.32.3-1.1 kubectl=1.32.3-1.1
 sudo DEBIAN_FRONTEND=noninteractive apt-mark hold kubelet kubeadm kubectl
 

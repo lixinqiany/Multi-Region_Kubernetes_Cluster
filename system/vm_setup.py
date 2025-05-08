@@ -7,18 +7,26 @@
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from gcp.VMManager import VMManager
-import os
+import os,logging
+
+logging.basicConfig(
+            level=logging.INFO,
+            format="%(asctime)s [%(name)s] %(levelname)s: %(message)s"
+        )
+# 默认仅警告级别以上输出至控制台（不创建文件）
+logging.basicConfig(level=logging.WARNING, format="%(asctime)s [%(name)s] %(levelname)s: %(message)s")
 
 def main():
+    # 不能并发太多
     node_nums = 6
     name_tem = "node-"
     node_names = [f"{name_tem}{x+1}" for x in range(node_nums)]
     # use multiple threads to create nodes
     region = "australia-southeast1"
-    machine_type = "e2-standard-8"
+    machine_type = "e2-standard-4"
     vm_manager = VMManager()
 
-    with ThreadPoolExecutor(max_workers=6) as executor:
+    with ThreadPoolExecutor(max_workers=2) as executor:
         future_to_node = {
             executor.submit(vm_manager.create_node, name, region, machine_type,20): name
             for name in node_names

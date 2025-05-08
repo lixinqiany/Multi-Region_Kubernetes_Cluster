@@ -136,7 +136,7 @@ class VMManager:
         sftp = ssh.open_sftp()
         remote_path = '/root/worker_initial.sh'
         sftp.put(local_script, remote_path)
-        sftp.chmod(remote_path, 0o755)
+        sftp.chmod(remote_path, 0o777)
         sftp.close()
         # 执行脚本
         stdin, stdout, stderr = ssh.exec_command(f"bash {remote_path}")
