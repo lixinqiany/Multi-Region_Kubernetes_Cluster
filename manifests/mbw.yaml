@@ -9,7 +9,7 @@ metadata:
 spec:
   parallelism: 20
   completions: 2
-  backoffLimit: 3
+  backoffLimit: 4
   template:
     metadata:
       labels:
