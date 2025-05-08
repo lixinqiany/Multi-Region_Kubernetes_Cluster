@@ -1,18 +1,15 @@
 #!/bin/bash
 
-# 每阶段持续时间（秒）：15分钟
-DURATION=900
+# 每阶段持续时间（秒），90分钟总共6个阶段 => 每阶段15分钟
+DURATION=1200
 
-# 两种副本数交替变化：6 和 10
-LOW=6
-HIGH=10
+# 阶跃副本数序列
+REPLICAS=(6 12 4 8 20 6)
 
-while true; do
-  echo "$(date): Scaling step-load to $LOW replicas"
-  kubectl scale deploy step-load --replicas=$LOW
-  sleep $DURATION
-
-  echo "$(date): Scaling step-load to $HIGH replicas"
-  kubectl scale deploy step-load --replicas=$HIGH
+for r in "${REPLICAS[@]}"; do
+  echo "$(date): Scaling step-load to $r replicas"
+  kubectl scale deploy step-load --replicas=$r
   sleep $DURATION
 done
+
+echo "$(date): Done scaling. Total duration: $((DURATION * ${#REPLICAS[@]} / 60)) minutes"
