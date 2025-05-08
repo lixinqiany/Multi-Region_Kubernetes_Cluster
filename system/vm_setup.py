@@ -15,7 +15,7 @@ def main():
     node_names = [f"{name_tem}{x+1}" for x in range(node_nums)]
     # use multiple threads to create nodes
     region = "australia-southeast1"
-    machine_type = "e2-standard-4"
+    machine_type = "e2-standard-8"
     vm_manager = VMManager()
 
     with ThreadPoolExecutor(max_workers=6) as executor:
