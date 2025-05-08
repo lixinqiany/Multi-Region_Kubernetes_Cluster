@@ -20,9 +20,9 @@ spec:
           image: lixinqiany/job:renaissance_1.1
           resources:
             requests:
-              cpu: "3100m"
+              cpu: "3200m"
               memory: "512Mi"
             limits:
-              cpu: "3100m"
+              cpu: "3200m"
               memory: "512Mi"
       restartPolicy: OnFailure
