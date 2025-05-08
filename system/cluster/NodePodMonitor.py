@@ -29,8 +29,28 @@ class NodePodMonitor:
         """启动节点Pod分布监控循环，检测Pod增减变化并记录。"""
         self.logger.info("Pod分布监控器 NodePodMonitor started.")
         header = "timestamp,action,pod"
+        pending_header = "timestamp,pending_pod_count"
+
         while True:
             timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+
+            # --- Part 1: Pending Pod 数量监控 --- #
+            try:
+                # 通过 Kubernetes API 统计 Pending Pods
+                pods = self.cluster.core_v1.list_namespaced_pod(
+                    namespace=self.namespace
+                ).items
+                pending_count = sum(1 for p in pods if p.status.phase == "Pending")
+                # 写入 pending 统计文件
+                self.write_csv(
+                    "data/plan/pending-pod-count.csv",
+                    pending_header,
+                    [timestamp, str(pending_count)]
+                )
+                self.logger.info(f"Pending Pods: {pending_count}")
+            except Exception as e:
+                self.logger.error(f"统计 Pending Pods 失败: {e}")
+
             # 构建当前分布：node -> set(Pod名称) via kubernets API
             current_dist = self.cluster.get_pod_node_map(self.namespace)
             # 若第一次运行，记录初始状态(将所有Pod视为新增)
