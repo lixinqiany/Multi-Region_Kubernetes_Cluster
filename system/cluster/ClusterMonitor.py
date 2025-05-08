@@ -1,7 +1,10 @@
 import logging
+import time
 
 import urllib3
 from kubernetes import client, config
+from kubernetes.client import PolicyV1Api
+from kubernetes.client.rest import ApiException
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 class ClusterMonitor:
@@ -124,3 +127,58 @@ class ClusterMonitor:
         except Exception as e:
             self.logger.error(f"list_jobs failed: {e}")
         return out
+
+    def cordon_node(self, node_name: str):
+        """
+        Mark a node as unschedulable (cordon).
+        """
+        body = {"spec": {"unschedulable": True}}
+        try:
+            self.core_v1.patch_node(node_name, body)
+            self.logger.info(f"Cordoned node {node_name},标记不可调度")
+        except ApiException as e:
+            self.logger.error(f"Failed to cordon {node_name}: {e}")
+            raise
+
+    def drain_node(self, node_name: str, grace_period_seconds: int = 30, timeout: int = 120):
+        """
+        Evict all pods from the node, blocking until done or timeout.
+        """
+        # 先 cordon
+        self.cordon_node(node_name)
+
+        # 一次性获取所有 Pod
+        field = f"spec.nodeName={node_name}"
+        pods = self.core_v1.list_pod_for_all_namespaces(field_selector=field).items
+        if not pods:
+            self.logger.info(f"没有pods No pods found on node {node_name} to evict.")
+            return
+
+        for pod in pods:
+            name = pod.metadata.name
+            ns = pod.metadata.namespace
+            eviction = client.V1Eviction(
+                metadata=client.V1ObjectMeta(name=name, namespace=ns),
+                delete_options=client.V1DeleteOptions(grace_period_seconds=grace_period_seconds)
+            )
+            try:
+                # 尝试优雅驱逐
+                self.core_v1.create_namespaced_pod_eviction(
+                    name=name, namespace=ns, body=eviction
+                )
+                self.logger.debug(f"Eviction triggered for Pod {name}")
+            except ApiException as e:
+                # PDB 阻止或其它错误，则强制删除
+                self.logger.warning(f"Eviction failed for {name} (status {e.status}), deleting directly")
+                try:
+                    self.core_v1.delete_namespaced_pod(
+                        name=name,
+                        namespace=ns,
+                        grace_period_seconds=grace_period_seconds,
+                        body=client.V1DeleteOptions()
+                    )
+                    self.logger.debug(f"Deleted Pod {name} bypassing Eviction")
+                except ApiException as delete_err:
+                    self.logger.error(f"Failed to delete Pod {name}: {delete_err}")
+
+        self.logger.info(f"Eviction/delete attempted once for all pods on node {node_name}")

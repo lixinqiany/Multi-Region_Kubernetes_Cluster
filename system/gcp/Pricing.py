@@ -24,9 +24,9 @@ class PricingClient:
     # Compute Engine 服务在 Catalog API 中的标识
     COMPUTE_ENGINE_SERVICE_NAME = "services/6F81-5844-456A"
     project_id = "single-cloud-ylxq"
-    pricing_path = "../data/gcp/pricing_map.json"
-    machine_types_path = "../data/gcp/machine_types.json"
-    region_machine_price_path = "../data/gcp/region_machine_prices.json"
+    pricing_path = "./data/gcp/pricing_map.json"
+    machine_types_path = "./data/gcp/machine_types.json"
+    region_machine_price_path = "./data/gcp/region_machine_prices.json"
 
     def __init__(self):
         self.logger = logging.getLogger(f"{__name__}.{self.__class__.__name__}")

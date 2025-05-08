@@ -14,10 +14,12 @@ gcp_node_manager.py
 """
 
 import os, json, time, logging
-
+from google.api_core.exceptions import NotFound
 import paramiko
 from google.cloud import compute_v1
 from cluster.ClusterMonitor import ClusterMonitor
+from pathlib import Path
+
 
 class VMManager:
     """
@@ -34,7 +36,9 @@ class VMManager:
         self.regions_client = compute_v1.RegionsClient()
 
         self.project = "single-cloud-ylxq"
-        self.startup_script_path = startup_script_path
+        project_root = Path(__file__).parents[1]  # system/gcp/VMManager.py -> ../../
+        self.startup_script_path = str((project_root / startup_script_path).resolve())
+        print(f"Startup script path: {self.startup_script_path}")
 
         self.logger = logging.getLogger(f"{__name__}.{self.__class__.__name__}")
 
@@ -130,7 +134,7 @@ class VMManager:
         上传本地初始化脚本并在远端执行。
         """
         sftp = ssh.open_sftp()
-        remote_path = '/home/yulixinqian805/worker_initial.sh'
+        remote_path = '/root/worker_initial.sh'
         sftp.put(local_script, remote_path)
         sftp.chmod(remote_path, 0o755)
         sftp.close()
@@ -181,7 +185,66 @@ class VMManager:
             time.sleep(interval)
         raise TimeoutError(f"等待节点 {node_name} Ready 超时")
 
+    def delete_node(self, node_name: str, location: str, grace_period: int = 30):
+        # 1. 安全退出集群
+        self.cluster_monitor.drain_node(node_name)
+        # 2. delete node from cluster
+        try:
+            self.cluster_monitor.core_v1.delete_node(node_name)
+            self.logger.info(f"从集群中删除节点Deleted Kubernetes Node object {node_name}")
+        except Exception as e:
+            self.logger.warning(f"Failed to delete Node object {node_name}: {e}")
+        # 3. 在 GCP 中查找并删除实例
+        deleted = False
+        agg = self.instances_client.aggregated_list(project=self.project)
+        for zone_url, scoped_list in agg:
+            instances = scoped_list.instances
+            if not instances:
+                continue
+            zone = zone_url.split('/')[-1]
+            for inst in instances:
+                if inst.name == node_name:
+                    self.logger.info(f"Deleting VM {node_name} in zone {zone}")
+                    op = self.instances_client.delete(
+                        project=self.project,
+                        zone=zone,
+                        instance=node_name
+                    )
+                    op.result()
+                    deleted = True
+                    break
+            if deleted:
+                break
+        if not deleted:
+            self.logger.warning(f"实例删除时没有找到Instance {node_name} not found in any zone")
+            return False
+        # 等待删除
+        self._wait_for_deletion(node_name, zone, timeout=180)
+        return True
+
+    def _wait_for_deletion(self, node_name: str, zone: str, timeout: int = 300):
+        start = time.time()
+        while time.time() - start < timeout:
+            try:
+                # 调用 get，如果资源尚未删除则不会抛 404
+                self.instances_client.get(project=self.project,
+                                          zone=zone,
+                                          instance=node_name)
+                self.logger.debug(f"VM {node_name} still exists in zone {zone}, retrying...")
+                time.sleep(5)
+            except NotFound as e:
+                if e.code == 404:
+                    self.logger.info(f"实例 {node_name} 在 zone {zone} 已确认删除")
+                    return
+                else:
+                    # 其它 HTTP 错误
+                    self.logger.error(f"Error checking deletion of {node_name}: {e}")
+                    raise
+        raise TimeoutError(f"等待实例 {node_name} 在 zone {zone} 删除超时")
+
 if __name__== "__main__":
     os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "./config/single-cloud-ylxq-ed1608c43bb4.json"
     vm_manager = VMManager()
-    vm_manager.create_node(name="test-node", location="us-west1", machine_type="e2-standard-2")
+    # vm_manager.create_node(name="test-node", location="us-west1", machine_type="e2-standard-2")
+    if vm_manager.delete_node(node_name="test-node", location="us-west1"):
+        print("节点删除成功")
