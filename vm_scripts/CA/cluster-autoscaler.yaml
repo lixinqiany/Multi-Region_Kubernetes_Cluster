@@ -1,0 +1,149 @@
+###############################################################################
+#  Cluster Autoscaler – 完整版 YAML
+#  适用环境：GCE (kubeadm 自建集群)，单区 MIG
+#  ⚠️  请替换 <PROJECT_ID>  <ZONE>  <MIG_NAME> 三个占位符
+###############################################################################
+# 下载账号的json密钥
+#kubectl create secret generic ca-gcp-sa \
+#  --namespace=kube-system \
+#  --from-file=key.json=./ca-sa-key.json
+#--------------------------------------------------------------------
+# 1) ServiceAccount
+#--------------------------------------------------------------------
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: cluster-autoscaler
+  namespace: kube-system
+---
+#--------------------------------------------------------------------
+# 2) ClusterRole（官方完整规则，确保拥有所有所需权限）
+#--------------------------------------------------------------------
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: cluster-autoscaler
+rules:
+- apiGroups: [""]
+  resources:
+    - events
+    - endpoints
+    - pods
+    - services
+    - replicationcontrollers
+    - persistentvolumeclaims
+    - persistentvolumes
+    - namespaces
+    - nodes
+  verbs: ["get","list","watch","create","patch","update"]
+- apiGroups: ["apps"]
+  resources: ["replicasets","statefulsets","daemonsets"]
+  verbs: ["get","list","watch"]
+- apiGroups: ["batch"]
+  resources: ["jobs","cronjobs"]
+  verbs: ["get","list","watch"]
+- apiGroups: ["policy"]
+  resources: ["poddisruptionbudgets"]
+  verbs: ["get","list","watch"]
+- apiGroups: ["storage.k8s.io"]
+  resources: ["storageclasses","csinodes","csidrivers","csistoragecapacities"]
+  verbs: ["get","list","watch"]
+- apiGroups: ["coordination.k8s.io"]
+  resources: ["leases"]
+  verbs: ["get","list","watch","create","update","patch"]
+- apiGroups: ["autoscaling"]
+  resources: ["horizontalpodautoscalers"]
+  verbs: ["get","list","watch"]
+- apiGroups: [""]
+  resources: ["configmaps"]        # ← 新增
+  verbs: ["get","list","watch","create","update","patch"]
+---
+#--------------------------------------------------------------------
+# 3) ClusterRoleBinding
+#--------------------------------------------------------------------
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: cluster-autoscaler
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-autoscaler
+subjects:
+- kind: ServiceAccount
+  name: cluster-autoscaler
+  namespace: kube-system
+---
+#--------------------------------------------------------------------
+# 4) Deployment
+#--------------------------------------------------------------------
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cluster-autoscaler
+  namespace: kube-system
+  labels:
+    app: cluster-autoscaler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cluster-autoscaler
+  template:
+    metadata:
+      labels:
+        app: cluster-autoscaler
+      annotations:
+        cluster-autoscaler.kubernetes.io/safe-to-evict: "false"
+    spec:
+      #
+      # 如要把 CA 跑到 control-plane，请保留下方 tolerations；
+      # 若希望跑在普通 Worker，直接删掉 tolerations 段。
+      #
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        operator: "Exists"
+        effect: "NoSchedule"
+
+      serviceAccountName: cluster-autoscaler
+
+      containers:
+      - name: cluster-autoscaler
+        image: k8s.gcr.io/autoscaling/cluster-autoscaler:v1.27.1
+        #
+        # 挂载 GCP 服务帐号 JSON
+        #
+        env:
+        - name: GOOGLE_APPLICATION_CREDENTIALS
+          value: /etc/gcp/key.json
+        command:
+        - ./cluster-autoscaler
+        - --v=4
+        - --cloud-provider=gce
+        - --namespace=kube-system
+        #
+        # 显式声明节点组：min=1  max=6
+        # selfLink 格式：
+        # https://www.googleapis.com/compute/v1/projects/<PROJECT_ID>/zones/<ZONE>/instanceGroups/<MIG_NAME>
+        #
+        - --nodes=1:6:https://www.googleapis.com/compute/v1/projects/single-cloud-ylxq/zones/australia-southeast1-b/instanceGroups/workers-mig
+        - --scale-down-utilization-threshold=0.35      # 利用率低于 30% 可删
+        - --scale-down-unneeded-time=2m               # 闲置 5 分钟可删
+        - --scale-down-unready-time=5m               # NotReady 10 分钟可删
+        #
+        # 其他常用参数
+        #
+        - --balance-similar-node-groups
+        - --skip-nodes-with-local-storage=false
+        - --skip-nodes-with-system-pods=false
+
+        volumeMounts:
+        - name: gcp-sa-key
+          mountPath: /etc/gcp
+          readOnly: true
+
+      volumes:
+      - name: gcp-sa-key
+        secret:
+          secretName: cluster-autoscaler-sa   # ← 第一步 create secret 时的名字
+
