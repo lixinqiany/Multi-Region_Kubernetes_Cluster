@@ -5,7 +5,7 @@ set -euo pipefail
 # 参数：$1 = job 名称，$2 = 超时时间（秒，可选，默认 3600s）
 wait_for_completion() {
   local job="$1"
-  local timeout="${2:-300}"
+  local timeout="${2:-3600}"
   echo "[$(date '+%Y-%m-%d %H:%M:%S')] 等待 Job '$job' 完成，超时 ${timeout}s ..."
   kubectl wait --for=condition=complete "job/${job}" --timeout="${timeout}s"
   echo "[$(date '+%Y-%m-%d %H:%M:%S')] Job '$job' 已完成。"
@@ -27,6 +27,7 @@ sleep 3000
 # 等待上一轮 renaissance 完成，再 delete 并重新 apply
 wait_for_completion "renaissance"
 kubectl delete job renaissance --ignore-not-found
+sleep 5
 kubectl apply -f renaissance.yaml
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] 第二轮 renaissance 已提交。"
 
@@ -37,6 +38,7 @@ sleep 600
 # 等待上一轮 mbw 完成，再 delete 并重新 apply
 wait_for_completion "mbw"
 kubectl delete job mbw --ignore-not-found
+sleep 5
 kubectl apply -f mbw.yaml
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] 第二轮 mbw 已提交。"
 
