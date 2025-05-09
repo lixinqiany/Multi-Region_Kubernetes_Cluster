@@ -1,21 +1,21 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# 输出开始时间
-echo "🕒 $(date): 脚本开始执行。将于 15 分钟后部署 renaissance-job..."
-
-# 等待 15 分钟（900 秒）
-sleep 900
-
-# 应用 renaissance job
-echo "🚀 $(date): 正在部署 renaissance.yaml..."
+# 第一次轮次
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] 等待 10 分钟，开始 apply renaissance.yaml"
+sleep 600
 kubectl apply -f renaissance.yaml
 
-# 等待 30 分钟（1800 秒）
-echo "🕒 $(date): 等待 30 分钟再部署 mbw-job..."
-sleep 900
-
-# 应用 mbw job
-echo "🚀 $(date): 正在部署 mbw-job.yaml..."
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] 等待 10 分钟，开始 apply mbw.yaml"
+sleep 600
 kubectl apply -f mbw.yaml
 
-echo "✅ $(date): 所有作业部署完成。"
+# 第二次轮次
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] 等待 45 分钟，开始第二轮 apply renaissance.yaml"
+sleep 3000
+kubectl apply -f renaissance.yaml
+
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] 等待 10 分钟，开始第二轮 apply mbw.yaml"
+sleep 600
+kubectl apply -f mbw.yaml
+
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] 脚本执行完毕"

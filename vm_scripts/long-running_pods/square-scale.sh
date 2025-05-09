@@ -4,7 +4,7 @@
 DURATION=1200
 
 # 阶跃副本数序列
-REPLICAS=(6 12 6 4 8 6)
+REPLICAS=(6 12 6 8 4 6)
 
 for r in "${REPLICAS[@]}"; do
   echo "$(date): Scaling step-load to $r replicas"
