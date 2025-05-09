@@ -62,7 +62,7 @@ class NodeMonitor:
         # 表头定义
         header = "timestamp,cpu_usage(core),cpu_capacity(core),cpu_util_percent,memory_usage_bytes,memory_total_bytes,memory_util_percent"
         # 集群节点信息的表头
-        cluster_header = "timestamp,node_count,added,removed"
+        cluster_header = "timestamp,node_count,added,removed,detailed_nodes"
         while True:
             timestamp = time.strftime("%Y-%m-%d %H:%M:%S")  # 当前时间
             # 查询 CPU 和 内存 利用率
@@ -118,7 +118,8 @@ class NodeMonitor:
             cluster_line = [timestamp,
                             str(len(curr_nodes)),
                             added_str,
-                            removed_str]
+                            removed_str,
+                            detailed_nodes_str]
             self.write_csv("data/node/cluster-info.csv", cluster_header, cluster_line)
             if added or removed:
                 self.logger.info(f"Cluster Change at {timestamp}: 新增节点={added}, 移除节点={removed}")

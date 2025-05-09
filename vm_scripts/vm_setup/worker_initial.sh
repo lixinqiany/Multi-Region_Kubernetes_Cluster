@@ -44,6 +44,22 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y nfs-common rpcbind
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y kubelet=1.32.3-1.1 kubeadm=1.32.3-1.1 kubectl=1.32.3-1.1
 sudo DEBIAN_FRONTEND=noninteractive apt-mark hold kubelet kubeadm kubectl
 
-systemctl enable kubelet
+sudo systemctl enable kubelet
+
+PROJECT_ID=$(curl -s -H "Metadata-Flavor: Google" http://metadata.google.internal/computeMetadata/v1/project/project-id)
+ZONE=$(curl -s -H "Metadata-Flavor: Google" http://metadata.google.internal/computeMetadata/v1/instance/zone | awk -F/ '{print $NF}')
+HOSTNAME=$(hostname)
+
+sudo mkdir -p /etc/systemd/system/kubelet.service.d
+
+cat <<EOF | sudo tee /etc/systemd/system/kubelet.service.d/20-cloud-provider.conf
+[Service]
+Environment="KUBELET_EXTRA_ARGS=--cloud-provider=gce --provider-id=gce://${PROJECT_ID}/${ZONE}/${HOSTNAME}"
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl restart kubelet
 
 kubeadm join 10.192.0.2:6443 --token 2tk7uf.r5lg4pr4xln8ap4i --discovery-token-ca-cert-hash sha256:01d90eede05983350531420a401e040560870f36ab8ddb9e031936107a906ac1
+
+sudo systemctl enable kubelet
