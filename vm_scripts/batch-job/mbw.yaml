@@ -8,7 +8,7 @@ metadata:
     app: pts
 spec:
   parallelism: 4
-  completions: 16
+  completions: 20
   backoffLimit: 6
   template:
     metadata:
