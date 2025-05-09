@@ -7,9 +7,9 @@ metadata:
     type: batch-job
     app: pts
 spec:
-  parallelism: 1
-  completions: 2
-  backoffLimit: 3
+  parallelism: 3
+  completions: 12
+  backoffLimit: 6
   template:
     metadata:
       labels:
@@ -20,9 +20,9 @@ spec:
           image: lixinqiany/job:renaissance_1.1
           resources:
             requests:
-              cpu: "4"
+              cpu: "3200m"
               memory: "512Mi"
             limits:
-              cpu: "4"
+              cpu: "3200m"
               memory: "512Mi"
-      restartPolicy: Never
+      restartPolicy: OnFailure
