@@ -35,6 +35,7 @@ rules:
     - persistentvolumes
     - namespaces
     - nodes
+    - pods/eviction
   verbs: ["get","list","watch","create","patch","update"]
 - apiGroups: ["apps"]
   resources: ["replicasets","statefulsets","daemonsets"]
