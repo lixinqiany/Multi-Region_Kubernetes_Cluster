@@ -1,0 +1,23 @@
+timestamp,action,pod
+2025-05-10 12:11:28,ADD,step-load-8476d48fcd-hz8qn
+2025-05-10 12:16:28,ADD,nginx-7c4b4649d-j9247
+2025-05-10 12:31:31,ADD,mbw-pjjxg
+2025-05-10 12:31:31,ADD,step-load-8476d48fcd-cxbkv
+2025-05-10 12:41:29,DEL,mbw-pjjxg
+2025-05-10 12:41:34,ADD,mbw-5qvp9
+2025-05-10 12:51:33,DEL,mbw-5qvp9
+2025-05-10 12:51:38,ADD,mbw-n9kct
+2025-05-10 12:52:00,DEL,step-load-8476d48fcd-cxbkv
+2025-05-10 13:01:37,DEL,mbw-n9kct
+2025-05-10 13:11:33,ADD,step-load-8476d48fcd-6vshl
+2025-05-10 13:31:55,ADD,mbw-pgm2q
+2025-05-10 13:32:00,DEL,step-load-8476d48fcd-hz8qn
+2025-05-10 13:32:00,DEL,step-load-8476d48fcd-6vshl
+2025-05-10 13:42:00,ADD,mbw-n29ck
+2025-05-10 13:42:00,DEL,mbw-pgm2q
+2025-05-10 13:51:33,ADD,step-load-8476d48fcd-9llpw
+2025-05-10 13:52:05,ADD,mbw-fh42f
+2025-05-10 13:52:05,DEL,mbw-n29ck
+2025-05-10 14:02:09,DEL,mbw-fh42f
+2025-05-10 14:17:35,DEL,nginx-7c4b4649d-j9247
+2025-05-10 14:18:06,DEL,step-load-8476d48fcd-9llpw
