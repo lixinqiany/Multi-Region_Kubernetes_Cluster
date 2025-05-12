@@ -4,6 +4,7 @@ metadata:
   name: step-load
   labels:
     app: step-load
+    type: batch-job
 spec:
   replicas: 6
   selector:
@@ -13,6 +14,7 @@ spec:
     metadata:
       labels:
         app: step-load
+        type: batch-job
     spec:
       containers:
       - name: step-load
