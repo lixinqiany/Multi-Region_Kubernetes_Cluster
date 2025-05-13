@@ -1,5 +1,5 @@
 import logging
-import time
+import time, uuid,copy
 
 import urllib3
 from kubernetes import client, config
@@ -20,6 +20,7 @@ class ClusterMonitor:
         self.core_v1 = client.CoreV1Api()
         self.batch_v1 = client.BatchV1Api()
         self.apps_v1 = client.AppsV1Api()
+        self.metrics_api = client.CustomObjectsApi()
 
     def get_running_pods(self, namespace):
         """
@@ -182,3 +183,114 @@ class ClusterMonitor:
                     self.logger.error(f"Failed to delete Pod {name}: {delete_err}")
 
         self.logger.info(f"Eviction/delete attempted once for all pods on node {node_name}")
+
+    # ──────────────────────────
+    # Pending Pod 绑定到目标节点
+    # ──────────────────────────
+    def bind_pod(self, name: str, namespace: str, node: str):
+        try:
+            target = client.V1ObjectReference(api_version="v1",
+                                              kind="Node", name=node)
+            body = client.V1Binding(
+                metadata=client.V1ObjectMeta(name=name, namespace=namespace),
+                target=target)
+            self.core_v1.create_namespaced_binding(namespace=namespace, body=body)
+        except ApiException as e:
+            self.logger.error(f"绑定Pod {name}到节点{node}失败")
+            print(e)
+        except Exception as e:
+            self.logger.info(f"绑定Pod {name}到节点{node}成功")
+
+    # ─────────────────────────────────────────────
+    # 热迁移：clone→bind→delete old
+    # ─────────────────────────────────────────────
+    def move_pod(self, name: str, namespace: str, target_node: str):
+        """
+        1. 读取运行中 Pod definition
+        2. 克隆一个新 Pod 并绑定到目标节点
+        3. 删除旧 Pod
+        """
+        # ① 获取原 Pod 对象
+        old = self.core_v1.read_namespaced_pod(name, namespace)
+
+        # ② 构造新 Pod meta & spec
+        new_name = f"{name}-mv-{uuid.uuid4().hex[:6]}"
+        new_meta = client.V1ObjectMeta(
+            name=new_name,
+            namespace=namespace,
+            labels=copy.deepcopy(old.metadata.labels),
+            annotations=copy.deepcopy(old.metadata.annotations),
+            owner_references=copy.deepcopy(old.metadata.owner_references),
+        )
+        new_spec = copy.deepcopy(old.spec)
+        new_spec.node_name = None  # 解除节点绑定
+        new_spec.scheduler_name = old.spec.scheduler_name
+        # ③ 创建新 Pod（Pending）
+        pod_body = client.V1Pod(metadata=new_meta, spec=new_spec)
+        self.core_v1.create_namespaced_pod(namespace, pod_body)
+
+        # ④ 立即绑定到目标节点
+        self.bind_pod(new_name, namespace, target_node)
+
+        # ⑤ 删除旧 Pod（grace_period=0 前台删除）
+        self.core_v1.delete_namespaced_pod(
+            name=name, namespace=namespace,
+            body=client.V1DeleteOptions(
+                grace_period_seconds=0,
+                propagation_policy="Foreground"))
+
+    def wait_node_ready(self, name: str,
+                        timeout: int = 300,
+                        interval: int = 5) -> bool:
+        """
+        轮询 node.status.conditions, 直到 type=Ready 且 status=True。
+        """
+        start = time.time()
+        while time.time() - start < timeout:
+            try:
+                node = self.core_v1.read_node(name)
+                for cond in node.status.conditions or []:
+                    if cond.type == "Ready" and cond.status == "True":
+                        return True
+            except Exception:
+                pass
+            time.sleep(interval)
+        return False
+
+        # ------------------------------------------------------------------
+    def get_node_cpu_util(self, node_name: str) -> float | None:
+        """
+        返回指定节点 **实际 CPU 利用率 (0-1)**；若取不到返回 None
+        依赖 metrics-server (`metrics.k8s.io` CRD)：
+            apiVersion: metrics.k8s.io/v1beta1
+            kind: NodeMetrics
+        """
+        try:
+            m = self.metrics_api.get_cluster_custom_object(
+                group="metrics.k8s.io", version="v1beta1",
+                plural="nodes", name=node_name
+            )
+            # usage.cpu 例子: "123456789n" (纳核)
+            usage_nano = int(m["usage"]["cpu"][:-1])  # 去掉 'n'
+            # capacity.cpu 从 core_v1 Node status
+            node_obj = self.core_v1.read_node(node_name)
+            cap_core = int(node_obj.status.capacity["cpu"])  # 核
+            # 转换为核
+            usage_core = usage_nano / 1e3
+            return usage_core / cap_core if cap_core else None
+        except client.exceptions.ApiException as exc:
+            if exc.status == 404:  # metrics 可能还没上报
+                return None
+            raise
+
+if __name__ == "__main__":
+    # 测试代码
+    # 1. 创建 ClusterMonitor 实例
+    cm = ClusterMonitor()
+    # 2. 获取节点 CPU 利用率
+    node_name = "node-1"  # 替换为实际节点名称
+    cpu_util = cm.get_node_cpu_util(node_name)
+    if cpu_util is not None:
+        print(f"Node {node_name} CPU Utilization: {cpu_util:.2%}")
+    else:
+        print(f"无法获取 Node {node_name} 的 CPU 利用率")

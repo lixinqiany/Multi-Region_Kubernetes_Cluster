@@ -23,9 +23,11 @@ class BaseOptimizer(ABC):
         super().__init__()
 
     @abstractmethod
+    @abstractmethod
     def optimize(self,
-                 current: ResourceModel,
-                 pending: List[Pod]) -> Tuple[ResourceModel, List[Pod]]:
+                 plan: ResourceModel,
+                 pending: list[Pod],
+                 mode: str = "incremental") -> tuple[ResourceModel, list[Pod]]:
         """
         Parameters
         ----------
@@ -46,6 +48,6 @@ class BaseOptimizer(ABC):
 
 
 class NoOpOptimizer(BaseOptimizer):
-    def optimize(self, current, pending):
+    def optimize(self, current, pending,mode: str = "incremental"):
         # 什么都不做：直接原样返回
         return current, pending

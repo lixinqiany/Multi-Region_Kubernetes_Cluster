@@ -1,0 +1,11 @@
+timestamp,action,pod
+2025-05-13 18:59:21,ADD,mbw-brg49
+2025-05-13 19:01:30,ADD,nginx-69576ccd8f-xdq42
+2025-05-13 19:03:29,ADD,nginx-69576ccd8f-sbjx6
+2025-05-13 19:09:25,DEL,mbw-brg49
+2025-05-13 19:09:56,ADD,nginx-69576ccd8f-w6jcf
+2025-05-13 19:12:05,ADD,mbw-776hn
+2025-05-13 19:16:10,DEL,nginx-69576ccd8f-w6jcf
+2025-05-13 19:16:10,DEL,nginx-69576ccd8f-sbjx6
+2025-05-13 19:16:10,DEL,nginx-69576ccd8f-xdq42
+2025-05-13 19:16:36,DEL,mbw-776hn

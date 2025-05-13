@@ -1,0 +1,575 @@
+2025-05-13 17:01:36,447 [root] INFO: Starting monitors with interval=5s, Prometheus=http://34.129.107.238:32501
+2025-05-13 17:01:36,534 [cluster.NodeMonitor.NodeMonitor] INFO: node监控器 连接prometheus服务器True
+2025-05-13 17:01:36,551 [cluster.ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-13 17:01:36,577 [cluster.PodMonitor.PodMonitor] INFO: pod监控器 连接prometheus服务器True
+2025-05-13 17:01:36,589 [cluster.ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-13 17:01:36,617 [cluster.NodePodMonitor.NodePodMonitor] INFO: pod分布监控器 连接prometheus服务器True
+2025-05-13 17:01:36,625 [cluster.ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-13 17:01:37,376 [cluster.ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-13 17:01:37,383 [cluster.ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-13 17:01:37,384 [cluster.NodeMonitor.NodeMonitor] INFO: 节点性能监控器 NodeMonitor started.
+2025-05-13 17:01:37,384 [cluster.PodMonitor.PodMonitor] INFO: PodMonitor started.
+2025-05-13 17:01:37,385 [cluster.NodePodMonitor.NodePodMonitor] INFO: Pod分布监控器 NodePodMonitor started.
+2025-05-13 17:01:37,387 [cluster.NginxSLOMonitor.NginxSLOMonitor] INFO: NginxSLOMonitor (multi-threshold) started.
+2025-05-13 17:01:37,388 [cluster.DeploymentMonitor.DeploymentMonitor] INFO: deployment资源监控器 DeploymentMonitor started.
+2025-05-13 17:01:37,389 [cluster.JobMonitor.JobMonitor] INFO: Job资源监控器JobMonitor started.
+2025-05-13 17:01:37,390 [root] INFO: All monitoring threads started.
+2025-05-13 17:01:37,455 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 17:01:37: 新增节点={'master', 'node-1'}, 移除节点=set()
+2025-05-13 17:01:38,225 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:01:43,242 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:01:48,258 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:01:53,273 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:01:58,297 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:02:03,316 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:02:08,331 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:02:13,351 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:02:18,377 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:02:23,391 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:02:28,414 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:02:33,427 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:02:38,453 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:02:43,472 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:02:48,486 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:02:53,509 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:02:58,523 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:03:03,537 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:03:08,550 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:03:13,569 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:03:18,582 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:03:23,601 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:03:28,624 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:03:33,646 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:03:38,672 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:03:43,695 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:03:48,718 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:03:53,736 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:03:58,747 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:04:03,762 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:04:08,774 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:04:13,797 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:04:18,811 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:04:23,835 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:04:28,861 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:04:33,876 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:04:38,892 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:04:43,907 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:04:48,921 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:04:53,939 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:04:58,957 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:05:03,971 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:05:08,992 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:05:14,010 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:05:19,033 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:05:24,047 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:05:29,062 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:05:34,080 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:05:39,093 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:05:44,111 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:05:49,126 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:05:54,151 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:05:59,172 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:06:04,184 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:06:09,201 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:06:14,219 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:06:19,233 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:06:24,257 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:06:29,276 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:06:34,296 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:06:39,318 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:06:44,334 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:06:49,353 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:06:54,380 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:06:59,402 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:07:04,428 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:07:09,453 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:07:14,471 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:07:19,488 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:07:24,510 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:07:29,535 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:07:34,558 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:07:39,575 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:07:44,601 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:07:49,617 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:07:54,641 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:07:59,661 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:08:04,679 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:08:09,647 [cluster.DeploymentMonitor.DeploymentMonitor] INFO: Deployment ADD nginx
+2025-05-13 17:08:09,649 [cluster.DeploymentMonitor.DeploymentMonitor] INFO: Deployment ADD step-load
+2025-05-13 17:08:09,693 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:08:14,709 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:08:19,734 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:08:24,750 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:08:29,771 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:08:34,793 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:08:39,817 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:08:44,841 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:08:49,857 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:08:54,882 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:08:59,896 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:09:04,914 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:09:09,936 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:09:14,958 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:09:19,982 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:09:25,007 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:09:30,022 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:09:35,033 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:09:40,056 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:09:45,072 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:09:50,100 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:09:55,114 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:10:00,128 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:10:05,154 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:10:10,169 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:10:15,193 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:10:20,210 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:10:25,224 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:10:30,241 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:10:35,259 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:10:40,289 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:10:45,305 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:10:50,335 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:10:55,367 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:11:00,398 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:11:05,422 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:11:10,450 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:11:15,463 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:11:20,483 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:11:25,509 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:11:30,526 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:11:35,549 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:11:40,576 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:11:45,602 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:11:50,618 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:11:55,646 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:12:00,661 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:12:05,685 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:12:10,702 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:12:15,726 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 17:12:18,691 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD step-load-56f7f9dbb7-s9ltf
+2025-05-13 17:12:18,692 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD step-load-56f7f9dbb7-qljzz
+2025-05-13 17:12:18,693 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD step-load-56f7f9dbb7-snlrl
+2025-05-13 17:12:18,694 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD step-load-56f7f9dbb7-t8cwt
+2025-05-13 17:12:54,378 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-standard-2-92452] ADD nginx-69576ccd8f-6rwh2
+2025-05-13 17:13:02,790 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 17:13:02: 新增节点={'pack-us-central1-n1-standard-2-92452'}, 移除节点=set()
+2025-05-13 17:13:09,662 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-standard-2-92452] ADD step-load-56f7f9dbb7-zsqqw
+2025-05-13 17:13:09,663 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-standard-2-92452] ADD nginx-69576ccd8f-m4c5f
+2025-05-13 17:13:09,664 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-standard-2-92452] ADD step-load-56f7f9dbb7-mlhwr
+2025-05-13 17:18:42,231 [cluster.JobMonitor.JobMonitor] INFO: Job ADD renaissance
+2025-05-13 17:20:39,756 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD nginx-69576ccd8f-wwjf8
+2025-05-13 17:21:20,792 [cluster.NodePodMonitor.NodePodMonitor] INFO: [sa-us-central1-n1-standard-1-77684] ADD nginx-69576ccd8f-wp4wp
+2025-05-13 17:21:25,908 [cluster.NodePodMonitor.NodePodMonitor] INFO: [sa-us-central1-n1-standard-1-77684] ADD nginx-69576ccd8f-vfhkh
+2025-05-13 17:22:01,911 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 17:22:01: 新增节点={'sa-us-central1-n1-standard-1-77684'}, 移除节点=set()
+2025-05-13 17:25:42,884 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-94054] ADD renaissance-hvd85
+2025-05-13 17:25:48,016 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-94054] ADD renaissance-fss28
+2025-05-13 17:25:53,159 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-51683] ADD renaissance-r69rb
+2025-05-13 17:26:02,327 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 17:26:02: 新增节点={'rfsa-us-west1-n1-highcpu-4-51683'}, 移除节点=set()
+2025-05-13 17:26:17,585 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 17:26:17: 新增节点={'pack-us-east1-n1-highcpu-8-94054'}, 移除节点=set()
+2025-05-13 17:28:40,403 [cluster.JobMonitor.JobMonitor] INFO: Job ADD mbw
+2025-05-13 17:29:24,236 [cluster.NodePodMonitor.NodePodMonitor] INFO: [sa-us-central1-n1-standard-1-77684] DEL nginx-69576ccd8f-wp4wp
+2025-05-13 17:29:24,237 [cluster.NodePodMonitor.NodePodMonitor] INFO: [sa-us-central1-n1-standard-1-77684] DEL nginx-69576ccd8f-vfhkh
+2025-05-13 17:29:45,874 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 17:29:45: 新增节点=set(), 移除节点={'sa-us-central1-n1-standard-1-77684'}
+2025-05-13 17:32:04,150 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-94054] ADD mbw-bchpj
+2025-05-13 17:32:04,151 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-51683] ADD step-load-56f7f9dbb7-5gm64
+2025-05-13 17:32:14,488 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-86079] ADD mbw-cjcfh
+2025-05-13 17:32:19,663 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-86079] ADD step-load-56f7f9dbb7-254sb
+2025-05-13 17:32:55,975 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 17:32:55: 新增节点={'rfsa-us-east4-n4-highcpu-2-86079'}, 移除节点=set()
+2025-05-13 17:35:36,496 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD nginx-69576ccd8f-x8k87
+2025-05-13 17:35:57,502 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-94054] ADD nginx-69576ccd8f-qmgjq
+2025-05-13 17:36:02,743 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n4-highcpu-2-33281] ADD mbw-h84b7
+2025-05-13 17:36:08,038 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n4-highcpu-2-33281] ADD step-load-56f7f9dbb7-j6vd9
+2025-05-13 17:36:18,572 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n4-highcpu-2-33281] ADD nginx-69576ccd8f-5fm9d
+2025-05-13 17:36:23,873 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 17:36:23: 新增节点={'rfsa-us-central1-n4-highcpu-2-33281'}, 移除节点=set()
+2025-05-13 17:37:47,481 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-94054] DEL renaissance-hvd85
+2025-05-13 17:37:52,763 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-94054] DEL renaissance-fss28
+2025-05-13 17:37:58,056 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-51683] DEL renaissance-r69rb
+2025-05-13 17:39:58,269 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-94054] DEL nginx-69576ccd8f-qmgjq
+2025-05-13 17:40:29,714 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-94054] DEL mbw-bchpj
+2025-05-13 17:40:29,746 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 17:40:29: 新增节点=set(), 移除节点={'pack-us-east1-n1-highcpu-8-94054'}
+2025-05-13 17:41:06,079 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-51683] DEL step-load-56f7f9dbb7-5gm64
+2025-05-13 17:41:32,085 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 17:41:31: 新增节点=set(), 移除节点={'rfsa-us-west1-n1-highcpu-4-51683'}
+2025-05-13 17:42:18,582 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-86079] DEL mbw-cjcfh
+2025-05-13 17:44:22,996 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-86079] ADD nginx-69576ccd8f-wm8d5
+2025-05-13 17:44:59,221 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-75793] ADD renaissance-427pq
+2025-05-13 17:45:14,920 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-75793] ADD step-load-56f7f9dbb7-5dv9n
+2025-05-13 17:45:14,923 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-75793] ADD renaissance-57hlb
+2025-05-13 17:45:14,924 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-75793] ADD step-load-56f7f9dbb7-ncjpb
+2025-05-13 17:45:14,948 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 17:45:14: 新增节点={'pack-us-east1-n1-highcpu-8-75793'}, 移除节点=set()
+2025-05-13 17:46:07,382 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n4-highcpu-2-33281] DEL mbw-h84b7
+2025-05-13 17:48:33,328 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-86079] ADD mbw-hwh2b
+2025-05-13 17:48:33,329 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n4-highcpu-2-33281] ADD mbw-ndjct
+2025-05-13 17:48:54,486 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-52213] ADD step-load-56f7f9dbb7-tmp9l
+2025-05-13 17:49:15,495 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL step-load-56f7f9dbb7-snlrl
+2025-05-13 17:49:15,498 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL step-load-56f7f9dbb7-qljzz
+2025-05-13 17:49:15,499 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL step-load-56f7f9dbb7-t8cwt
+2025-05-13 17:49:15,500 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL step-load-56f7f9dbb7-s9ltf
+2025-05-13 17:49:20,789 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 17:49:20: 新增节点={'rfsa-us-west1-n1-highcpu-4-52213'}, 移除节点=set()
+2025-05-13 17:49:36,229 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-52213] DEL step-load-56f7f9dbb7-tmp9l
+2025-05-13 17:49:41,404 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-52213] ADD renaissance-5b9l9
+2025-05-13 17:50:38,382 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD mbw-z4qdl
+2025-05-13 17:50:38,385 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD mbw-z6rxf
+2025-05-13 17:52:48,505 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD nginx-69576ccd8f-ghrl8
+2025-05-13 17:53:45,621 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL nginx-69576ccd8f-ghrl8
+2025-05-13 17:54:58,311 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-86079] DEL nginx-69576ccd8f-wm8d5
+2025-05-13 17:55:19,159 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-86079] DEL step-load-56f7f9dbb7-254sb
+2025-05-13 17:55:24,433 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 17:55:24: 新增节点=set(), 移除节点={'rfsa-us-east4-n4-highcpu-2-86079'}
+2025-05-13 17:55:50,166 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-86079] DEL mbw-hwh2b
+2025-05-13 17:56:10,859 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-standard-2-92452] DEL nginx-69576ccd8f-m4c5f
+2025-05-13 17:56:10,861 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-standard-2-92452] DEL nginx-69576ccd8f-6rwh2
+2025-05-13 17:56:16,053 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-standard-2-92452] DEL step-load-56f7f9dbb7-zsqqw
+2025-05-13 17:56:16,054 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-standard-2-92452] DEL step-load-56f7f9dbb7-mlhwr
+2025-05-13 17:56:47,158 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 17:56:46: 新增节点=set(), 移除节点={'pack-us-central1-n1-standard-2-92452'}
+2025-05-13 17:57:07,629 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-75793] DEL renaissance-427pq
+2025-05-13 17:57:17,908 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-75793] DEL renaissance-57hlb
+2025-05-13 17:58:35,152 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n4-highcpu-2-33281] DEL mbw-ndjct
+2025-05-13 17:59:06,062 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 17:59:05: 新增节点={'rfsa-us-east4-n4-highcpu-2-30483'}, 移除节点=set()
+2025-05-13 17:59:16,306 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-75793] ADD step-load-56f7f9dbb7-v4q4b
+2025-05-13 17:59:26,633 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-30483] ADD mbw-bdhm6
+2025-05-13 18:00:08,135 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 18:00:07: 新增节点={'up-us-central1-n1-standard-1-74581'}, 移除节点=set()
+2025-05-13 18:00:38,941 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL mbw-z4qdl
+2025-05-13 18:00:38,942 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL mbw-z6rxf
+2025-05-13 18:01:25,370 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n4-highcpu-2-33281] ADD mbw-m84dd
+2025-05-13 18:01:25,371 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-52213] ADD step-load-56f7f9dbb7-5vgcf
+2025-05-13 18:01:30,571 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-75793] ADD step-load-56f7f9dbb7-58hwg
+2025-05-13 18:01:35,779 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-75793] ADD mbw-qb2r4
+2025-05-13 18:01:46,155 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-52213] DEL renaissance-5b9l9
+2025-05-13 18:01:46,784 [cluster.JobMonitor.JobMonitor] INFO: Job COMPLETE renaissance, duration=2587s
+2025-05-13 18:03:29,695 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-75793] DEL step-load-56f7f9dbb7-v4q4b
+2025-05-13 18:03:29,698 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-75793] DEL step-load-56f7f9dbb7-58hwg
+2025-05-13 18:03:34,859 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-75793] DEL step-load-56f7f9dbb7-5dv9n
+2025-05-13 18:03:34,860 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-75793] DEL step-load-56f7f9dbb7-ncjpb
+2025-05-13 18:04:00,620 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 18:04:00: 新增节点=set(), 移除节点={'pack-us-east1-n1-highcpu-8-75793'}
+2025-05-13 18:04:10,765 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n1-highcpu-8-75793] DEL mbw-qb2r4
+2025-05-13 18:05:02,204 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 18:05:02: 新增节点=set(), 移除节点={'rfsa-us-west1-n1-highcpu-4-52213'}
+2025-05-13 18:05:27,817 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-52213] DEL step-load-56f7f9dbb7-5vgcf
+2025-05-13 18:06:08,930 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 18:06:08: 新增节点=set(), 移除节点={'up-us-central1-n1-standard-1-74581'}
+2025-05-13 18:08:57,712 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 18:08:57: 新增节点={'sa-us-central1-n4-highcpu-2-63888'}, 移除节点=set()
+2025-05-13 18:09:03,380 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD mbw-lnh76
+2025-05-13 18:09:03,381 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD step-load-56f7f9dbb7-9glh7
+2025-05-13 18:09:03,382 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD step-load-56f7f9dbb7-qrkkd
+2025-05-13 18:09:03,383 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL nginx-69576ccd8f-x8k87
+2025-05-13 18:09:13,692 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-30483] ADD step-load-56f7f9dbb7-rwxqh
+2025-05-13 18:09:18,832 [cluster.NodePodMonitor.NodePodMonitor] INFO: [sa-us-central1-n4-highcpu-2-63888] ADD mbw-5lnsk
+2025-05-13 18:09:23,979 [cluster.NodePodMonitor.NodePodMonitor] INFO: [sa-us-central1-n4-highcpu-2-63888] ADD step-load-56f7f9dbb7-xqlzr
+2025-05-13 18:09:29,118 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-30483] DEL mbw-bdhm6
+2025-05-13 18:09:38,395 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 18:09:38: 新增节点={'rfsa-us-east1-n1-standard-1-54876'}, 移除节点=set()
+2025-05-13 18:09:39,422 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-standard-1-54876] ADD step-load-56f7f9dbb7-sprm4
+2025-05-13 18:11:27,903 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n4-highcpu-2-33281] DEL mbw-m84dd
+2025-05-13 18:13:26,748 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD step-load-56f7f9dbb7-8sb9n
+2025-05-13 18:13:31,927 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-30483] ADD mbw-cwmbq
+2025-05-13 18:13:52,648 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-standard-1-54876] ADD nginx-69576ccd8f-8nq7z
+2025-05-13 18:14:08,199 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-standard-1-95592] ADD nginx-69576ccd8f-j7cb4
+2025-05-13 18:14:08,238 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 18:14:08: 新增节点={'rfsa-us-west1-n1-standard-1-95592'}, 移除节点=set()
+2025-05-13 18:14:23,770 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-standard-1-95592] ADD step-load-56f7f9dbb7-fr5gk
+2025-05-13 18:15:46,697 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n4-highcpu-2-33281] ADD mbw-bczw2
+2025-05-13 18:18:42,937 [cluster.JobMonitor.JobMonitor] INFO: Job DEL renaissance
+2025-05-13 18:18:47,960 [cluster.JobMonitor.JobMonitor] INFO: Job ADD renaissance
+2025-05-13 18:19:04,043 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL mbw-lnh76
+2025-05-13 18:19:24,825 [cluster.NodePodMonitor.NodePodMonitor] INFO: [sa-us-central1-n4-highcpu-2-63888] DEL mbw-5lnsk
+2025-05-13 18:19:55,968 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-30483] DEL step-load-56f7f9dbb7-rwxqh
+2025-05-13 18:20:22,367 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 18:20:22: 新增节点=set(), 移除节点={'rfsa-us-east4-n4-highcpu-2-30483'}
+2025-05-13 18:20:27,050 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-30483] DEL mbw-cwmbq
+2025-05-13 18:20:58,083 [cluster.NodePodMonitor.NodePodMonitor] INFO: [sa-us-central1-n4-highcpu-2-63888] DEL step-load-56f7f9dbb7-xqlzr
+2025-05-13 18:21:29,205 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 18:21:29: 新增节点=set(), 移除节点={'sa-us-central1-n4-highcpu-2-63888'}
+2025-05-13 18:24:20,558 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD mbw-8x7cd
+2025-05-13 18:25:07,351 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-highcpu-8-60867] ADD renaissance-fh7wk
+2025-05-13 18:25:22,966 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-highcpu-8-60867] ADD step-load-56f7f9dbb7-7dmsj
+2025-05-13 18:25:22,967 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-highcpu-8-60867] ADD step-load-56f7f9dbb7-cqf79
+2025-05-13 18:25:22,968 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-highcpu-8-60867] ADD renaissance-5dsq2
+2025-05-13 18:25:26,598 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 18:25:26: 新增节点={'pack-us-central1-n1-highcpu-8-60867'}, 移除节点=set()
+2025-05-13 18:25:54,350 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n4-highcpu-2-33281] DEL mbw-bczw2
+2025-05-13 18:28:40,728 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n4-highcpu-2-33281] ADD mbw-fhrsr
+2025-05-13 18:29:17,224 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL step-load-56f7f9dbb7-8sb9n
+2025-05-13 18:29:17,225 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL step-load-56f7f9dbb7-9glh7
+2025-05-13 18:29:17,226 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL step-load-56f7f9dbb7-qrkkd
+2025-05-13 18:29:22,478 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-highcpu-8-60867] DEL step-load-56f7f9dbb7-7dmsj
+2025-05-13 18:29:27,711 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 18:29:27: 新增节点={'rfsa-us-west1-n1-highcpu-4-86936'}, 移除节点=set()
+2025-05-13 18:29:32,894 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-86936] ADD renaissance-fj2pj
+2025-05-13 18:34:22,924 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL mbw-8x7cd
+2025-05-13 18:34:43,608 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-standard-1-95592] DEL nginx-69576ccd8f-j7cb4
+2025-05-13 18:34:48,792 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-standard-1-54876] DEL nginx-69576ccd8f-8nq7z
+2025-05-13 18:34:54,006 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-standard-1-54876] DEL step-load-56f7f9dbb7-sprm4
+2025-05-13 18:35:22,145 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 18:35:22: 新增节点=set(), 移除节点={'rfsa-us-east1-n1-standard-1-54876'}
+2025-05-13 18:36:16,360 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-86936] ADD step-load-56f7f9dbb7-lrkjx
+2025-05-13 18:37:18,182 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-highcpu-8-60867] DEL renaissance-fh7wk
+2025-05-13 18:37:28,515 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-highcpu-8-60867] DEL renaissance-5dsq2
+2025-05-13 18:38:10,021 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-highcpu-8-60867] ADD renaissance-2vps5
+2025-05-13 18:38:10,022 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-highcpu-8-60867] ADD renaissance-bdhzm
+2025-05-13 18:38:44,795 [cluster.JobMonitor.JobMonitor] INFO: Job DEL mbw
+2025-05-13 18:38:46,147 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n4-highcpu-2-33281] DEL mbw-fhrsr
+2025-05-13 18:38:49,821 [cluster.JobMonitor.JobMonitor] INFO: Job ADD mbw
+2025-05-13 18:40:13,426 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n4-highcpu-2-33281] DEL nginx-69576ccd8f-5fm9d
+2025-05-13 18:40:13,428 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n4-highcpu-2-33281] DEL step-load-56f7f9dbb7-j6vd9
+2025-05-13 18:40:49,300 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 18:40:49: 新增节点=set(), 移除节点={'rfsa-us-central1-n4-highcpu-2-33281'}
+2025-05-13 18:41:40,515 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-86936] DEL renaissance-fj2pj
+2025-05-13 18:42:06,173 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 18:42:06: 新增节点=set(), 移除节点={'rfsa-us-west1-n1-standard-1-95592'}
+2025-05-13 18:42:31,739 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-standard-1-95592] DEL step-load-56f7f9dbb7-fr5gk
+2025-05-13 18:44:08,922 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD mbw-2x64f
+2025-05-13 18:44:08,923 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD mbw-7rslr
+2025-05-13 18:44:14,061 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-86936] ADD renaissance-m5l6p
+2025-05-13 18:44:29,549 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-82379] ADD step-load-56f7f9dbb7-ltrhn
+2025-05-13 18:44:39,845 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-82379] ADD nginx-69576ccd8f-lwp56
+2025-05-13 18:44:39,846 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-82379] ADD step-load-56f7f9dbb7-l8c98
+2025-05-13 18:44:45,001 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-82379] ADD nginx-69576ccd8f-7tvfz
+2025-05-13 18:44:50,204 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-82379] ADD mbw-m4f78
+2025-05-13 18:44:50,205 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-82379] ADD mbw-f8lcx
+2025-05-13 18:44:50,218 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 18:44:50: 新增节点={'pack-us-east1-n4-highcpu-4-82379'}, 移除节点=set()
+2025-05-13 18:50:15,847 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-highcpu-8-60867] DEL renaissance-2vps5
+2025-05-13 18:50:15,848 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-highcpu-8-60867] DEL renaissance-bdhzm
+2025-05-13 18:50:31,334 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD step-load-56f7f9dbb7-kgn7t
+2025-05-13 18:50:36,491 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-highcpu-8-60867] ADD step-load-56f7f9dbb7-dwjl2
+2025-05-13 18:54:08,353 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL mbw-2x64f
+2025-05-13 18:54:13,529 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL mbw-7rslr
+2025-05-13 18:54:44,525 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-highcpu-8-60867] DEL step-load-56f7f9dbb7-dwjl2
+2025-05-13 18:54:44,526 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-highcpu-8-60867] DEL step-load-56f7f9dbb7-cqf79
+2025-05-13 18:54:54,836 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-82379] DEL mbw-m4f78
+2025-05-13 18:54:59,970 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-82379] DEL mbw-f8lcx
+2025-05-13 18:55:10,281 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 18:55:10: 新增节点=set(), 移除节点={'pack-us-central1-n1-highcpu-8-60867'}
+2025-05-13 18:55:51,313 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-86936] DEL step-load-56f7f9dbb7-lrkjx
+2025-05-13 18:56:16,999 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-86936] DEL renaissance-m5l6p
+2025-05-13 18:56:17,041 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 18:56:16: 新增节点=set(), 移除节点={'rfsa-us-west1-n1-highcpu-4-86936'}
+2025-05-13 18:59:06,462 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD step-load-56f7f9dbb7-cl7hb
+2025-05-13 18:59:06,463 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD step-load-56f7f9dbb7-zplxr
+2025-05-13 18:59:06,464 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD mbw-nlk85
+2025-05-13 18:59:11,615 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-82379] ADD mbw-lwdjk
+2025-05-13 18:59:11,616 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-82379] ADD mbw-5lrwg
+2025-05-13 18:59:21,446 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 18:59:21: 新增节点={'sa-us-central1-n4-highcpu-2-38744'}, 移除节点=set()
+2025-05-13 18:59:21,961 [cluster.NodePodMonitor.NodePodMonitor] INFO: [sa-us-central1-n4-highcpu-2-38744] ADD mbw-brg49
+2025-05-13 18:59:37,418 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-highcpu-8-34530] ADD step-load-56f7f9dbb7-bw7jd
+2025-05-13 18:59:58,053 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-82379] DEL nginx-69576ccd8f-7tvfz
+2025-05-13 19:00:08,367 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-highcpu-8-34530] ADD renaissance-gr2hn
+2025-05-13 19:00:52,941 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 19:00:52: 新增节点={'pack-us-central1-n1-highcpu-8-34530'}, 移除节点=set()
+2025-05-13 19:01:30,976 [cluster.NodePodMonitor.NodePodMonitor] INFO: [sa-us-central1-n4-highcpu-2-38744] ADD nginx-69576ccd8f-xdq42
+2025-05-13 19:03:29,840 [cluster.NodePodMonitor.NodePodMonitor] INFO: [sa-us-central1-n4-highcpu-2-38744] ADD nginx-69576ccd8f-sbjx6
+2025-05-13 19:05:34,280 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-highcpu-8-34530] DEL step-load-56f7f9dbb7-bw7jd
+2025-05-13 19:06:03,738 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 19:06:03: 新增节点=set(), 移除节点={'pack-us-central1-n1-highcpu-8-34530'}
+2025-05-13 19:06:10,569 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-central1-n1-highcpu-8-34530] DEL renaissance-gr2hn
+2025-05-13 19:06:41,561 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-82379] DEL nginx-69576ccd8f-lwp56
+2025-05-13 19:06:46,717 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-82379] DEL step-load-56f7f9dbb7-l8c98
+2025-05-13 19:06:46,718 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-82379] DEL step-load-56f7f9dbb7-ltrhn
+2025-05-13 19:07:12,490 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-82379] DEL mbw-lwdjk
+2025-05-13 19:07:14,858 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 19:07:14: 新增节点=set(), 移除节点={'pack-us-east1-n4-highcpu-4-82379'}
+2025-05-13 19:07:27,910 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-82379] DEL mbw-5lrwg
+2025-05-13 19:09:05,227 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL mbw-nlk85
+2025-05-13 19:09:25,841 [cluster.NodePodMonitor.NodePodMonitor] INFO: [sa-us-central1-n4-highcpu-2-38744] DEL mbw-brg49
+2025-05-13 19:09:56,658 [cluster.NodePodMonitor.NodePodMonitor] INFO: [sa-us-central1-n4-highcpu-2-38744] ADD nginx-69576ccd8f-w6jcf
+2025-05-13 19:10:06,981 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-74220] ADD mbw-82mnt
+2025-05-13 19:10:06,982 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-74220] ADD mbw-4989d
+2025-05-13 19:10:07,477 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 19:10:07: 新增节点={'pack-us-east1-n4-highcpu-4-74220'}, 移除节点=set()
+2025-05-13 19:10:12,159 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-74220] ADD step-load-56f7f9dbb7-mlzdc
+2025-05-13 19:10:12,160 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-74220] ADD step-load-56f7f9dbb7-2j9wq
+2025-05-13 19:10:22,502 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-75668] ADD step-load-56f7f9dbb7-q8spr
+2025-05-13 19:10:53,613 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 19:10:53: 新增节点={'rfsa-us-west1-n1-highcpu-4-75668'}, 移除节点=set()
+2025-05-13 19:11:03,938 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-75668] ADD renaissance-8kx77
+2025-05-13 19:12:00,962 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD mbw-pzdfc
+2025-05-13 19:12:06,170 [cluster.NodePodMonitor.NodePodMonitor] INFO: [sa-us-central1-n4-highcpu-2-38744] ADD mbw-776hn
+2025-05-13 19:16:10,624 [cluster.NodePodMonitor.NodePodMonitor] INFO: [sa-us-central1-n4-highcpu-2-38744] DEL nginx-69576ccd8f-w6jcf
+2025-05-13 19:16:10,625 [cluster.NodePodMonitor.NodePodMonitor] INFO: [sa-us-central1-n4-highcpu-2-38744] DEL nginx-69576ccd8f-sbjx6
+2025-05-13 19:16:10,626 [cluster.NodePodMonitor.NodePodMonitor] INFO: [sa-us-central1-n4-highcpu-2-38744] DEL nginx-69576ccd8f-xdq42
+2025-05-13 19:16:34,233 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 19:16:34: 新增节点=set(), 移除节点={'sa-us-central1-n4-highcpu-2-38744'}
+2025-05-13 19:16:36,400 [cluster.NodePodMonitor.NodePodMonitor] INFO: [sa-us-central1-n4-highcpu-2-38744] DEL mbw-776hn
+2025-05-13 19:19:36,680 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-74220] ADD nginx-69576ccd8f-f68hr
+2025-05-13 19:19:52,238 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n4-highcpu-2-10263] ADD mbw-98p9f
+2025-05-13 19:20:02,562 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n4-highcpu-2-10263] ADD nginx-69576ccd8f-p5rjr
+2025-05-13 19:20:02,563 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n4-highcpu-2-10263] ADD nginx-69576ccd8f-jj2bp
+2025-05-13 19:20:12,958 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-74220] DEL mbw-82mnt
+2025-05-13 19:20:12,959 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-74220] DEL mbw-4989d
+2025-05-13 19:20:28,629 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 19:20:28: 新增节点={'rfsa-us-central1-n4-highcpu-2-10263'}, 移除节点=set()
+2025-05-13 19:21:30,808 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-74220] ADD mbw-2wdfb
+2025-05-13 19:21:36,020 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-74220] ADD mbw-mksts
+2025-05-13 19:22:01,935 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL mbw-pzdfc
+2025-05-13 19:23:14,417 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-75668] DEL renaissance-8kx77
+2025-05-13 19:27:39,773 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n4-highcpu-2-10263] DEL nginx-69576ccd8f-p5rjr
+2025-05-13 19:27:39,774 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n4-highcpu-2-10263] DEL nginx-69576ccd8f-jj2bp
+2025-05-13 19:28:10,756 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 19:28:10: 新增节点=set(), 移除节点={'rfsa-us-central1-n4-highcpu-2-10263'}
+2025-05-13 19:28:31,345 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n4-highcpu-2-10263] DEL mbw-98p9f
+2025-05-13 19:28:41,711 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-75668] DEL step-load-56f7f9dbb7-q8spr
+2025-05-13 19:29:07,569 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 19:29:07: 新增节点=set(), 移除节点={'rfsa-us-west1-n1-highcpu-4-75668'}
+2025-05-13 19:31:37,649 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-74220] DEL mbw-2wdfb
+2025-05-13 19:31:42,804 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-74220] DEL mbw-mksts
+2025-05-13 19:32:39,352 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD mbw-sndd5
+2025-05-13 19:32:44,533 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-74220] ADD nginx-69576ccd8f-v9t52
+2025-05-13 19:33:20,656 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n1-standard-1-92844] ADD nginx-69576ccd8f-6gxbp
+2025-05-13 19:33:41,297 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n1-standard-1-92844] ADD step-load-56f7f9dbb7-nwq72
+2025-05-13 19:33:53,036 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 19:33:52: 新增节点={'rfsa-us-central1-n1-standard-1-92844'}, 移除节点=set()
+2025-05-13 19:38:51,087 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-74220] DEL nginx-69576ccd8f-v9t52
+2025-05-13 19:38:51,088 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-74220] DEL nginx-69576ccd8f-f68hr
+2025-05-13 19:38:56,200 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-74220] DEL step-load-56f7f9dbb7-mlzdc
+2025-05-13 19:38:56,201 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-east1-n4-highcpu-4-74220] DEL step-load-56f7f9dbb7-2j9wq
+2025-05-13 19:39:20,779 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 19:39:20: 新增节点=set(), 移除节点={'pack-us-east1-n4-highcpu-4-74220'}
+2025-05-13 19:40:07,983 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n1-standard-1-92844] DEL nginx-69576ccd8f-6gxbp
+2025-05-13 19:40:37,048 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 19:40:36: 新增节点=set(), 移除节点={'rfsa-us-central1-n1-standard-1-92844'}
+2025-05-13 19:40:48,892 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n1-standard-1-92844] DEL step-load-56f7f9dbb7-nwq72
+2025-05-13 19:42:41,421 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL mbw-sndd5
+2025-05-13 19:42:42,804 [cluster.JobMonitor.JobMonitor] INFO: Job COMPLETE mbw, duration=3831s
+2025-05-13 19:44:05,233 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 19:44:05: 新增节点={'rfsa-us-west1-n1-standard-1-69246'}, 移除节点=set()
+2025-05-13 19:44:55,997 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 19:44:55: 新增节点={'rfsa-us-central1-n1-standard-1-82355'}, 移除节点=set()
+2025-05-13 19:45:35,525 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n1-standard-1-82355] ADD nginx-69576ccd8f-7mzcv
+2025-05-13 19:45:35,527 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-standard-1-69246] ADD step-load-56f7f9dbb7-kpwld
+2025-05-13 19:45:50,981 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-standard-1-69246] ADD nginx-69576ccd8f-6xsss
+2025-05-13 19:45:50,982 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n1-standard-1-82355] ADD step-load-56f7f9dbb7-ctbps
+2025-05-13 19:45:56,142 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-standard-1-51688] ADD nginx-69576ccd8f-67l9m
+2025-05-13 19:46:11,640 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-standard-1-51688] ADD step-load-56f7f9dbb7-nqv92
+2025-05-13 19:46:27,439 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 19:46:27: 新增节点={'rfsa-us-east1-n1-standard-1-51688'}, 移除节点=set()
+2025-05-13 19:51:28,736 [cluster.DeploymentMonitor.DeploymentMonitor] INFO: Deployment DEL nginx
+2025-05-13 19:51:28,737 [cluster.DeploymentMonitor.DeploymentMonitor] INFO: Deployment DEL step-load
+2025-05-13 19:51:30,683 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL nginx-69576ccd8f-wwjf8
+2025-05-13 19:51:35,848 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n1-standard-1-82355] DEL nginx-69576ccd8f-7mzcv
+2025-05-13 19:51:35,850 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-standard-1-69246] DEL nginx-69576ccd8f-6xsss
+2025-05-13 19:51:40,964 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-standard-1-51688] DEL nginx-69576ccd8f-67l9m
+2025-05-13 19:51:56,099 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 19:51:56: 新增节点=set(), 移除节点={'rfsa-us-central1-n1-standard-1-82355'}
+2025-05-13 19:52:01,423 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL step-load-56f7f9dbb7-cl7hb
+2025-05-13 19:52:01,435 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL step-load-56f7f9dbb7-zplxr
+2025-05-13 19:52:01,436 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL step-load-56f7f9dbb7-kgn7t
+2025-05-13 19:52:06,509 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-standard-1-69246] DEL step-load-56f7f9dbb7-kpwld
+2025-05-13 19:52:06,510 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-standard-1-51688] DEL step-load-56f7f9dbb7-nqv92
+2025-05-13 19:52:11,566 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:52:11,568 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-central1-n1-standard-1-82355] DEL step-load-56f7f9dbb7-ctbps
+2025-05-13 19:52:16,588 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:52:21,610 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:52:26,631 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:52:31,652 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:52:36,671 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:52:41,694 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:52:46,717 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:52:51,742 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:52:56,758 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:53:01,779 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:53:06,797 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:53:11,817 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:53:12,291 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 19:53:12: 新增节点=set(), 移除节点={'rfsa-us-east1-n1-standard-1-51688'}
+2025-05-13 19:53:16,831 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:53:21,863 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:53:26,876 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:53:31,902 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:53:36,932 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:53:41,959 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:53:46,977 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:53:52,004 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:53:57,023 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:54:02,046 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:54:03,109 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-13 19:54:03: 新增节点=set(), 移除节点={'rfsa-us-west1-n1-standard-1-69246'}
+2025-05-13 19:54:07,069 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:54:12,094 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:54:17,118 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:54:22,135 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:54:27,162 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:54:32,175 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:54:37,200 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:54:42,215 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:54:47,240 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:54:52,261 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:54:57,283 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:55:02,300 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:55:07,316 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:55:12,340 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:55:17,364 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:55:22,389 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:55:27,414 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:55:32,439 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:55:37,463 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:55:42,481 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:55:47,503 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:55:52,530 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:55:57,555 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:56:02,581 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:56:07,604 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:56:12,619 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:56:17,637 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:56:22,652 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:56:27,664 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:56:32,693 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:56:37,718 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:56:42,741 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:56:47,770 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:56:52,794 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:56:57,816 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:57:02,838 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:57:07,858 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:57:12,882 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:57:17,908 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:57:22,934 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:57:27,957 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:57:32,980 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:57:37,996 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:57:43,008 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:57:48,037 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:57:53,061 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:57:58,083 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:58:03,103 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:58:08,117 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:58:13,142 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:58:18,167 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:58:23,188 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:58:28,204 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:58:33,228 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:58:38,241 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:58:43,263 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:58:48,287 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:58:53,309 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:58:58,325 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:59:03,339 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:59:08,352 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:59:13,378 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:59:18,394 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:59:23,421 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:59:28,436 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:59:33,455 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:59:38,475 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:59:43,502 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:59:48,513 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:59:53,532 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 19:59:58,558 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:00:03,580 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:00:08,598 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:00:13,617 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:00:18,635 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:00:23,649 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:00:28,671 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:00:33,695 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:00:38,718 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:00:43,736 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:00:48,749 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:00:53,771 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:00:58,793 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:01:03,815 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:01:08,827 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:01:13,839 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:01:18,859 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:01:23,872 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:01:28,892 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:01:33,913 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:01:38,932 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:01:43,946 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:01:48,967 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:01:53,985 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:01:59,005 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:02:04,020 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:02:09,033 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:02:14,050 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:02:19,075 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:02:24,089 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:02:29,109 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:02:34,126 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:02:39,147 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:02:44,166 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:02:49,181 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:02:54,199 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:02:59,221 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:03:04,240 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:03:09,262 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:03:14,287 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:03:19,308 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:03:24,324 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:03:29,343 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:03:34,366 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:03:39,391 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:03:44,414 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:03:49,436 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:03:54,461 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:03:59,482 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:04:04,510 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:04:09,531 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:04:14,554 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:04:19,683 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:04:24,698 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-13 20:04:29,341 [root] INFO: Stopping monitors...

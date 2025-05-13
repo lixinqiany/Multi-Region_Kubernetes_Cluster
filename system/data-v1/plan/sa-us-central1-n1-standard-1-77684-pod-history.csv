@@ -1,0 +1,5 @@
+timestamp,action,pod
+2025-05-13 17:21:20,ADD,nginx-69576ccd8f-wp4wp
+2025-05-13 17:21:25,ADD,nginx-69576ccd8f-vfhkh
+2025-05-13 17:29:24,DEL,nginx-69576ccd8f-wp4wp
+2025-05-13 17:29:24,DEL,nginx-69576ccd8f-vfhkh

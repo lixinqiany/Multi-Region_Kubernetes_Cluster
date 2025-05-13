@@ -1,0 +1,5 @@
+timestamp,action,pod
+2025-05-13 19:45:35,ADD,nginx-69576ccd8f-7mzcv
+2025-05-13 19:45:50,ADD,step-load-56f7f9dbb7-ctbps
+2025-05-13 19:51:35,DEL,nginx-69576ccd8f-7mzcv
+2025-05-13 19:52:11,DEL,step-load-56f7f9dbb7-ctbps

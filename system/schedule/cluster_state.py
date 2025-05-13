@@ -69,7 +69,7 @@ def snapshot_cluster(monitor: ClusterMonitor) -> ResourceModel:
         alloc_cpu = float(n.status.allocatable["cpu"])
         alloc_mem = float(n.status.allocatable["memory"][:-2]) / 1024 /1024
         # ⚠ 价格信息不在 K8s，算法里再注入；先用 0
-        nodes[name] = Node(name, region, mtype, alloc_cpu, alloc_mem, price=0.0)
+        nodes[name] = Node(name, region, mtype, alloc_cpu, alloc_mem, price=0.0,is_existing=True)
 
     # 2. Pods
     pods = []
@@ -91,11 +91,20 @@ def snapshot_cluster(monitor: ClusterMonitor) -> ResourceModel:
                   cpu_req,
                   mem_req,
                   p.metadata.labels or {})
+        pod.is_new = False
         if p.status.phase == "Running":
             node_name = p.spec.node_name
             if node_name in nodes:
                 record_flag = p.metadata.namespace == "default"
-                nodes[node_name].add_pod(pod,record=record_flag)
+                try:
+                    nodes[node_name].add_pod(pod, record=record_flag)
+                except AssertionError as e:
+                    if str(e) == "resource overflow":
+                        # 容忍溢出：忽略该 Pod 对建模的影响
+                        #   （可选）累加到一个 overflow 计数，用于日志
+                        continue
+                    else:
+                        raise
                 pod2node[pod.full_name] = node_name
                 pods.append(pod)
         else:

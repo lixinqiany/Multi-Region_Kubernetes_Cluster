@@ -9,19 +9,21 @@ from typing import Dict
 
 class Pod:
     """Kubernetes Pod 的极简描述（仅 requests 维度）"""
-    __slots__ = ("name", "namespace", "cpu", "mem", "labels")
+    __slots__ = ("name", "namespace", "cpu", "mem", "labels", "is_new")
 
     def __init__(self,
                  name: str,
                  namespace: str,
                  cpu: float,
                  mem: float,
-                 labels: Dict[str, str] | None = None):
+                 labels: Dict[str, str] | None = None,
+                 ):
         self.name = name
         self.namespace = namespace
         self.cpu = cpu          # 请求 CPU，单位：核
         self.mem = mem          # 请求内存，单位：Gi
         self.labels = labels or {}
+        self.is_new = False
 
     # —— 方便打印 / 去重 —— #
     @property
@@ -38,11 +40,14 @@ class Pod:
 
 
 class Node:
+    DEFAULT_OVERHEAD_CPU  = 0.15  # ✨ 系统保留 vCPU
+    SPECIAL_NODE_NAME = "node-1"
+    SPECIAL_OVERHEAD_CPU = 0.40
     """云节点描述：规格 + 成本 + 当前已用资源"""
     __slots__ = ("name", "region", "machine_type",
                  "cpu_cap", "mem_cap",
                  "cpu_used", "mem_used",
-                 "price","_pods",)
+                 "price","_pods","is_existing","usable_cpu_cap","overhead_cpu")
 
     def __init__(self,
                  name: str,
@@ -50,7 +55,7 @@ class Node:
                  machine_type: str,
                  cpu_cap: float,
                  mem_cap: float,
-                 price: float):
+                 price: float,is_existing: bool = False):
         self.name = name
         self.region = region
         self.machine_type = machine_type
@@ -59,7 +64,16 @@ class Node:
         self.cpu_used = 0.0
         self.mem_used = 0.0
         self.price = price
+        self.overhead_cpu = (
+            Node.SPECIAL_OVERHEAD_CPU
+            if name == Node.SPECIAL_NODE_NAME
+            else Node.DEFAULT_OVERHEAD_CPU
+        )
         self._pods: list[Pod] = []  # ← 初始化为空列表
+        self.is_existing = is_existing  # ← 新增
+        if is_existing:
+            self.overhead_cpu = 0.0
+        self.usable_cpu_cap = max(0.0, cpu_cap - self.overhead_cpu)
 
     @property
     def pods(self) -> list[Pod]:
@@ -67,9 +81,11 @@ class Node:
         return self._pods
 
     # —— 资源判定 —— #
-    def can_fit(self, pod: Pod) -> bool:
-        return (self.cpu_used + pod.cpu <= self.cpu_cap and
-                self.mem_used + pod.mem <= self.mem_cap)
+    def can_fit(self, pod: "Pod") -> bool:
+        return (
+            self.cpu_used + pod.cpu <= self.usable_cpu_cap and
+            self.mem_used + pod.mem <= self.mem_cap
+        )
 
     def add_pod(self, pod: Pod, record: bool = True):
         assert self.can_fit(pod), "resource overflow"
@@ -99,8 +115,20 @@ class Node:
 
     @property
     def util_ratio(self) -> float:
-        """取 CPU 与 MEM 两条维度中占用更高者"""
-        return 1 - max(self.cpu_idle_ratio, self.mem_idle_ratio)
+        if self.usable_cpu_cap == 0:
+            return 1.0
+        return self.cpu_used / self.usable_cpu_cap
+
+        # ------------------------------------------------
+        def clone(self):
+            dup = Node(self.name, self.region, self.machine_type,
+                       self.cpu_cap, self.mem_cap, self.price, self.is_existing)
+            dup.overhead_cpu = self.overhead_cpu
+            dup.usable_cpu_cap = self.usable_cpu_cap
+            dup.cpu_used = self.cpu_used
+            dup.mem_used = self.mem_used
+            dup._pods = [p.clone() for p in self._pods]  # 假设 Pod 定义有 clone
+            return dup
 
     def __repr__(self):
         return (f"Node({self.name}, {self.region}/{self.machine_type}, "

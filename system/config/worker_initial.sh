@@ -47,4 +47,4 @@ sudo DEBIAN_FRONTEND=noninteractive apt-mark hold kubelet kubeadm kubectl
 
 systemctl enable kubelet
 
-kubeadm join 10.192.0.2:6443 --token 2tk7uf.r5lg4pr4xln8ap4i --discovery-token-ca-cert-hash sha256:01d90eede05983350531420a401e040560870f36ab8ddb9e031936107a906ac1
+kubeadm join 10.192.0.7:6443 --token 4zu624.n6d70660cqq6yzf3 --discovery-token-ca-cert-hash sha256:0e328e318f8a3e80ea29f01b029ef8cf9659dcdd85835e7dca7bff8d9ceabf42

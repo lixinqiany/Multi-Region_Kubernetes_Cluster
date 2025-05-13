@@ -10,15 +10,15 @@ from gcp.VMManager import VMManager
 import os
 
 def main():
-    node_nums = 6
+    node_nums = 2
     name_tem = "node-"
     node_names = [f"{name_tem}{x+1}" for x in range(node_nums)]
     # use multiple threads to create nodes
-    region = "australia-southeast1"
+    region = "australia-southeast2"
     machine_type = "e2-standard-4"
     vm_manager = VMManager()
 
-    with ThreadPoolExecutor(max_workers=6) as executor:
+    with ThreadPoolExecutor(max_workers=2) as executor:
         future_to_node = {
             executor.submit(vm_manager.create_node, name, region, machine_type,20): name
             for name in node_names

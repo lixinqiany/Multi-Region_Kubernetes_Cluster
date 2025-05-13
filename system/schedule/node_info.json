@@ -5,6 +5,6 @@
   },
   "node-1": {
     "machine_type": "e2-standard-4",
-    "region": "australia-southeast1"
+    "region": "australia-southeast2"
   }
 }
