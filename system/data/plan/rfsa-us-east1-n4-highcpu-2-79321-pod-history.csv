@@ -1,0 +1,7 @@
+timestamp,action,pod
+2025-05-14 16:47:59,ADD,mbw-q9plh
+2025-05-14 16:48:04,ADD,step-load-7d6dd98f99-mwcmg
+2025-05-14 16:48:14,ADD,nginx-7b6d77bd77-n4tb2
+2025-05-14 16:58:04,DEL,mbw-q9plh
+2025-05-14 17:00:39,DEL,nginx-7b6d77bd77-n4tb2
+2025-05-14 17:00:44,DEL,step-load-7d6dd98f99-mwcmg

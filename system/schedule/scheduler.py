@@ -11,6 +11,8 @@ scheduler.py
 """
 from __future__ import annotations
 import threading
+from concurrent.futures import ThreadPoolExecutor
+
 from kubernetes.client.rest import ApiException
 import concurrent
 import time, os, json
@@ -58,11 +60,11 @@ class Scheduler:
         # ✨ 互斥锁：调度 & Consolidator
         self.op_lock = threading.Lock()
 
+        self.creation_block_sec = 150
+        self.last_node_create_ts = 0  # 上次新建节点时间戳
         # 启动 Consolidator 守护线程
         threading.Thread(target=self._consolidate_loop,
                          daemon=True).start()
-        self.creation_block_sec = 150
-        self.last_node_create_ts = 0  # 上次新建节点时间戳
 
     # ──────────────────────────────────────────────
     # 主循环
@@ -78,7 +80,7 @@ class Scheduler:
             try:
                 with self.op_lock:          # ✨ 与 Consolidator 互斥
                     self._run_once(cycle_id)
-                    time.sleep(60)
+                    time.sleep(10)
             except Exception as exc:     # noqa
                 self.logger.exception("scheduler run_once failed: %s", exc)
 
@@ -112,7 +114,7 @@ class Scheduler:
             E_full = energy(full_plan)
 
             # 3) 比较能量
-            if E_full / (E_inc + 1e-6) <= 1 / self.full_threshold:
+            if E_full / (E_inc + 1e-8) <= self.full_threshold:
                 do_full = True
                 chosen_plan, still = full_plan, still_full
             else:
@@ -219,7 +221,7 @@ class Scheduler:
                         continue
                     if vcpu - Node.DEFAULT_OVERHEAD_CPU >= cpu_sum \
                             and mem >= mem_sum \
-                            and price_new <= price_sum*1.01:
+                            and price_new <= price_sum*1.1:
                         cand.append((vcpu, mem, price_new, mt))
                 if not cand:
                     continue
@@ -372,9 +374,7 @@ class Scheduler:
         def _create(node_name: str):
             nd = new.nodes[node_name]
             try:
-                self.vm.create_node(node_name, nd.region, nd.machine_type)
-                self.logger.info("create node %s (%s/%s)",
-                                 node_name, nd.region, nd.machine_type)
+                self._try_create_with_fallback(node_name, nd)
                 node_info[node_name] = {
                     "machine_type": nd.machine_type,
                     "region": nd.region
@@ -432,6 +432,59 @@ class Scheduler:
             self.last_node_create_ts = time.time()
 
     # -------------------------------------------------
+    def _try_create_with_fallback(self, vm_name: str, nd):
+        """
+        尝试在原 Region 创建 VM；若资源池耗尽或配额不足，
+        自动在 “同单价” 的其它 Region/Zone 重试。
+        """
+        try:
+            self.vm.create_node(vm_name, nd.region, nd.machine_type)
+            self.logger.info("create node %s (%s/%s)", vm_name, nd.region, nd.machine_type)
+            return
+        except Exception as exc:
+            msg = str(exc)
+            if "ZONE_RESOURCE_POOL_EXHAUSTED" not in msg \
+                    and "QUOTA_EXCEEDED" not in msg:
+                raise  # 其它异常直接抛出
+
+            self.logger.warning("region %s unavailable (%s), searching fallback...",
+                                nd.region, msg.split(":")[0])
+
+        # -------- 1) 收集同单价候选 --------
+        price_map = self.optimizer.seed.price_map  # RFSA price_map
+        spec_map = self.optimizer.seed.spec_map
+
+        price_orig = nd.price
+        family = nd.machine_type.split("-")[0]  # e.g. n1, n2d, n4 ...
+        # 遍历所有 region，找 price 相同 && 机型存在
+        cand = []
+        for region, mts in price_map.items():
+            if region == nd.region:
+                continue
+            price = mts.get("OnDemand", {}).get(nd.machine_type)
+            if price is not None and abs(price - price_orig) < 1e-6:
+                cand.append(region)
+
+        if not cand:
+            raise RuntimeError("no region with same price for fallback")
+
+        # -------- 2) 逐个 Region 尝试 --------
+        for region in cand:
+            alt_vm_name = f"{vm_name}"
+            try:
+                self.vm.create_node(alt_vm_name, region, nd.machine_type)
+                self.logger.info("fallback create %s (%s/%s) succeeded",
+                                 alt_vm_name, region, nd.machine_type)
+                # 更新节点对象属性以便后续 apply_plan
+                nd.name = alt_vm_name
+                nd.region = region
+                return
+            except Exception as exc:
+                self.logger.warning("fallback region %s failed: %s", region, exc)
+
+        raise RuntimeError("all fallback regions exhausted for " + vm_name)
+
+    # -------------------------------------------------
     def _energy_parts(self, plan: ResourceModel) -> tuple[float, float, float, float]:
         """返回 (energy, cost, idle, conc) 组合指标。"""
         cost = sum(nd.price for nd in plan.nodes.values() if nd.name != "master")
@@ -484,7 +537,6 @@ class Scheduler:
                           sleep_sec: int = 240,
                           low_thr: float = 0.45):
         while True:
-            time.sleep(60)
             try:
                 with self.op_lock:  # ✨ 互斥
                     if time.time() - self.last_node_create_ts < self.creation_block_sec:
@@ -499,9 +551,19 @@ class Scheduler:
                         continue
 
                     removed_names = []
-                    for nd in to_remove:
-                        if self._close_idle_node(nd):
-                            removed_names.append(nd.name)
+
+                    def _del(nd):
+                        return nd.name if self._close_idle_node(nd) else None
+
+                    with ThreadPoolExecutor(max_workers=2) as pool:
+                        for r in pool.map(_del, to_remove):
+                            if r:
+                                removed_names.append(r)
+
+                    #removed_names = []
+                    #for nd in to_remove:
+                    #    if self._close_idle_node(nd):
+                    #        removed_names.append(nd.name)
 
                     if removed_names:
                         # 统一记录一次关机后的集群状态

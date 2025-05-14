@@ -83,8 +83,13 @@ def snapshot_cluster(monitor: ClusterMonitor) -> ResourceModel:
         mem_req = 0.0
         for c in p.spec.containers:
             reqs = c.resources.requests or {}  # 关键：若 None 则用 {}
-            cpu_req += _parse_cpu(reqs.get("cpu", "0"))
-            mem_req += _parse_mem(reqs.get("memory", "0"))
+            req_cpu = _parse_cpu(c.resources.requests.get("cpu", "0")) if c.resources.requests else 0
+            lim_cpu = _parse_cpu(c.resources.limits.get("cpu", "0")) if c.resources.limits else 0
+            cpu_req += max(req_cpu, lim_cpu)
+            req_mem = _parse_mem(c.resources.requests.get("memory", "0")) if c.resources.requests else 0
+            lim_mem = _parse_mem(c.resources.limits.get("memory", "0")) if c.resources.limits else 0
+            mem_req += max(req_mem, lim_mem)
+            #mem_req += _parse_mem(reqs.get("memory", "0"))
 
         pod = Pod(p.metadata.name,
                   p.metadata.namespace,

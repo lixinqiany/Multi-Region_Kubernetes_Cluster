@@ -1,0 +1,23 @@
+timestamp,action,pod
+2025-05-14 03:59:54,ADD,step-load-7d6dd98f99-44zkx
+2025-05-14 03:59:54,ADD,step-load-7d6dd98f99-g9fbh
+2025-05-14 03:59:54,ADD,step-load-7d6dd98f99-c5gtt
+2025-05-14 03:59:54,ADD,step-load-7d6dd98f99-d748r
+2025-05-14 04:11:26,ADD,nginx-7b6d77bd77-gxgw4
+2025-05-14 04:19:00,ADD,step-load-7d6dd98f99-bfxvp
+2025-05-14 04:20:23,ADD,nginx-7b6d77bd77-zdf8f
+2025-05-14 04:37:18,DEL,step-load-7d6dd98f99-44zkx
+2025-05-14 04:37:18,DEL,step-load-7d6dd98f99-bfxvp
+2025-05-14 04:37:18,DEL,step-load-7d6dd98f99-c5gtt
+2025-05-14 04:37:18,DEL,step-load-7d6dd98f99-d748r
+2025-05-14 04:37:39,ADD,mbw-b5965
+2025-05-14 04:47:38,DEL,mbw-b5965
+2025-05-14 04:49:52,ADD,mbw-76z2v
+2025-05-14 04:59:04,ADD,nginx-7b6d77bd77-92g4b
+2025-05-14 04:59:51,DEL,mbw-76z2v
+2025-05-14 05:01:50,ADD,step-load-7d6dd98f99-zfqbz
+2025-05-14 05:08:36,ADD,nginx-7b6d77bd77-6mtkv
+2025-05-14 05:23:37,DEL,nginx-7b6d77bd77-6mtkv
+2025-05-14 05:23:37,DEL,nginx-7b6d77bd77-92g4b
+2025-05-14 05:53:12,DEL,nginx-7b6d77bd77-zdf8f
+2025-05-14 06:36:18,ADD,step-load-7d6dd98f99-lsv8q

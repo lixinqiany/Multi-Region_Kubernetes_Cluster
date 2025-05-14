@@ -15,7 +15,7 @@ from system.schedule.sa_optimizer import SAOptimizer
 from system.schedule.scheduler import Scheduler
 
 if __name__ == '__main__':
-    os.makedirs("../logs/logs", exist_ok=True)
+    os.makedirs("./logs", exist_ok=True)
     log_file = time.strftime("logs/%Y%m%d-%H%M%S.log")
     log_stored=True
     if log_stored:
@@ -39,8 +39,8 @@ if __name__ == '__main__':
         spec_json="data/gcp/machine_types.json"
     )
     sa = SAOptimizer(seed_optimizer=optimizer,
-                     n_iter=250,  # 每个温度邻域尝试次数
-                     T0=65, Tmin=1, alpha=0.9)
+                     n_iter=300,  # 每个温度邻域尝试次数
+                     T0=60, Tmin=1, alpha=0.9)
 
     sched = Scheduler(optimizer=sa, interval_sec=60)  # 每 2 分钟调度一次
     sched.run_forever()

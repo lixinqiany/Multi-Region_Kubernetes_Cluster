@@ -1,0 +1,403 @@
+2025-05-14 03:53:28,279 [root] INFO: Starting monitors with interval=5s, Prometheus=http://34.129.107.238:32501
+2025-05-14 03:53:28,307 [cluster.NodeMonitor.NodeMonitor] INFO: node监控器 连接prometheus服务器True
+2025-05-14 03:53:28,318 [cluster.ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-14 03:53:28,347 [cluster.PodMonitor.PodMonitor] INFO: pod监控器 连接prometheus服务器True
+2025-05-14 03:53:28,354 [cluster.ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-14 03:53:28,377 [cluster.NodePodMonitor.NodePodMonitor] INFO: pod分布监控器 连接prometheus服务器True
+2025-05-14 03:53:28,384 [cluster.ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-14 03:53:29,122 [cluster.ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-14 03:53:29,129 [cluster.ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-14 03:53:29,130 [cluster.NodeMonitor.NodeMonitor] INFO: 节点性能监控器 NodeMonitor started.
+2025-05-14 03:53:29,130 [cluster.PodMonitor.PodMonitor] INFO: PodMonitor started.
+2025-05-14 03:53:29,131 [cluster.NodePodMonitor.NodePodMonitor] INFO: Pod分布监控器 NodePodMonitor started.
+2025-05-14 03:53:29,132 [cluster.NginxSLOMonitor.NginxSLOMonitor] INFO: NginxSLOMonitor (multi-threshold) started.
+2025-05-14 03:53:29,133 [cluster.DeploymentMonitor.DeploymentMonitor] INFO: deployment资源监控器 DeploymentMonitor started.
+2025-05-14 03:53:29,134 [cluster.JobMonitor.JobMonitor] INFO: Job资源监控器JobMonitor started.
+2025-05-14 03:53:29,134 [root] INFO: All monitoring threads started.
+2025-05-14 03:53:29,202 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 03:53:29: 新增节点={'master', 'node-1'}, 移除节点=set()
+2025-05-14 03:53:29,991 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:53:35,022 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:53:40,057 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:53:45,086 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:53:50,113 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:53:55,135 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:54:00,154 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:54:05,183 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:54:10,203 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:54:15,228 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:54:20,248 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:54:25,268 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:54:30,304 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:54:35,326 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:54:40,349 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:54:45,363 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:54:50,389 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:54:55,406 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:55:00,432 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:55:05,461 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:55:10,487 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:55:15,508 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:55:21,667 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:55:26,697 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:55:31,711 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:55:36,730 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:55:41,751 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:55:46,773 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:55:51,798 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:55:56,825 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:56:01,853 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:56:06,880 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:56:11,896 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:56:16,910 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:56:21,926 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:56:26,953 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:56:31,978 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:56:37,004 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:56:42,005 [cluster.DeploymentMonitor.DeploymentMonitor] INFO: Deployment ADD step-load
+2025-05-14 03:56:42,006 [cluster.DeploymentMonitor.DeploymentMonitor] INFO: Deployment ADD nginx
+2025-05-14 03:56:42,027 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:56:47,052 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:56:52,073 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:56:57,103 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:57:02,139 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:57:07,157 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:57:12,179 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:57:17,203 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:57:22,228 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:57:27,251 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:57:32,264 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:57:37,275 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:57:42,290 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:57:47,317 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:57:52,339 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:57:57,363 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:58:02,385 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:58:07,403 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:58:12,416 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:58:17,445 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:58:22,465 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:58:27,485 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:58:32,512 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:58:37,528 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:58:42,542 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:58:47,560 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:58:52,585 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:58:57,599 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:59:02,614 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:59:07,628 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:59:12,651 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:59:17,673 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:59:22,691 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:59:27,718 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:59:32,741 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:59:37,761 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:59:42,789 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:59:47,813 [cluster.PodMonitor.PodMonitor] WARNING: 目前没有正在运行的pods在default空间下
+2025-05-14 03:59:54,551 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD step-load-7d6dd98f99-44zkx
+2025-05-14 03:59:54,552 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD step-load-7d6dd98f99-g9fbh
+2025-05-14 03:59:54,553 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD step-load-7d6dd98f99-c5gtt
+2025-05-14 03:59:54,555 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD step-load-7d6dd98f99-d748r
+2025-05-14 04:00:30,413 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-62597] ADD step-load-7d6dd98f99-r926l
+2025-05-14 04:00:50,876 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-62597] ADD step-load-7d6dd98f99-tszsp
+2025-05-14 04:00:50,877 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-62597] ADD nginx-7b6d77bd77-krrj5
+2025-05-14 04:00:50,878 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-62597] ADD nginx-7b6d77bd77-4drlw
+2025-05-14 04:01:17,553 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:01:17: 新增节点={'pack-us-west1-n1-standard-2-62597'}, 移除节点=set()
+2025-05-14 04:06:53,813 [cluster.JobMonitor.JobMonitor] INFO: Job ADD renaissance
+2025-05-14 04:07:54,718 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:07:54: 新增节点={'up-us-west1-n1-standard-1-93300'}, 移除节点=set()
+2025-05-14 04:07:56,137 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-west1-n1-standard-1-93300] ADD nginx-7b6d77bd77-kpzlh
+2025-05-14 04:10:52,874 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:10:52: 新增节点={'rfsa-us-east1-n1-highcpu-4-81988'}, 移除节点=set()
+2025-05-14 04:10:57,969 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:10:57: 新增节点={'rfsa-us-west1-n1-highcpu-4-64655'}, 移除节点=set()
+2025-05-14 04:11:26,480 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD nginx-7b6d77bd77-gxgw4
+2025-05-14 04:12:12,728 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-highcpu-4-81988] ADD renaissance-bkqlq
+2025-05-14 04:12:12,729 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-64655] ADD renaissance-z89wc
+2025-05-14 04:12:23,009 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-highcpu-4-81988] ADD nginx-7b6d77bd77-tr6rp
+2025-05-14 04:12:28,178 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-highcpu-4-29805] ADD renaissance-9bw2j
+2025-05-14 04:12:29,736 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:12:29: 新增节点={'rfsa-us-east1-n1-highcpu-4-29805'}, 移除节点=set()
+2025-05-14 04:15:48,933 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-west1-n1-standard-1-93300] DEL nginx-7b6d77bd77-kpzlh
+2025-05-14 04:16:25,000 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:16:24: 新增节点=set(), 移除节点={'up-us-west1-n1-standard-1-93300'}
+2025-05-14 04:16:52,021 [cluster.JobMonitor.JobMonitor] INFO: Job ADD mbw
+2025-05-14 04:17:16,584 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-highcpu-4-81988] ADD nginx-7b6d77bd77-fgp7g
+2025-05-14 04:17:21,771 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-highcpu-4-29805] ADD step-load-7d6dd98f99-9mfjh
+2025-05-14 04:17:21,772 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-64655] ADD step-load-7d6dd98f99-26gf5
+2025-05-14 04:19:00,375 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD step-load-7d6dd98f99-bfxvp
+2025-05-14 04:19:21,185 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-99352] ADD step-load-7d6dd98f99-pttpz
+2025-05-14 04:19:29,947 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:19:29: 新增节点={'rfsa-us-east4-n4-highcpu-2-99352'}, 移除节点=set()
+2025-05-14 04:19:36,770 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-99352] ADD mbw-fpntw
+2025-05-14 04:20:23,730 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD nginx-7b6d77bd77-zdf8f
+2025-05-14 04:21:36,735 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-62597] ADD nginx-7b6d77bd77-5c6ds
+2025-05-14 04:21:36,736 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-highcpu-4-81988] ADD nginx-7b6d77bd77-rnzp6
+2025-05-14 04:24:13,317 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-64655] DEL renaissance-z89wc
+2025-05-14 04:24:34,242 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-highcpu-4-29805] DEL renaissance-9bw2j
+2025-05-14 04:25:05,464 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-64655] DEL step-load-7d6dd98f99-26gf5
+2025-05-14 04:25:05,465 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-highcpu-4-29805] DEL step-load-7d6dd98f99-9mfjh
+2025-05-14 04:25:21,103 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-highcpu-4-81988] DEL renaissance-bkqlq
+2025-05-14 04:25:26,384 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:25:26: 新增节点=set(), 移除节点={'rfsa-us-west1-n1-highcpu-4-64655'}
+2025-05-14 04:25:31,580 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:25:31: 新增节点=set(), 移除节点={'rfsa-us-east1-n1-highcpu-4-29805'}
+2025-05-14 04:28:33,362 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-highcpu-4-81988] ADD renaissance-8tdvq
+2025-05-14 04:29:05,038 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-99352] DEL step-load-7d6dd98f99-pttpz
+2025-05-14 04:29:19,240 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:29:19: 新增节点={'rfsa-us-west1-n1-highcpu-4-51045'}, 移除节点=set()
+2025-05-14 04:29:20,773 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-51045] ADD renaissance-bw2wr
+2025-05-14 04:29:29,418 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:29:29: 新增节点=set(), 移除节点={'rfsa-us-east4-n4-highcpu-2-99352'}
+2025-05-14 04:29:31,236 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-51045] ADD step-load-7d6dd98f99-cr4vn
+2025-05-14 04:29:52,121 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-99352] DEL mbw-fpntw
+2025-05-14 04:30:49,431 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-highcpu-4-81988] DEL nginx-7b6d77bd77-rnzp6
+2025-05-14 04:32:28,231 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-east1-n4-highcpu-2-25143] ADD mbw-psrjg
+2025-05-14 04:32:54,502 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:32:54: 新增节点={'up-us-east1-n4-highcpu-2-25143'}, 移除节点=set()
+2025-05-14 04:34:29,056 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-east1-n4-highcpu-2-25143] ADD step-load-7d6dd98f99-t27nw
+2025-05-14 04:35:08,584 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:35:08: 新增节点={'rfsa-us-west1-n1-highcpu-4-44724'}, 移除节点=set()
+2025-05-14 04:35:11,323 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-44724] ADD renaissance-gmg7q
+2025-05-14 04:35:21,940 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-44724] ADD nginx-7b6d77bd77-dfzd6
+2025-05-14 04:35:53,747 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-44724] ADD step-load-7d6dd98f99-4jptj
+2025-05-14 04:37:19,004 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL step-load-7d6dd98f99-44zkx
+2025-05-14 04:37:19,005 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL step-load-7d6dd98f99-bfxvp
+2025-05-14 04:37:19,006 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL step-load-7d6dd98f99-c5gtt
+2025-05-14 04:37:19,008 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL step-load-7d6dd98f99-d748r
+2025-05-14 04:37:39,989 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD mbw-b5965
+2025-05-14 04:40:15,945 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-62597] DEL nginx-7b6d77bd77-krrj5
+2025-05-14 04:40:15,946 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-62597] DEL nginx-7b6d77bd77-4drlw
+2025-05-14 04:40:15,947 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-62597] DEL nginx-7b6d77bd77-5c6ds
+2025-05-14 04:40:21,139 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-62597] DEL step-load-7d6dd98f99-r926l
+2025-05-14 04:40:21,140 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-62597] DEL step-load-7d6dd98f99-tszsp
+2025-05-14 04:40:36,684 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-highcpu-4-81988] DEL renaissance-8tdvq
+2025-05-14 04:40:47,166 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:40:46: 新增节点=set(), 移除节点={'pack-us-west1-n1-standard-2-62597'}
+2025-05-14 04:41:28,348 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-51045] DEL renaissance-bw2wr
+2025-05-14 04:42:35,373 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-east1-n4-highcpu-2-25143] DEL mbw-psrjg
+2025-05-14 04:43:32,154 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-highcpu-4-81988] ADD mbw-tqlqj
+2025-05-14 04:43:32,156 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-63305] ADD step-load-7d6dd98f99-wbdgr
+2025-05-14 04:43:42,490 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-highcpu-4-81988] DEL nginx-7b6d77bd77-tr6rp
+2025-05-14 04:43:42,491 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-highcpu-4-81988] DEL nginx-7b6d77bd77-fgp7g
+2025-05-14 04:43:42,492 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-51045] DEL step-load-7d6dd98f99-cr4vn
+2025-05-14 04:43:47,712 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-highcpu-4-81988] ADD step-load-7d6dd98f99-6v97m
+2025-05-14 04:43:47,713 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-63305] ADD mbw-wgfhn
+2025-05-14 04:43:58,088 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-highcpu-4-81988] DEL step-load-7d6dd98f99-6v97m
+2025-05-14 04:44:03,288 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:44:03: 新增节点={'rfsa-us-east4-n4-highcpu-2-63305'}, 移除节点={'rfsa-us-west1-n1-highcpu-4-51045'}
+2025-05-14 04:44:08,418 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-highcpu-4-81988] DEL mbw-tqlqj
+2025-05-14 04:44:08,463 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:44:08: 新增节点=set(), 移除节点={'rfsa-us-east1-n1-highcpu-4-81988'}
+2025-05-14 04:44:49,516 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-63305] DEL step-load-7d6dd98f99-wbdgr
+2025-05-14 04:45:15,214 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:45:15: 新增节点=set(), 移除节点={'rfsa-us-east4-n4-highcpu-2-63305'}
+2025-05-14 04:45:30,587 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-63305] DEL mbw-wgfhn
+2025-05-14 04:47:13,243 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-44724] DEL renaissance-gmg7q
+2025-05-14 04:47:18,146 [cluster.JobMonitor.JobMonitor] INFO: Job COMPLETE renaissance, duration=2423s
+2025-05-14 04:47:38,924 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL mbw-b5965
+2025-05-14 04:48:04,547 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-east1-n4-highcpu-2-25143] ADD mbw-8s6zp
+2025-05-14 04:48:56,005 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:48:55: 新增节点={'up-us-west1-n1-highcpu-2-92687'}, 移除节点=set()
+2025-05-14 04:49:52,441 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD mbw-76z2v
+2025-05-14 04:50:07,889 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-44724] ADD mbw-6snh7
+2025-05-14 04:50:07,890 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-west1-n1-highcpu-2-92687] ADD step-load-7d6dd98f99-msx84
+2025-05-14 04:50:07,891 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-west1-n1-highcpu-2-92687] ADD step-load-7d6dd98f99-px44t
+2025-05-14 04:50:23,368 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-70384] ADD mbw-rxtj6
+2025-05-14 04:50:23,396 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:50:23: 新增节点={'rfsa-us-east4-n4-highcpu-2-70384'}, 移除节点=set()
+2025-05-14 04:50:28,539 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-70384] ADD step-load-7d6dd98f99-hpjzn
+2025-05-14 04:51:25,417 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-east1-n4-highcpu-2-25143] ADD nginx-7b6d77bd77-g4lph
+2025-05-14 04:52:43,045 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-west1-n1-highcpu-2-92687] ADD nginx-7b6d77bd77-gctn4
+2025-05-14 04:54:10,977 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-44724] DEL nginx-7b6d77bd77-dfzd6
+2025-05-14 04:54:10,978 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-west1-n1-highcpu-2-92687] DEL nginx-7b6d77bd77-gctn4
+2025-05-14 04:54:16,142 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-44724] DEL step-load-7d6dd98f99-4jptj
+2025-05-14 04:54:36,804 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-west1-n1-highcpu-2-92687] DEL step-load-7d6dd98f99-px44t
+2025-05-14 04:54:36,805 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-west1-n1-highcpu-2-92687] DEL step-load-7d6dd98f99-msx84
+2025-05-14 04:54:36,859 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:54:36: 新增节点=set(), 移除节点={'rfsa-us-west1-n1-highcpu-4-44724'}
+2025-05-14 04:54:42,015 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:54:41: 新增节点=set(), 移除节点={'up-us-west1-n1-highcpu-2-92687'}
+2025-05-14 04:54:52,295 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-44724] DEL mbw-6snh7
+2025-05-14 04:57:47,255 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 04:57:47: 新增节点={'rfsa-us-west1-n4-highcpu-2-95583'}, 移除节点=set()
+2025-05-14 04:57:57,511 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n4-highcpu-2-95583] ADD mbw-8s8h7
+2025-05-14 04:57:57,512 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-70384] ADD nginx-7b6d77bd77-npbpb
+2025-05-14 04:58:02,725 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n4-highcpu-2-95583] ADD step-load-7d6dd98f99-4kxwk
+2025-05-14 04:58:07,916 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-east1-n4-highcpu-2-25143] DEL mbw-8s6zp
+2025-05-14 04:58:13,160 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-89852] ADD step-load-7d6dd98f99-smckw
+2025-05-14 04:58:18,375 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-89852] ADD step-load-7d6dd98f99-5ts2p
+2025-05-14 04:58:23,563 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-89852] DEL step-load-7d6dd98f99-smckw
+2025-05-14 04:58:28,732 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-89852] DEL step-load-7d6dd98f99-5ts2p
+2025-05-14 04:59:05,111 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD nginx-7b6d77bd77-92g4b
+2025-05-14 04:59:51,684 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL mbw-76z2v
+2025-05-14 05:00:27,856 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-70384] DEL mbw-rxtj6
+2025-05-14 05:01:40,293 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-east1-n4-highcpu-2-25143] ADD mbw-fctb5
+2025-05-14 05:01:50,733 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD step-load-7d6dd98f99-zfqbz
+2025-05-14 05:01:55,970 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-70384] ADD mbw-25xgb
+2025-05-14 05:02:06,427 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-74113] ADD step-load-7d6dd98f99-nq6jn
+2025-05-14 05:02:06,428 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-74113] ADD step-load-7d6dd98f99-mbgsd
+2025-05-14 05:02:11,684 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-74113] ADD step-load-7d6dd98f99-z6cts
+2025-05-14 05:02:43,924 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 05:02:43: 新增节点={'pack-us-west1-n1-standard-2-74113'}, 移除节点=set()
+2025-05-14 05:05:18,713 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n4-highcpu-2-61222] ADD mbw-skz5s
+2025-05-14 05:05:55,192 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n4-highcpu-2-61222] DEL mbw-skz5s
+2025-05-14 05:06:55,425 [cluster.JobMonitor.JobMonitor] INFO: Job DEL renaissance
+2025-05-14 05:07:00,443 [cluster.JobMonitor.JobMonitor] INFO: Job ADD renaissance
+2025-05-14 05:08:05,261 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n4-highcpu-2-95583] DEL mbw-8s8h7
+2025-05-14 05:08:36,723 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD nginx-7b6d77bd77-6mtkv
+2025-05-14 05:09:02,919 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n4-highcpu-2-42794] ADD mbw-h4x5w
+2025-05-14 05:09:13,161 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 05:09:13: 新增节点={'rfsa-us-west1-n4-highcpu-2-42794'}, 移除节点=set()
+2025-05-14 05:11:03,891 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n4-highcpu-2-95583] ADD mbw-ftrn5
+2025-05-14 05:11:45,650 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-east1-n4-highcpu-2-25143] DEL mbw-fctb5
+2025-05-14 05:12:01,286 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-70384] DEL mbw-25xgb
+2025-05-14 05:12:06,578 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-east1-n4-highcpu-2-25143] ADD mbw-rwwhp
+2025-05-14 05:13:04,273 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-70384] ADD mbw-4m4wt
+2025-05-14 05:14:44,018 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-70384] DEL nginx-7b6d77bd77-npbpb
+2025-05-14 05:15:06,313 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 05:15:06: 新增节点=set(), 移除节点={'rfsa-us-east4-n4-highcpu-2-70384'}
+2025-05-14 05:15:10,098 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-70384] DEL step-load-7d6dd98f99-hpjzn
+2025-05-14 05:15:16,458 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 05:15:16: 新增节点=set(), 移除节点={'rfsa-us-west1-n4-highcpu-2-42794'}
+2025-05-14 05:15:31,113 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-70384] DEL mbw-4m4wt
+2025-05-14 05:15:31,114 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n4-highcpu-2-42794] DEL mbw-h4x5w
+2025-05-14 05:17:19,889 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-74113] DEL step-load-7d6dd98f99-nq6jn
+2025-05-14 05:17:25,101 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-74113] DEL step-load-7d6dd98f99-z6cts
+2025-05-14 05:17:25,102 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-74113] DEL step-load-7d6dd98f99-mbgsd
+2025-05-14 05:18:27,050 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n4-highcpu-2-95583] ADD nginx-7b6d77bd77-sl57l
+2025-05-14 05:18:42,640 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n4-highcpu-2-95583] DEL nginx-7b6d77bd77-sl57l
+2025-05-14 05:19:03,430 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 05:19:03: 新增节点={'rfsa-us-west1-n1-highcpu-4-90504'}, 移除节点=set()
+2025-05-14 05:19:13,700 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-90504] ADD renaissance-glzt9
+2025-05-14 05:19:13,754 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 05:19:13: 新增节点=set(), 移除节点={'rfsa-us-west1-n4-highcpu-2-95583'}
+2025-05-14 05:19:34,395 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n4-highcpu-2-95583] DEL step-load-7d6dd98f99-4kxwk
+2025-05-14 05:19:34,396 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n4-highcpu-2-95583] DEL mbw-ftrn5
+2025-05-14 05:21:53,956 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-west1-n4-highcpu-2-92705] ADD mbw-5gp7h
+2025-05-14 05:21:59,150 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-74113] ADD mbw-fsxp2
+2025-05-14 05:22:08,797 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 05:22:08: 新增节点={'up-us-west1-n4-highcpu-2-92705'}, 移除节点=set()
+2025-05-14 05:22:09,563 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-east1-n4-highcpu-2-25143] DEL mbw-rwwhp
+2025-05-14 05:23:37,252 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL nginx-7b6d77bd77-6mtkv
+2025-05-14 05:23:37,253 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL nginx-7b6d77bd77-92g4b
+2025-05-14 05:23:47,599 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-east1-n4-highcpu-2-25143] ADD step-load-7d6dd98f99-d5j4q
+2025-05-14 05:24:31,295 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 05:24:31: 新增节点={'rfsa-us-west1-n1-highcpu-4-82074'}, 移除节点=set()
+2025-05-14 05:24:39,157 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-82074] ADD renaissance-8q6fk
+2025-05-14 05:26:37,830 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-74113] DEL mbw-fsxp2
+2025-05-14 05:26:43,531 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 05:26:43: 新增节点=set(), 移除节点={'pack-us-west1-n1-standard-2-74113'}
+2025-05-14 05:30:08,645 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 05:30:08: 新增节点={'rfsa-us-west1-n1-highcpu-4-17488'}, 移除节点=set()
+2025-05-14 05:30:14,568 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-17488] ADD renaissance-89jc4
+2025-05-14 05:31:21,663 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-90504] DEL renaissance-glzt9
+2025-05-14 05:31:47,419 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-east1-n4-highcpu-2-25143] DEL nginx-7b6d77bd77-g4lph
+2025-05-14 05:31:52,575 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-east1-n4-highcpu-2-25143] DEL step-load-7d6dd98f99-d5j4q
+2025-05-14 05:32:02,861 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-west1-n4-highcpu-2-92705] DEL mbw-5gp7h
+2025-05-14 05:32:20,875 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 05:32:20: 新增节点=set(), 移除节点={'up-us-east1-n4-highcpu-2-25143'}
+2025-05-14 05:32:33,716 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-east1-n4-highcpu-2-25143] DEL step-load-7d6dd98f99-t27nw
+2025-05-14 05:32:49,143 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-90504] ADD renaissance-js6s6
+2025-05-14 05:34:47,410 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-west1-n4-highcpu-2-92705] ADD mbw-7pmjb
+2025-05-14 05:34:57,764 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-90504] ADD step-load-7d6dd98f99-795wr
+2025-05-14 05:35:08,068 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-76439] ADD mbw-ghsn8
+2025-05-14 05:35:13,242 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-76439] ADD step-load-7d6dd98f99-5rdmc
+2025-05-14 05:35:18,967 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 05:35:18: 新增节点={'rfsa-us-east4-n4-highcpu-2-76439'}, 移除节点=set()
+2025-05-14 05:36:25,469 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-82074] ADD nginx-7b6d77bd77-wmxrp
+2025-05-14 05:36:46,141 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-82074] DEL renaissance-8q6fk
+2025-05-14 05:37:17,153 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-82074] ADD renaissance-lkbds
+2025-05-14 05:37:22,348 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-82074] ADD step-load-7d6dd98f99-bqfbs
+2025-05-14 05:38:48,387 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 05:38:48: 新增节点=set(), 移除节点={'rfsa-us-east4-n4-highcpu-2-76439'}
+2025-05-14 05:38:55,530 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-76439] DEL mbw-ghsn8
+2025-05-14 05:38:55,531 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-76439] DEL step-load-7d6dd98f99-5rdmc
+2025-05-14 05:39:26,577 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-west1-n4-highcpu-2-92705] ADD step-load-7d6dd98f99-htqzr
+2025-05-14 05:41:25,507 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-78346] ADD step-load-7d6dd98f99-5qgpc
+2025-05-14 05:41:41,077 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-78346] ADD mbw-ptcxm
+2025-05-14 05:41:46,297 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-78346] ADD nginx-7b6d77bd77-bwxvp
+2025-05-14 05:41:46,416 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 05:41:46: 新增节点={'rfsa-us-east4-n4-highcpu-2-78346'}, 移除节点=set()
+2025-05-14 05:42:22,515 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-17488] DEL renaissance-89jc4
+2025-05-14 05:43:35,015 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-17488] ADD renaissance-mts5h
+2025-05-14 05:44:16,446 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-17488] DEL renaissance-mts5h
+2025-05-14 05:44:21,713 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 05:44:21: 新增节点=set(), 移除节点={'rfsa-us-west1-n1-highcpu-4-17488'}
+2025-05-14 05:44:52,639 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-west1-n4-highcpu-2-92705] DEL mbw-7pmjb
+2025-05-14 05:44:57,799 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-90504] DEL renaissance-js6s6
+2025-05-14 05:48:09,166 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 05:48:08: 新增节点=set(), 移除节点={'up-us-west1-n4-highcpu-2-92705'}
+2025-05-14 05:48:14,298 [cluster.NodePodMonitor.NodePodMonitor] INFO: [up-us-west1-n4-highcpu-2-92705] DEL step-load-7d6dd98f99-htqzr
+2025-05-14 05:48:45,298 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-90504] DEL step-load-7d6dd98f99-795wr
+2025-05-14 05:49:16,277 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 05:49:16: 新增节点=set(), 移除节点={'rfsa-us-west1-n1-highcpu-4-90504'}
+2025-05-14 05:49:21,317 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-82074] DEL renaissance-lkbds
+2025-05-14 05:51:45,330 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-78346] DEL mbw-ptcxm
+2025-05-14 05:51:46,323 [cluster.JobMonitor.JobMonitor] INFO: Job DEL mbw
+2025-05-14 05:51:51,395 [cluster.JobMonitor.JobMonitor] INFO: Job ADD mbw
+2025-05-14 05:52:31,876 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-38060] ADD nginx-7b6d77bd77-c75nj
+2025-05-14 05:52:36,996 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-38060] DEL nginx-7b6d77bd77-c75nj
+2025-05-14 05:52:46,609 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 05:52:46: 新增节点={'pack-us-west1-n1-standard-2-38060'}, 移除节点=set()
+2025-05-14 05:53:12,877 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] DEL nginx-7b6d77bd77-zdf8f
+2025-05-14 05:54:07,906 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 05:54:07: 新增节点={'rfsa-us-east1-n4-highcpu-2-68498'}, 移除节点=set()
+2025-05-14 05:54:14,496 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-78346] ADD mbw-ntpp4
+2025-05-14 05:54:14,497 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-82074] ADD step-load-7d6dd98f99-f4m4r
+2025-05-14 05:54:24,814 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n4-highcpu-2-68498] ADD mbw-x8xgs
+2025-05-14 05:54:30,007 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-82074] ADD mbw-6mlzd
+2025-05-14 05:54:35,202 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-38060] ADD mbw-5sm8h
+2025-05-14 05:54:40,405 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n4-highcpu-2-68498] ADD step-load-7d6dd98f99-rwqt2
+2025-05-14 05:55:11,636 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-highcpu-4-87891] ADD renaissance-dkr66
+2025-05-14 05:56:20,002 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 05:56:19: 新增节点={'rfsa-us-east1-n1-highcpu-4-87891'}, 移除节点=set()
+2025-05-14 05:56:39,480 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-38060] ADD nginx-7b6d77bd77-vfz9d
+2025-05-14 05:56:55,070 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n4-highcpu-2-68498] ADD nginx-7b6d77bd77-c52gh
+2025-05-14 06:00:06,637 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-82074] DEL nginx-7b6d77bd77-wmxrp
+2025-05-14 06:00:11,782 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-38060] DEL nginx-7b6d77bd77-vfz9d
+2025-05-14 06:00:16,919 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-82074] DEL step-load-7d6dd98f99-f4m4r
+2025-05-14 06:00:16,921 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-82074] DEL step-load-7d6dd98f99-bqfbs
+2025-05-14 06:00:47,875 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 06:00:47: 新增节点=set(), 移除节点={'rfsa-us-west1-n1-highcpu-4-82074', 'pack-us-west1-n1-standard-2-38060'}
+2025-05-14 06:00:52,915 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-38060] DEL mbw-5sm8h
+2025-05-14 06:00:52,917 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n1-highcpu-4-82074] DEL mbw-6mlzd
+2025-05-14 06:03:52,889 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-91758] ADD nginx-7b6d77bd77-wcr9k
+2025-05-14 06:04:03,302 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-91758] ADD step-load-7d6dd98f99-8wmhf
+2025-05-14 06:04:03,303 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-91758] ADD nginx-7b6d77bd77-nrk5x
+2025-05-14 06:04:03,304 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-91758] ADD step-load-7d6dd98f99-6v2zg
+2025-05-14 06:04:08,545 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 06:04:08: 新增节点={'pack-us-west1-n4-highcpu-4-91758'}, 移除节点=set()
+2025-05-14 06:04:13,698 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-91758] ADD mbw-fll5m
+2025-05-14 06:04:13,699 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-91758] ADD mbw-4gfsq
+2025-05-14 06:04:18,932 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-78346] DEL mbw-ntpp4
+2025-05-14 06:04:29,346 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n4-highcpu-2-68498] DEL mbw-x8xgs
+2025-05-14 06:05:05,547 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-78346] ADD mbw-8vwq8
+2025-05-14 06:05:05,549 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n4-highcpu-2-68498] ADD mbw-tb9zx
+2025-05-14 06:07:20,079 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-highcpu-4-87891] DEL renaissance-dkr66
+2025-05-14 06:10:05,575 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 06:10:05: 新增节点=set(), 移除节点={'rfsa-us-east1-n1-highcpu-4-87891'}
+2025-05-14 06:12:45,834 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-91758] DEL nginx-7b6d77bd77-nrk5x
+2025-05-14 06:14:18,773 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-91758] DEL mbw-fll5m
+2025-05-14 06:14:18,774 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-91758] DEL mbw-4gfsq
+2025-05-14 06:14:39,455 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-91758] DEL nginx-7b6d77bd77-wcr9k
+2025-05-14 06:14:39,456 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-91758] DEL step-load-7d6dd98f99-6v2zg
+2025-05-14 06:14:44,573 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-91758] DEL step-load-7d6dd98f99-8wmhf
+2025-05-14 06:15:10,250 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-78346] DEL mbw-8vwq8
+2025-05-14 06:15:10,251 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n4-highcpu-2-68498] DEL mbw-tb9zx
+2025-05-14 06:15:10,262 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 06:15:10: 新增节点=set(), 移除节点={'pack-us-west1-n4-highcpu-4-91758'}
+2025-05-14 06:17:44,216 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-78346] ADD mbw-b9jdq
+2025-05-14 06:17:44,217 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n4-highcpu-2-68498] ADD mbw-ljf8q
+2025-05-14 06:17:59,755 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-66466] ADD step-load-7d6dd98f99-r6tbv
+2025-05-14 06:18:10,138 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-66466] ADD step-load-7d6dd98f99-jxd2d
+2025-05-14 06:18:10,139 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-66466] ADD nginx-7b6d77bd77-5rnqk
+2025-05-14 06:18:20,550 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-66466] ADD mbw-qqxmx
+2025-05-14 06:18:25,743 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-66466] ADD mbw-mk6tm
+2025-05-14 06:18:25,768 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 06:18:25: 新增节点={'pack-us-west1-n4-highcpu-4-66466'}, 移除节点=set()
+2025-05-14 06:27:49,136 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-78346] DEL mbw-b9jdq
+2025-05-14 06:27:49,137 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n4-highcpu-2-68498] DEL step-load-7d6dd98f99-rwqt2
+2025-05-14 06:27:49,138 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n4-highcpu-2-68498] DEL mbw-ljf8q
+2025-05-14 06:27:49,139 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n4-highcpu-2-68498] DEL nginx-7b6d77bd77-c52gh
+2025-05-14 06:28:20,057 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 06:28:19: 新增节点=set(), 移除节点={'rfsa-us-east1-n4-highcpu-2-68498'}
+2025-05-14 06:28:30,236 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-66466] DEL mbw-mk6tm
+2025-05-14 06:28:30,237 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-66466] DEL mbw-qqxmx
+2025-05-14 06:29:06,321 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-78346] ADD mbw-68zsv
+2025-05-14 06:29:06,322 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-66466] ADD step-load-7d6dd98f99-g2fks
+2025-05-14 06:29:06,323 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-66466] ADD mbw-kflr7
+2025-05-14 06:29:11,536 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-66466] ADD nginx-7b6d77bd77-jjnjr
+2025-05-14 06:32:53,413 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-66466] DEL nginx-7b6d77bd77-jjnjr
+2025-05-14 06:32:53,415 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-66466] DEL nginx-7b6d77bd77-5rnqk
+2025-05-14 06:32:58,554 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-66466] DEL step-load-7d6dd98f99-jxd2d
+2025-05-14 06:32:58,555 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-66466] DEL step-load-7d6dd98f99-g2fks
+2025-05-14 06:32:58,556 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-66466] DEL step-load-7d6dd98f99-r6tbv
+2025-05-14 06:33:24,223 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 06:33:24: 新增节点=set(), 移除节点={'pack-us-west1-n4-highcpu-4-66466'}
+2025-05-14 06:33:34,368 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n4-highcpu-4-66466] DEL mbw-kflr7
+2025-05-14 06:36:18,281 [cluster.NodePodMonitor.NodePodMonitor] INFO: [node-1] ADD step-load-7d6dd98f99-lsv8q
+2025-05-14 06:36:23,547 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 06:36:23: 新增节点={'rfsa-us-west1-n4-highcpu-2-16033'}, 移除节点=set()
+2025-05-14 06:36:33,709 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n4-highcpu-2-16033] ADD mbw-x8jhc
+2025-05-14 06:36:38,861 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n4-highcpu-2-16033] ADD step-load-7d6dd98f99-gjp2w
+2025-05-14 06:36:49,129 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n4-highcpu-2-16033] ADD nginx-7b6d77bd77-mwjc6
+2025-05-14 06:36:49,131 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-standard-1-77354] ADD nginx-7b6d77bd77-5mqbc
+2025-05-14 06:36:59,487 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 06:36:59: 新增节点={'rfsa-us-east1-n1-standard-1-77354'}, 移除节点=set()
+2025-05-14 06:36:59,572 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-standard-1-77354] ADD step-load-7d6dd98f99-nvq44
+2025-05-14 06:39:08,169 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-78346] DEL mbw-68zsv
+2025-05-14 06:41:57,950 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-standard-1-77354] DEL nginx-7b6d77bd77-5mqbc
+2025-05-14 06:41:57,951 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-78346] DEL nginx-7b6d77bd77-bwxvp
+2025-05-14 06:41:57,953 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east4-n4-highcpu-2-78346] DEL step-load-7d6dd98f99-5qgpc
+2025-05-14 06:42:03,092 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-standard-1-77354] DEL step-load-7d6dd98f99-nvq44
+2025-05-14 06:42:29,933 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 06:42:29: 新增节点=set(), 移除节点={'rfsa-us-east1-n1-standard-1-77354', 'rfsa-us-east4-n4-highcpu-2-78346'}
+2025-05-14 06:46:05,627 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-30114] ADD step-load-7d6dd98f99-2x2dn
+2025-05-14 06:46:13,770 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 06:46:13: 新增节点={'pack-us-west1-n1-standard-2-30114'}, 移除节点=set()
+2025-05-14 06:46:21,009 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-30114] ADD step-load-7d6dd98f99-qv778
+2025-05-14 06:46:21,010 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-30114] ADD nginx-7b6d77bd77-xhw2m
+2025-05-14 06:46:21,011 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-30114] ADD nginx-7b6d77bd77-ws74g
+2025-05-14 06:46:41,572 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n4-highcpu-2-16033] DEL mbw-x8jhc
+2025-05-14 06:46:41,699 [cluster.JobMonitor.JobMonitor] INFO: Job COMPLETE mbw, duration=3289s
+2025-05-14 06:51:09,053 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n4-highcpu-2-16033] DEL nginx-7b6d77bd77-mwjc6
+2025-05-14 06:51:29,536 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-west1-n4-highcpu-2-16033] DEL step-load-7d6dd98f99-gjp2w
+2025-05-14 06:51:34,739 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 06:51:34: 新增节点=set(), 移除节点={'rfsa-us-west1-n4-highcpu-2-16033'}
+2025-05-14 06:55:29,811 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-standard-1-76814] ADD nginx-7b6d77bd77-prl9s
+2025-05-14 06:55:45,169 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-standard-1-76814] ADD step-load-7d6dd98f99-zjl5k
+2025-05-14 06:55:55,505 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 06:55:55: 新增节点={'rfsa-us-east1-n1-standard-1-76814'}, 移除节点=set()
+2025-05-14 07:00:27,632 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-standard-1-76814] DEL nginx-7b6d77bd77-prl9s
+2025-05-14 07:00:27,633 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-standard-1-76814] DEL step-load-7d6dd98f99-zjl5k
+2025-05-14 07:00:53,319 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 07:00:53: 新增节点=set(), 移除节点={'rfsa-us-east1-n1-standard-1-76814'}
+2025-05-14 07:04:39,319 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-standard-1-10115] ADD nginx-7b6d77bd77-j8dsl
+2025-05-14 07:04:44,512 [cluster.NodeMonitor.NodeMonitor] INFO: Cluster Change at 2025-05-14 07:04:44: 新增节点={'rfsa-us-east1-n1-standard-1-10115'}, 移除节点=set()
+2025-05-14 07:04:49,588 [cluster.NodePodMonitor.NodePodMonitor] INFO: [rfsa-us-east1-n1-standard-1-10115] ADD step-load-7d6dd98f99-8ghtb
+2025-05-14 07:10:24,269 [cluster.NodePodMonitor.NodePodMonitor] INFO: [pack-us-west1-n1-standard-2-30114] ADD nginx-7b6d77bd77-585bl

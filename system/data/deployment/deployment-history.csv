@@ -1,0 +1,5 @@
+timestamp,action,deployment
+2025-05-14 14:34:07,ADD,nginx
+2025-05-14 14:34:07,ADD,step-load
+2025-05-14 17:22:25,DEL,nginx
+2025-05-14 17:22:25,DEL,step-load

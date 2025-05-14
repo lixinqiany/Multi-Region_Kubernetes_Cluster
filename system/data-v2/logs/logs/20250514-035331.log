@@ -1,0 +1,1457 @@
+2025-05-14 03:53:31,208 [ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-14 03:53:31,216 [ClusterMonitor.ClusterMonitor] INFO: 在本地连接到远程集群
+2025-05-14 03:53:31,328 [SAScheduler] INFO: SA Scheduler started. interval=60s
+2025-05-14 03:53:34,144 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 03:54:31,860 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 03:55:31,851 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 03:56:31,934 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 03:57:43,504 [VMManager.VMManager] INFO: 在 zone us-west1-a 找到机型 n1-standard-2
+2025-05-14 03:57:43,506 [VMManager.VMManager] INFO: Location us-west1 识别为 region，选用 zone us-west1-a
+2025-05-14 03:57:43,506 [VMManager.VMManager] INFO: 准备创建 VM pack-us-west1-n1-standard-2-62597 (zone=us-west1-a, type=n1-standard-2)...
+2025-05-14 03:57:54,963 [VMManager.VMManager] INFO: VM pack-us-west1-n1-standard-2-62597 已运行（RUNNING）。
+2025-05-14 03:57:56,097 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.197.20.24（第 1/5 次）
+2025-05-14 03:58:11,316 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 35.197.20.24
+2025-05-14 03:58:21,330 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.197.20.24（第 2/5 次）
+2025-05-14 03:58:21,687 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 03:58:22,624 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 03:58:22,625 [VMManager.VMManager] INFO: SSH 连接成功: 35.197.20.24
+2025-05-14 03:58:28,460 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 03:58:29,310 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 03:59:27,240 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 03:59:28,069 [VMManager.VMManager] INFO: 节点 pack-us-west1-n1-standard-2-62597 Ready。
+2025-05-14 03:59:28,069 [SAScheduler] INFO: create node pack-us-west1-n1-standard-2-62597 (us-west1/n1-standard-2)
+2025-05-14 03:59:48,988 [SAScheduler] INFO: node pack-us-west1-n1-standard-2-62597 ready
+2025-05-14 03:59:49,017 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-44zkx到节点node-1成功
+2025-05-14 03:59:49,017 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-44zkx → node-1
+2025-05-14 03:59:49,055 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-c5gtt到节点node-1成功
+2025-05-14 03:59:49,055 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-c5gtt → node-1
+2025-05-14 03:59:49,099 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-d748r到节点node-1成功
+2025-05-14 03:59:49,099 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-d748r → node-1
+2025-05-14 03:59:49,135 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-g9fbh到节点node-1成功
+2025-05-14 03:59:49,135 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-g9fbh → node-1
+2025-05-14 03:59:49,168 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-r926l到节点pack-us-west1-n1-standard-2-62597成功
+2025-05-14 03:59:49,168 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-r926l → pack-us-west1-n1-standard-2-62597
+2025-05-14 03:59:49,208 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-tszsp到节点pack-us-west1-n1-standard-2-62597成功
+2025-05-14 03:59:49,208 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-tszsp → pack-us-west1-n1-standard-2-62597
+2025-05-14 03:59:49,241 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-4drlw到节点pack-us-west1-n1-standard-2-62597成功
+2025-05-14 03:59:49,242 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-4drlw → pack-us-west1-n1-standard-2-62597
+2025-05-14 03:59:49,279 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-krrj5到节点pack-us-west1-n1-standard-2-62597成功
+2025-05-14 03:59:49,279 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-krrj5 → pack-us-west1-n1-standard-2-62597
+2025-05-14 03:59:49,280 [SAScheduler] INFO: apply diff done: +1 nodes, -0 nodes
+2025-05-14 03:59:49,280 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 04:00:00,309 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 04:01:00,086 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 04:01:59,899 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 04:02:59,962 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 04:04:01,278 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 04:05:10,714 [VMManager.VMManager] INFO: 在 zone us-west1-a 找到机型 n1-standard-1
+2025-05-14 04:05:10,715 [VMManager.VMManager] INFO: Location us-west1 识别为 region，选用 zone us-west1-a
+2025-05-14 04:05:10,715 [VMManager.VMManager] INFO: 准备创建 VM up-us-west1-n1-standard-1-93300 (zone=us-west1-a, type=n1-standard-1)...
+2025-05-14 04:05:22,585 [VMManager.VMManager] INFO: VM up-us-west1-n1-standard-1-93300 已运行（RUNNING）。
+2025-05-14 04:05:23,747 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.19.102.98（第 1/5 次）
+2025-05-14 04:05:38,987 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.19.102.98
+2025-05-14 04:05:48,999 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.19.102.98（第 2/5 次）
+2025-05-14 04:05:49,349 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 04:05:50,284 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 04:05:50,285 [VMManager.VMManager] INFO: SSH 连接成功: 34.19.102.98
+2025-05-14 04:05:54,986 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 04:05:55,840 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 04:06:54,464 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 04:06:55,142 [VMManager.VMManager] INFO: 节点 up-us-west1-n1-standard-1-93300 Ready。
+2025-05-14 04:06:55,142 [SAScheduler] INFO: create node up-us-west1-n1-standard-1-93300 (us-west1/n1-standard-1)
+2025-05-14 04:07:16,018 [SAScheduler] INFO: node up-us-west1-n1-standard-1-93300 ready
+2025-05-14 04:07:16,075 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-kpzlh到节点up-us-west1-n1-standard-1-93300成功
+2025-05-14 04:07:16,075 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-kpzlh → up-us-west1-n1-standard-1-93300
+2025-05-14 04:07:16,076 [SAScheduler] INFO: apply diff done: +1 nodes, -0 nodes
+2025-05-14 04:07:16,076 [SAScheduler] INFO: schedule cycle finished | mode=FULL
+2025-05-14 04:07:34,837 [VMManager.VMManager] INFO: 在 zone us-west1-a 找到机型 n1-highcpu-4
+2025-05-14 04:07:34,837 [VMManager.VMManager] INFO: Location us-west1 识别为 region，选用 zone us-west1-a
+2025-05-14 04:07:34,837 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-west1-n1-highcpu-4-64655 (zone=us-west1-a, type=n1-highcpu-4)...
+2025-05-14 04:07:34,996 [VMManager.VMManager] INFO: 在 zone us-east1-b 找到机型 n1-highcpu-4
+2025-05-14 04:07:34,996 [VMManager.VMManager] INFO: Location us-east1 识别为 region，选用 zone us-east1-b
+2025-05-14 04:07:34,996 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-east1-n1-highcpu-4-81988 (zone=us-east1-b, type=n1-highcpu-4)...
+2025-05-14 04:07:53,180 [VMManager.VMManager] INFO: VM rfsa-us-east1-n1-highcpu-4-81988 已运行（RUNNING）。
+2025-05-14 04:07:54,320 [VMManager.VMManager] INFO: VM rfsa-us-west1-n1-highcpu-4-64655 已运行（RUNNING）。
+2025-05-14 04:07:54,682 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.19.118.254（第 1/5 次）
+2025-05-14 04:07:54,752 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.227.58.188（第 1/5 次）
+2025-05-14 04:08:02,720 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 35.227.58.188
+2025-05-14 04:08:09,917 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.19.118.254
+2025-05-14 04:08:12,725 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.227.58.188（第 2/5 次）
+2025-05-14 04:08:13,188 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 04:08:14,408 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 04:08:14,408 [VMManager.VMManager] INFO: SSH 连接成功: 35.227.58.188
+2025-05-14 04:08:19,927 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.19.118.254（第 2/5 次）
+2025-05-14 04:08:20,278 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 04:08:21,218 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 04:08:21,219 [VMManager.VMManager] INFO: SSH 连接成功: 34.19.118.254
+2025-05-14 04:08:22,203 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 04:08:23,327 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 04:08:25,986 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 04:08:26,825 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 04:09:20,043 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 04:09:20,718 [VMManager.VMManager] INFO: 节点 rfsa-us-west1-n1-highcpu-4-64655 Ready。
+2025-05-14 04:09:20,718 [SAScheduler] INFO: create node rfsa-us-west1-n1-highcpu-4-64655 (us-west1/n1-highcpu-4)
+2025-05-14 04:09:23,954 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 04:09:24,006 [VMManager.VMManager] INFO: 节点 rfsa-us-east1-n1-highcpu-4-81988 Ready。
+2025-05-14 04:09:24,006 [SAScheduler] INFO: create node rfsa-us-east1-n1-highcpu-4-81988 (us-east1/n1-highcpu-4)
+2025-05-14 04:09:24,034 [VMManager.VMManager] INFO: 在 zone us-east1-b 找到机型 n1-highcpu-4
+2025-05-14 04:09:24,034 [VMManager.VMManager] INFO: Location us-east1 识别为 region，选用 zone us-east1-b
+2025-05-14 04:09:24,034 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-east1-n1-highcpu-4-29805 (zone=us-east1-b, type=n1-highcpu-4)...
+2025-05-14 04:09:39,562 [VMManager.VMManager] INFO: VM rfsa-us-east1-n1-highcpu-4-29805 已运行（RUNNING）。
+2025-05-14 04:09:41,126 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.139.134.121（第 1/5 次）
+2025-05-14 04:09:49,097 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.139.134.121
+2025-05-14 04:09:59,106 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.139.134.121（第 2/5 次）
+2025-05-14 04:09:59,570 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 04:10:00,780 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 04:10:00,780 [VMManager.VMManager] INFO: SSH 连接成功: 34.139.134.121
+2025-05-14 04:10:09,480 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 04:10:10,599 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 04:11:07,329 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 04:11:08,032 [VMManager.VMManager] INFO: 节点 rfsa-us-east1-n1-highcpu-4-29805 Ready。
+2025-05-14 04:11:08,032 [SAScheduler] INFO: create node rfsa-us-east1-n1-highcpu-4-29805 (us-east1/n1-highcpu-4)
+2025-05-14 04:11:08,666 [SAScheduler] INFO: node rfsa-us-east1-n1-highcpu-4-81988 ready
+2025-05-14 04:11:08,680 [SAScheduler] INFO: node rfsa-us-west1-n1-highcpu-4-64655 ready
+2025-05-14 04:11:23,760 [SAScheduler] INFO: node rfsa-us-east1-n1-highcpu-4-29805 ready
+2025-05-14 04:11:23,894 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod renaissance-9bw2j到节点rfsa-us-east1-n1-highcpu-4-29805成功
+2025-05-14 04:11:23,894 [SAScheduler] INFO: bind Pending pod default/renaissance-9bw2j → rfsa-us-east1-n1-highcpu-4-29805
+2025-05-14 04:11:23,930 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod renaissance-bkqlq到节点rfsa-us-east1-n1-highcpu-4-81988成功
+2025-05-14 04:11:23,930 [SAScheduler] INFO: bind Pending pod default/renaissance-bkqlq → rfsa-us-east1-n1-highcpu-4-81988
+2025-05-14 04:11:23,960 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod renaissance-z89wc到节点rfsa-us-west1-n1-highcpu-4-64655成功
+2025-05-14 04:11:23,961 [SAScheduler] INFO: bind Pending pod default/renaissance-z89wc → rfsa-us-west1-n1-highcpu-4-64655
+2025-05-14 04:11:24,003 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-gxgw4到节点node-1成功
+2025-05-14 04:11:24,004 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-gxgw4 → node-1
+2025-05-14 04:11:24,039 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-tr6rp到节点rfsa-us-east1-n1-highcpu-4-81988成功
+2025-05-14 04:11:24,039 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-tr6rp → rfsa-us-east1-n1-highcpu-4-81988
+2025-05-14 04:11:24,039 [SAScheduler] INFO: apply diff done: +3 nodes, -0 nodes
+2025-05-14 04:11:24,040 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 04:11:35,095 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 04:12:34,929 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 04:13:35,015 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 04:14:35,034 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 04:15:36,777 [SAScheduler] INFO: [consolidate] try close up-us-west1-n1-standard-1-93300 util=47.00%
+2025-05-14 04:15:37,421 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node up-us-west1-n1-standard-1-93300,标记不可调度
+2025-05-14 04:15:37,939 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node up-us-west1-n1-standard-1-93300
+2025-05-14 04:15:37,958 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object up-us-west1-n1-standard-1-93300
+2025-05-14 04:15:38,961 [VMManager.VMManager] INFO: Deleting VM up-us-west1-n1-standard-1-93300 in zone us-west1-a
+2025-05-14 04:16:44,868 [VMManager.VMManager] INFO: 实例 up-us-west1-n1-standard-1-93300 在 zone us-west1-a 已确认删除
+2025-05-14 04:16:44,868 [SAScheduler] INFO: [consolidate] deleted node up-us-west1-n1-standard-1-93300
+2025-05-14 04:16:45,776 [SAScheduler] INFO: [consolidate] closed nodes: up-us-west1-n1-standard-1-93300
+2025-05-14 04:17:00,434 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-26gf5到节点rfsa-us-west1-n1-highcpu-4-64655成功
+2025-05-14 04:17:00,434 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-26gf5 → rfsa-us-west1-n1-highcpu-4-64655
+2025-05-14 04:17:00,464 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-9mfjh到节点rfsa-us-east1-n1-highcpu-4-29805成功
+2025-05-14 04:17:00,465 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-9mfjh → rfsa-us-east1-n1-highcpu-4-29805
+2025-05-14 04:17:00,492 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-fnnss到节点pack-us-west1-n1-standard-2-62597成功
+2025-05-14 04:17:00,492 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-fnnss → pack-us-west1-n1-standard-2-62597
+2025-05-14 04:17:00,535 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-fgp7g到节点rfsa-us-east1-n1-highcpu-4-81988成功
+2025-05-14 04:17:00,535 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-fgp7g → rfsa-us-east1-n1-highcpu-4-81988
+2025-05-14 04:17:00,536 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 04:17:00,536 [SAScheduler] WARNING: unscheduled pod(s): ['default/step-load-7d6dd98f99-lhdrs', 'default/step-load-7d6dd98f99-pttpz', 'default/step-load-7d6dd98f99-x8xz6']
+2025-05-14 04:17:00,536 [SAScheduler] INFO: schedule cycle finished | mode=FULL
+2025-05-14 04:17:20,776 [VMManager.VMManager] INFO: 在 zone us-east4-a 找到机型 n4-highcpu-2
+2025-05-14 04:17:20,776 [VMManager.VMManager] INFO: Location us-east4 识别为 region，选用 zone us-east4-a
+2025-05-14 04:17:20,776 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-east4-n4-highcpu-2-99352 (zone=us-east4-a, type=n4-highcpu-2)...
+2025-05-14 04:17:35,863 [VMManager.VMManager] INFO: VM rfsa-us-east4-n4-highcpu-2-99352 已运行（RUNNING）。
+2025-05-14 04:17:36,273 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.145.208.68（第 1/5 次）
+2025-05-14 04:17:44,226 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.145.208.68
+2025-05-14 04:17:54,241 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.145.208.68（第 2/5 次）
+2025-05-14 04:17:54,749 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 04:17:56,091 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 04:17:56,091 [VMManager.VMManager] INFO: SSH 连接成功: 34.145.208.68
+2025-05-14 04:18:01,131 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 04:18:02,379 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 04:18:41,983 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 04:18:42,662 [VMManager.VMManager] INFO: 节点 rfsa-us-east4-n4-highcpu-2-99352 Ready。
+2025-05-14 04:18:42,662 [SAScheduler] INFO: create node rfsa-us-east4-n4-highcpu-2-99352 (us-east4/n4-highcpu-2)
+2025-05-14 04:18:58,364 [SAScheduler] INFO: node rfsa-us-east4-n4-highcpu-2-99352 ready
+2025-05-14 04:18:58,518 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-fpntw到节点rfsa-us-east4-n4-highcpu-2-99352成功
+2025-05-14 04:18:58,518 [SAScheduler] INFO: bind Pending pod default/mbw-fpntw → rfsa-us-east4-n4-highcpu-2-99352
+2025-05-14 04:18:58,545 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-bfxvp到节点node-1成功
+2025-05-14 04:18:58,545 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-bfxvp → node-1
+2025-05-14 04:18:58,577 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-lhdrs到节点pack-us-west1-n1-standard-2-62597成功
+2025-05-14 04:18:58,577 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-lhdrs → pack-us-west1-n1-standard-2-62597
+2025-05-14 04:18:58,605 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-pttpz到节点rfsa-us-east4-n4-highcpu-2-99352成功
+2025-05-14 04:18:58,605 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-pttpz → rfsa-us-east4-n4-highcpu-2-99352
+2025-05-14 04:18:58,606 [SAScheduler] INFO: apply diff done: +1 nodes, -0 nodes
+2025-05-14 04:18:58,606 [SAScheduler] WARNING: unscheduled pod(s): ['default/mbw-k2nj7', 'default/mbw-psrjg', 'default/mbw-tqlqj', 'default/step-load-7d6dd98f99-x8xz6']
+2025-05-14 04:18:58,606 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 04:19:17,209 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-k2nj7到节点rfsa-us-east4-n4-highcpu-2-99352成功
+2025-05-14 04:19:17,209 [SAScheduler] INFO: bind Pending pod default/mbw-k2nj7 → rfsa-us-east4-n4-highcpu-2-99352
+2025-05-14 04:19:17,236 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-b6bl2到节点rfsa-us-east4-n4-highcpu-2-99352成功
+2025-05-14 04:19:17,236 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-b6bl2 → rfsa-us-east4-n4-highcpu-2-99352
+2025-05-14 04:19:17,237 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 04:19:17,237 [SAScheduler] WARNING: unscheduled pod(s): ['default/mbw-psrjg', 'default/mbw-tqlqj', 'default/step-load-7d6dd98f99-x8xz6']
+2025-05-14 04:19:17,237 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 04:20:17,535 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-zdf8f到节点node-1成功
+2025-05-14 04:20:17,536 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-zdf8f → node-1
+2025-05-14 04:20:17,536 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 04:20:17,536 [SAScheduler] WARNING: unscheduled pod(s): ['default/mbw-46lfg', 'default/mbw-psrjg', 'default/mbw-tqlqj', 'default/step-load-7d6dd98f99-bknm8', 'default/step-load-7d6dd98f99-x8xz6']
+2025-05-14 04:20:17,537 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 04:21:25,766 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-5c6ds到节点pack-us-west1-n1-standard-2-62597成功
+2025-05-14 04:21:25,766 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-5c6ds → pack-us-west1-n1-standard-2-62597
+2025-05-14 04:21:25,789 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-rnzp6到节点rfsa-us-east1-n1-highcpu-4-81988成功
+2025-05-14 04:21:25,789 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-rnzp6 → rfsa-us-east1-n1-highcpu-4-81988
+2025-05-14 04:21:25,790 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 04:21:25,790 [SAScheduler] WARNING: unscheduled pod(s): ['default/mbw-46lfg', 'default/mbw-psrjg', 'default/mbw-tqlqj', 'default/step-load-7d6dd98f99-bknm8', 'default/step-load-7d6dd98f99-x8xz6']
+2025-05-14 04:21:25,790 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 04:22:25,649 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 04:22:25,649 [SAScheduler] WARNING: unscheduled pod(s): ['default/mbw-46lfg', 'default/mbw-psrjg', 'default/mbw-tqlqj', 'default/step-load-7d6dd98f99-bknm8', 'default/step-load-7d6dd98f99-x8xz6']
+2025-05-14 04:22:25,649 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 04:23:25,612 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 04:23:25,612 [SAScheduler] WARNING: unscheduled pod(s): ['default/mbw-46lfg', 'default/mbw-psrjg', 'default/mbw-tqlqj', 'default/step-load-7d6dd98f99-bknm8', 'default/step-load-7d6dd98f99-x8xz6']
+2025-05-14 04:23:25,612 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 04:24:25,679 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 04:24:25,679 [SAScheduler] WARNING: unscheduled pod(s): ['default/mbw-46lfg', 'default/mbw-psrjg', 'default/mbw-tqlqj', 'default/step-load-7d6dd98f99-bknm8', 'default/step-load-7d6dd98f99-x8xz6']
+2025-05-14 04:24:25,679 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 04:24:48,671 [SAScheduler] INFO: [consolidate] try close rfsa-us-east1-n1-highcpu-4-29805 util=19.25%
+2025-05-14 04:24:48,672 [SAScheduler] INFO: [consolidate] try close rfsa-us-west1-n1-highcpu-4-64655 util=19.25%
+2025-05-14 04:24:49,396 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-east1-n1-highcpu-4-29805,标记不可调度
+2025-05-14 04:24:49,402 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-west1-n1-highcpu-4-64655,标记不可调度
+2025-05-14 04:24:49,872 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-east1-n1-highcpu-4-29805
+2025-05-14 04:24:49,909 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-east1-n1-highcpu-4-29805
+2025-05-14 04:24:50,225 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-west1-n1-highcpu-4-64655
+2025-05-14 04:24:50,268 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-west1-n1-highcpu-4-64655
+2025-05-14 04:24:50,933 [VMManager.VMManager] INFO: Deleting VM rfsa-us-east1-n1-highcpu-4-29805 in zone us-east1-b
+2025-05-14 04:24:51,715 [VMManager.VMManager] INFO: Deleting VM rfsa-us-west1-n1-highcpu-4-64655 in zone us-west1-a
+2025-05-14 04:25:55,879 [VMManager.VMManager] INFO: 实例 rfsa-us-west1-n1-highcpu-4-64655 在 zone us-west1-a 已确认删除
+2025-05-14 04:25:55,879 [SAScheduler] INFO: [consolidate] deleted node rfsa-us-west1-n1-highcpu-4-64655
+2025-05-14 04:26:00,399 [VMManager.VMManager] INFO: 实例 rfsa-us-east1-n1-highcpu-4-29805 在 zone us-east1-b 已确认删除
+2025-05-14 04:26:00,399 [SAScheduler] INFO: [consolidate] deleted node rfsa-us-east1-n1-highcpu-4-29805
+2025-05-14 04:26:01,305 [SAScheduler] INFO: [consolidate] closed nodes: rfsa-us-east1-n1-highcpu-4-29805,rfsa-us-west1-n1-highcpu-4-64655
+2025-05-14 04:26:21,824 [VMManager.VMManager] INFO: 在 zone us-west1-a 找到机型 n1-highcpu-4
+2025-05-14 04:26:21,825 [VMManager.VMManager] INFO: Location us-west1 识别为 region，选用 zone us-west1-a
+2025-05-14 04:26:21,825 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-west1-n1-highcpu-4-51045 (zone=us-west1-a, type=n1-highcpu-4)...
+2025-05-14 04:26:22,071 [VMManager.VMManager] INFO: 在 zone us-east1-b 找到机型 n1-highcpu-4
+2025-05-14 04:26:22,071 [VMManager.VMManager] INFO: Location us-east1 识别为 region，选用 zone us-east1-b
+2025-05-14 04:26:22,071 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-east1-n1-highcpu-4-29861 (zone=us-east1-b, type=n1-highcpu-4)...
+2025-05-14 04:26:32,443 [VMManager.VMManager] INFO: VM rfsa-us-west1-n1-highcpu-4-51045 已运行（RUNNING）。
+2025-05-14 04:26:33,148 [VMManager.VMManager] INFO: VM rfsa-us-east1-n1-highcpu-4-29861 已运行（RUNNING）。
+2025-05-14 04:26:33,603 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.19.102.98（第 1/5 次）
+2025-05-14 04:26:34,695 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.74.167.104（第 1/5 次）
+2025-05-14 04:26:48,824 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.19.102.98
+2025-05-14 04:26:49,954 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.74.167.104
+2025-05-14 04:26:58,826 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.19.102.98（第 2/5 次）
+2025-05-14 04:26:59,180 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 04:26:59,956 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.74.167.104（第 2/5 次）
+2025-05-14 04:27:00,117 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 04:27:00,117 [VMManager.VMManager] INFO: SSH 连接成功: 34.19.102.98
+2025-05-14 04:27:00,421 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 04:27:01,620 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 04:27:01,621 [VMManager.VMManager] INFO: SSH 连接成功: 34.74.167.104
+2025-05-14 04:27:06,032 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 04:27:06,849 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 04:27:06,876 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 04:27:07,972 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 04:27:58,551 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 04:27:59,260 [VMManager.VMManager] INFO: 节点 rfsa-us-west1-n1-highcpu-4-51045 Ready。
+2025-05-14 04:27:59,260 [SAScheduler] INFO: create node rfsa-us-west1-n1-highcpu-4-51045 (us-west1/n1-highcpu-4)
+2025-05-14 04:28:06,308 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 04:28:06,375 [VMManager.VMManager] INFO: 节点 rfsa-us-east1-n1-highcpu-4-29861 Ready。
+2025-05-14 04:28:06,375 [SAScheduler] INFO: create node rfsa-us-east1-n1-highcpu-4-29861 (us-east1/n1-highcpu-4)
+2025-05-14 04:28:22,079 [SAScheduler] INFO: node rfsa-us-east1-n1-highcpu-4-29861 ready
+2025-05-14 04:28:22,098 [SAScheduler] INFO: node rfsa-us-west1-n1-highcpu-4-51045 ready
+2025-05-14 04:28:22,356 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod renaissance-8tdvq到节点rfsa-us-east1-n1-highcpu-4-81988成功
+2025-05-14 04:28:22,356 [SAScheduler] INFO: bind Pending pod default/renaissance-8tdvq → rfsa-us-east1-n1-highcpu-4-81988
+2025-05-14 04:28:22,394 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod renaissance-bw2wr到节点rfsa-us-west1-n1-highcpu-4-51045成功
+2025-05-14 04:28:22,394 [SAScheduler] INFO: bind Pending pod default/renaissance-bw2wr → rfsa-us-west1-n1-highcpu-4-51045
+2025-05-14 04:28:22,430 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod renaissance-hx9zx到节点rfsa-us-east1-n1-highcpu-4-29861成功
+2025-05-14 04:28:22,430 [SAScheduler] INFO: bind Pending pod default/renaissance-hx9zx → rfsa-us-east1-n1-highcpu-4-29861
+2025-05-14 04:28:22,462 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-bknm8到节点pack-us-west1-n1-standard-2-62597成功
+2025-05-14 04:28:22,462 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-bknm8 → pack-us-west1-n1-standard-2-62597
+2025-05-14 04:28:22,491 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-cr4vn到节点rfsa-us-west1-n1-highcpu-4-51045成功
+2025-05-14 04:28:22,491 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-cr4vn → rfsa-us-west1-n1-highcpu-4-51045
+2025-05-14 04:28:22,492 [SAScheduler] INFO: apply diff done: +2 nodes, -0 nodes
+2025-05-14 04:28:22,492 [SAScheduler] WARNING: unscheduled pod(s): ['default/mbw-46lfg', 'default/mbw-psrjg', 'default/mbw-tqlqj', 'default/step-load-7d6dd98f99-d4vnx', 'default/step-load-7d6dd98f99-x8xz6']
+2025-05-14 04:28:22,492 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 04:28:50,952 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-east1-n1-highcpu-4-29861,标记不可调度
+2025-05-14 04:28:51,367 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-east1-n1-highcpu-4-29861
+2025-05-14 04:28:51,387 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-east1-n1-highcpu-4-29861
+2025-05-14 04:28:51,576 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-east4-n4-highcpu-2-99352,标记不可调度
+2025-05-14 04:28:52,215 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-east4-n4-highcpu-2-99352
+2025-05-14 04:28:52,239 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-east4-n4-highcpu-2-99352
+2025-05-14 04:28:52,337 [VMManager.VMManager] INFO: Deleting VM rfsa-us-east1-n1-highcpu-4-29861 in zone us-east1-b
+2025-05-14 04:28:53,155 [VMManager.VMManager] INFO: Deleting VM rfsa-us-east4-n4-highcpu-2-99352 in zone us-east4-a
+2025-05-14 04:29:55,741 [VMManager.VMManager] INFO: 实例 rfsa-us-east4-n4-highcpu-2-99352 在 zone us-east4-a 已确认删除
+2025-05-14 04:29:55,741 [SAScheduler] INFO: delete node rfsa-us-east4-n4-highcpu-2-99352
+2025-05-14 04:30:00,598 [VMManager.VMManager] INFO: 实例 rfsa-us-east1-n1-highcpu-4-29861 在 zone us-east1-b 已确认删除
+2025-05-14 04:30:00,598 [SAScheduler] INFO: delete node rfsa-us-east1-n1-highcpu-4-29861
+2025-05-14 04:30:03,909 [VMManager.VMManager] INFO: 在 zone us-east1-b 找到机型 n4-highcpu-2
+2025-05-14 04:30:03,909 [VMManager.VMManager] INFO: Location us-east1 识别为 region，选用 zone us-east1-b
+2025-05-14 04:30:03,909 [VMManager.VMManager] INFO: 准备创建 VM up-us-east1-n4-highcpu-2-25143 (zone=us-east1-b, type=n4-highcpu-2)...
+2025-05-14 04:30:29,739 [VMManager.VMManager] INFO: VM up-us-east1-n4-highcpu-2-25143 已运行（RUNNING）。
+2025-05-14 04:30:30,188 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.139.134.121（第 1/5 次）
+2025-05-14 04:30:33,344 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.139.134.121
+2025-05-14 04:30:43,347 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.139.134.121（第 2/5 次）
+2025-05-14 04:30:43,804 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 04:30:44,997 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 04:30:44,998 [VMManager.VMManager] INFO: SSH 连接成功: 34.139.134.121
+2025-05-14 04:30:49,825 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 04:30:50,947 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 04:31:35,582 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 04:31:36,276 [VMManager.VMManager] INFO: 节点 up-us-east1-n4-highcpu-2-25143 Ready。
+2025-05-14 04:31:36,276 [SAScheduler] INFO: create node up-us-east1-n4-highcpu-2-25143 (us-east1/n4-highcpu-2)
+2025-05-14 04:31:52,001 [SAScheduler] INFO: node up-us-east1-n4-highcpu-2-25143 ready
+2025-05-14 04:31:52,011 [SAScheduler] INFO: pod default/mbw-fpntw not found, skip
+2025-05-14 04:31:52,090 [SAScheduler] INFO: pod default/nginx-7b6d77bd77-rnzp6 not found, skip
+2025-05-14 04:31:52,230 [SAScheduler] INFO: pod default/step-load-7d6dd98f99-pttpz not found, skip
+2025-05-14 04:31:52,282 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-46lfg到节点rfsa-us-west1-n1-highcpu-4-51045成功
+2025-05-14 04:31:52,283 [SAScheduler] INFO: bind Pending pod default/mbw-46lfg → rfsa-us-west1-n1-highcpu-4-51045
+2025-05-14 04:31:52,318 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-psrjg到节点up-us-east1-n4-highcpu-2-25143成功
+2025-05-14 04:31:52,318 [SAScheduler] INFO: bind Pending pod default/mbw-psrjg → up-us-east1-n4-highcpu-2-25143
+2025-05-14 04:31:52,355 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-d4vnx到节点pack-us-west1-n1-standard-2-62597成功
+2025-05-14 04:31:52,355 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-d4vnx → pack-us-west1-n1-standard-2-62597
+2025-05-14 04:31:52,384 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-x8xz6到节点rfsa-us-west1-n1-highcpu-4-51045成功
+2025-05-14 04:31:52,384 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-x8xz6 → rfsa-us-west1-n1-highcpu-4-51045
+2025-05-14 04:31:52,419 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-xrxps到节点node-1成功
+2025-05-14 04:31:52,419 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-xrxps → node-1
+2025-05-14 04:31:52,419 [SAScheduler] INFO: apply diff done: +1 nodes, -2 nodes
+2025-05-14 04:31:52,420 [SAScheduler] WARNING: unscheduled pod(s): ['default/mbw-tqlqj']
+2025-05-14 04:31:52,420 [SAScheduler] INFO: schedule cycle finished | mode=FULL
+2025-05-14 04:32:13,984 [VMManager.VMManager] INFO: 在 zone us-west1-a 找到机型 n1-highcpu-4
+2025-05-14 04:32:13,984 [VMManager.VMManager] INFO: Location us-west1 识别为 region，选用 zone us-west1-a
+2025-05-14 04:32:13,984 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-west1-n1-highcpu-4-44724 (zone=us-west1-a, type=n1-highcpu-4)...
+2025-05-14 04:32:26,482 [VMManager.VMManager] INFO: VM rfsa-us-west1-n1-highcpu-4-44724 已运行（RUNNING）。
+2025-05-14 04:32:27,609 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.197.34.101（第 1/5 次）
+2025-05-14 04:32:42,822 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 35.197.34.101
+2025-05-14 04:32:52,838 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.197.34.101（第 2/5 次）
+2025-05-14 04:32:53,194 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 04:32:54,122 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 04:32:54,122 [VMManager.VMManager] INFO: SSH 连接成功: 35.197.34.101
+2025-05-14 04:32:58,907 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 04:32:59,764 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 04:33:52,128 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 04:33:52,809 [VMManager.VMManager] INFO: 节点 rfsa-us-west1-n1-highcpu-4-44724 Ready。
+2025-05-14 04:33:52,810 [SAScheduler] INFO: create node rfsa-us-west1-n1-highcpu-4-44724 (us-west1/n1-highcpu-4)
+2025-05-14 04:34:08,516 [SAScheduler] INFO: node rfsa-us-west1-n1-highcpu-4-44724 ready
+2025-05-14 04:34:08,677 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod renaissance-gmg7q到节点rfsa-us-west1-n1-highcpu-4-44724成功
+2025-05-14 04:34:08,677 [SAScheduler] INFO: bind Pending pod default/renaissance-gmg7q → rfsa-us-west1-n1-highcpu-4-44724
+2025-05-14 04:34:08,705 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-mbzkq到节点up-us-east1-n4-highcpu-2-25143成功
+2025-05-14 04:34:08,706 [SAScheduler] INFO: bind Pending pod default/mbw-mbzkq → up-us-east1-n4-highcpu-2-25143
+2025-05-14 04:34:08,735 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-dgswd到节点pack-us-west1-n1-standard-2-62597成功
+2025-05-14 04:34:08,736 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-dgswd → pack-us-west1-n1-standard-2-62597
+2025-05-14 04:34:08,760 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-t27nw到节点up-us-east1-n4-highcpu-2-25143成功
+2025-05-14 04:34:08,761 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-t27nw → up-us-east1-n4-highcpu-2-25143
+2025-05-14 04:34:08,761 [SAScheduler] INFO: apply diff done: +1 nodes, -0 nodes
+2025-05-14 04:34:08,762 [SAScheduler] WARNING: unscheduled pod(s): ['default/mbw-q6zv9', 'default/mbw-tqlqj', 'default/step-load-7d6dd98f99-w88b6', 'default/step-load-7d6dd98f99-xjf2g']
+2025-05-14 04:34:08,762 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 04:34:28,719 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-q6zv9到节点rfsa-us-west1-n1-highcpu-4-44724成功
+2025-05-14 04:34:28,720 [SAScheduler] INFO: bind Pending pod default/mbw-q6zv9 → rfsa-us-west1-n1-highcpu-4-44724
+2025-05-14 04:34:28,747 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-6rbm9到节点pack-us-west1-n1-standard-2-62597成功
+2025-05-14 04:34:28,748 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-6rbm9 → pack-us-west1-n1-standard-2-62597
+2025-05-14 04:34:28,776 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-w88b6到节点up-us-east1-n4-highcpu-2-25143成功
+2025-05-14 04:34:28,777 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-w88b6 → up-us-east1-n4-highcpu-2-25143
+2025-05-14 04:34:28,819 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-xjf2g到节点up-us-east1-n4-highcpu-2-25143成功
+2025-05-14 04:34:28,819 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-xjf2g → up-us-east1-n4-highcpu-2-25143
+2025-05-14 04:34:28,850 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-dfzd6到节点rfsa-us-west1-n1-highcpu-4-44724成功
+2025-05-14 04:34:28,850 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-dfzd6 → rfsa-us-west1-n1-highcpu-4-44724
+2025-05-14 04:34:28,851 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 04:34:28,851 [SAScheduler] WARNING: unscheduled pod(s): ['default/mbw-tqlqj', 'default/mbw-wgfhn']
+2025-05-14 04:34:28,851 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 04:35:27,932 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-4jptj到节点rfsa-us-west1-n1-highcpu-4-44724成功
+2025-05-14 04:35:27,932 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-4jptj → rfsa-us-west1-n1-highcpu-4-44724
+2025-05-14 04:35:27,933 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 04:35:27,933 [SAScheduler] WARNING: unscheduled pod(s): ['default/mbw-b5965', 'default/mbw-tqlqj', 'default/mbw-wgfhn', 'default/step-load-7d6dd98f99-685c2', 'default/step-load-7d6dd98f99-dw5wk']
+2025-05-14 04:35:27,933 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 04:36:36,137 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 04:36:36,138 [SAScheduler] WARNING: unscheduled pod(s): ['default/mbw-b5965', 'default/mbw-tqlqj', 'default/mbw-wgfhn', 'default/step-load-7d6dd98f99-685c2', 'default/step-load-7d6dd98f99-dw5wk']
+2025-05-14 04:36:36,138 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 04:37:34,967 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-b5965到节点node-1成功
+2025-05-14 04:37:34,967 [SAScheduler] INFO: bind Pending pod default/mbw-b5965 → node-1
+2025-05-14 04:37:34,968 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 04:37:34,968 [SAScheduler] WARNING: unscheduled pod(s): ['default/mbw-tqlqj', 'default/mbw-wgfhn']
+2025-05-14 04:37:34,968 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 04:38:35,044 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 04:38:35,044 [SAScheduler] WARNING: unscheduled pod(s): ['default/mbw-tqlqj', 'default/mbw-wgfhn']
+2025-05-14 04:38:35,044 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 04:39:35,104 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 04:39:35,104 [SAScheduler] WARNING: unscheduled pod(s): ['default/mbw-tqlqj', 'default/mbw-wgfhn']
+2025-05-14 04:39:35,104 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 04:40:05,375 [SAScheduler] INFO: [consolidate] try close pack-us-west1-n1-standard-2-62597 util=93.50%
+2025-05-14 04:40:06,025 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node pack-us-west1-n1-standard-2-62597,标记不可调度
+2025-05-14 04:40:07,086 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node pack-us-west1-n1-standard-2-62597
+2025-05-14 04:40:07,105 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object pack-us-west1-n1-standard-2-62597
+2025-05-14 04:40:08,247 [VMManager.VMManager] INFO: Deleting VM pack-us-west1-n1-standard-2-62597 in zone us-west1-a
+2025-05-14 04:41:13,755 [VMManager.VMManager] INFO: 实例 pack-us-west1-n1-standard-2-62597 在 zone us-west1-a 已确认删除
+2025-05-14 04:41:13,755 [SAScheduler] INFO: [consolidate] deleted node pack-us-west1-n1-standard-2-62597
+2025-05-14 04:41:14,758 [SAScheduler] INFO: [consolidate] closed nodes: pack-us-west1-n1-standard-2-62597
+2025-05-14 04:41:32,735 [VMManager.VMManager] INFO: 在 zone us-east4-a 找到机型 n4-highcpu-2
+2025-05-14 04:41:32,735 [VMManager.VMManager] INFO: Location us-east4 识别为 region，选用 zone us-east4-a
+2025-05-14 04:41:32,735 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-east4-n4-highcpu-2-63305 (zone=us-east4-a, type=n4-highcpu-2)...
+2025-05-14 04:41:47,386 [VMManager.VMManager] INFO: VM rfsa-us-east4-n4-highcpu-2-63305 已运行（RUNNING）。
+2025-05-14 04:41:48,859 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.245.153.142（第 1/5 次）
+2025-05-14 04:41:56,830 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 35.245.153.142
+2025-05-14 04:42:06,843 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.245.153.142（第 2/5 次）
+2025-05-14 04:42:07,293 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 04:42:08,489 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 04:42:08,489 [VMManager.VMManager] INFO: SSH 连接成功: 35.245.153.142
+2025-05-14 04:42:13,730 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 04:42:14,825 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 04:42:57,009 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 04:42:57,700 [VMManager.VMManager] INFO: 节点 rfsa-us-east4-n4-highcpu-2-63305 Ready。
+2025-05-14 04:42:57,700 [SAScheduler] INFO: create node rfsa-us-east4-n4-highcpu-2-63305 (us-east4/n4-highcpu-2)
+2025-05-14 04:43:08,369 [SAScheduler] INFO: node rfsa-us-east4-n4-highcpu-2-63305 ready
+2025-05-14 04:43:08,519 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-tqlqj到节点rfsa-us-east1-n1-highcpu-4-81988成功
+2025-05-14 04:43:08,519 [SAScheduler] INFO: bind Pending pod default/mbw-tqlqj → rfsa-us-east1-n1-highcpu-4-81988
+2025-05-14 04:43:08,558 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-wgfhn到节点rfsa-us-east4-n4-highcpu-2-63305成功
+2025-05-14 04:43:08,558 [SAScheduler] INFO: bind Pending pod default/mbw-wgfhn → rfsa-us-east4-n4-highcpu-2-63305
+2025-05-14 04:43:08,587 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-6v97m到节点rfsa-us-east1-n1-highcpu-4-81988成功
+2025-05-14 04:43:08,588 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-6v97m → rfsa-us-east1-n1-highcpu-4-81988
+2025-05-14 04:43:08,628 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-wbdgr到节点rfsa-us-east4-n4-highcpu-2-63305成功
+2025-05-14 04:43:08,628 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-wbdgr → rfsa-us-east4-n4-highcpu-2-63305
+2025-05-14 04:43:08,638 [SAScheduler] INFO: pod default/nginx-7b6d77bd77-5gqh4 not found, skip
+2025-05-14 04:43:08,650 [SAScheduler] INFO: pod default/nginx-7b6d77bd77-nklhp not found, skip
+2025-05-14 04:43:08,662 [SAScheduler] INFO: pod default/nginx-7b6d77bd77-p8pcx not found, skip
+2025-05-14 04:43:08,664 [SAScheduler] INFO: apply diff done: +1 nodes, -0 nodes
+2025-05-14 04:43:08,664 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 04:43:31,773 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-west1-n1-highcpu-4-51045,标记不可调度
+2025-05-14 04:43:32,313 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-west1-n1-highcpu-4-51045
+2025-05-14 04:43:32,331 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-west1-n1-highcpu-4-51045
+2025-05-14 04:43:32,389 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-east1-n1-highcpu-4-81988,标记不可调度
+2025-05-14 04:43:33,121 [VMManager.VMManager] INFO: Deleting VM rfsa-us-west1-n1-highcpu-4-51045 in zone us-west1-a
+2025-05-14 04:43:33,232 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-east1-n1-highcpu-4-81988
+2025-05-14 04:43:33,263 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-east1-n1-highcpu-4-81988
+2025-05-14 04:43:34,283 [VMManager.VMManager] INFO: Deleting VM rfsa-us-east1-n1-highcpu-4-81988 in zone us-east1-b
+2025-05-14 04:44:37,047 [VMManager.VMManager] INFO: 实例 rfsa-us-east1-n1-highcpu-4-81988 在 zone us-east1-b 已确认删除
+2025-05-14 04:44:37,047 [SAScheduler] INFO: delete node rfsa-us-east1-n1-highcpu-4-81988
+2025-05-14 04:44:37,086 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-east4-n4-highcpu-2-63305,标记不可调度
+2025-05-14 04:44:37,786 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-east4-n4-highcpu-2-63305
+2025-05-14 04:44:37,803 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-east4-n4-highcpu-2-63305
+2025-05-14 04:44:38,590 [VMManager.VMManager] INFO: Deleting VM rfsa-us-east4-n4-highcpu-2-63305 in zone us-east4-a
+2025-05-14 04:44:40,476 [VMManager.VMManager] INFO: 实例 rfsa-us-west1-n1-highcpu-4-51045 在 zone us-west1-a 已确认删除
+2025-05-14 04:44:40,477 [SAScheduler] INFO: delete node rfsa-us-west1-n1-highcpu-4-51045
+2025-05-14 04:45:43,043 [VMManager.VMManager] INFO: 实例 rfsa-us-east4-n4-highcpu-2-63305 在 zone us-east4-a 已确认删除
+2025-05-14 04:45:43,043 [SAScheduler] INFO: delete node rfsa-us-east4-n4-highcpu-2-63305
+2025-05-14 04:45:45,957 [VMManager.VMManager] INFO: 在 zone us-west1-a 找到机型 n1-highcpu-2
+2025-05-14 04:45:45,957 [VMManager.VMManager] INFO: Location us-west1 识别为 region，选用 zone us-west1-a
+2025-05-14 04:45:45,957 [VMManager.VMManager] INFO: 准备创建 VM up-us-west1-n1-highcpu-2-92687 (zone=us-west1-a, type=n1-highcpu-2)...
+2025-05-14 04:46:03,535 [VMManager.VMManager] INFO: VM up-us-west1-n1-highcpu-2-92687 已运行（RUNNING）。
+2025-05-14 04:46:03,919 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.19.118.254（第 1/5 次）
+2025-05-14 04:46:11,809 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.19.118.254
+2025-05-14 04:46:21,820 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.19.118.254（第 2/5 次）
+2025-05-14 04:46:22,181 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 04:46:23,160 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 04:46:23,160 [VMManager.VMManager] INFO: SSH 连接成功: 34.19.118.254
+2025-05-14 04:46:31,087 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 04:46:31,937 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 04:47:31,609 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 04:47:32,279 [VMManager.VMManager] INFO: 节点 up-us-west1-n1-highcpu-2-92687 Ready。
+2025-05-14 04:47:32,279 [SAScheduler] INFO: create node up-us-west1-n1-highcpu-2-92687 (us-west1/n1-highcpu-2)
+2025-05-14 04:47:53,029 [SAScheduler] INFO: node up-us-west1-n1-highcpu-2-92687 ready
+2025-05-14 04:47:53,068 [SAScheduler] INFO: pod default/nginx-7b6d77bd77-fgp7g not found, skip
+2025-05-14 04:47:53,110 [SAScheduler] INFO: pod default/nginx-7b6d77bd77-tr6rp not found, skip
+2025-05-14 04:47:53,120 [SAScheduler] INFO: pod default/step-load-7d6dd98f99-cr4vn not found, skip
+2025-05-14 04:47:53,151 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-8s6zp到节点up-us-east1-n4-highcpu-2-25143成功
+2025-05-14 04:47:53,151 [SAScheduler] INFO: bind Pending pod default/mbw-8s6zp → up-us-east1-n4-highcpu-2-25143
+2025-05-14 04:47:53,152 [SAScheduler] INFO: apply diff done: +1 nodes, -3 nodes
+2025-05-14 04:47:53,152 [SAScheduler] INFO: schedule cycle finished | mode=FULL
+2025-05-14 04:48:13,963 [VMManager.VMManager] INFO: 在 zone us-east4-a 找到机型 n4-highcpu-2
+2025-05-14 04:48:13,963 [VMManager.VMManager] INFO: Location us-east4 识别为 region，选用 zone us-east4-a
+2025-05-14 04:48:13,963 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-east4-n4-highcpu-2-70384 (zone=us-east4-a, type=n4-highcpu-2)...
+2025-05-14 04:48:33,124 [VMManager.VMManager] INFO: VM rfsa-us-east4-n4-highcpu-2-70384 已运行（RUNNING）。
+2025-05-14 04:48:34,641 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.145.208.68（第 1/5 次）
+2025-05-14 04:48:39,319 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.145.208.68
+2025-05-14 04:48:49,324 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.145.208.68（第 2/5 次）
+2025-05-14 04:48:49,771 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 04:48:50,947 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 04:48:50,947 [VMManager.VMManager] INFO: SSH 连接成功: 34.145.208.68
+2025-05-14 04:48:55,729 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 04:48:56,822 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 04:49:35,661 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 04:49:36,348 [VMManager.VMManager] INFO: 节点 rfsa-us-east4-n4-highcpu-2-70384 Ready。
+2025-05-14 04:49:36,349 [SAScheduler] INFO: create node rfsa-us-east4-n4-highcpu-2-70384 (us-east4/n4-highcpu-2)
+2025-05-14 04:49:47,050 [SAScheduler] INFO: node rfsa-us-east4-n4-highcpu-2-70384 ready
+2025-05-14 04:49:47,076 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-6snh7到节点rfsa-us-west1-n1-highcpu-4-44724成功
+2025-05-14 04:49:47,076 [SAScheduler] INFO: bind Pending pod default/mbw-6snh7 → rfsa-us-west1-n1-highcpu-4-44724
+2025-05-14 04:49:47,109 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-76z2v到节点node-1成功
+2025-05-14 04:49:47,109 [SAScheduler] INFO: bind Pending pod default/mbw-76z2v → node-1
+2025-05-14 04:49:47,138 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-rxtj6到节点rfsa-us-east4-n4-highcpu-2-70384成功
+2025-05-14 04:49:47,138 [SAScheduler] INFO: bind Pending pod default/mbw-rxtj6 → rfsa-us-east4-n4-highcpu-2-70384
+2025-05-14 04:49:47,168 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-hpjzn到节点rfsa-us-east4-n4-highcpu-2-70384成功
+2025-05-14 04:49:47,169 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-hpjzn → rfsa-us-east4-n4-highcpu-2-70384
+2025-05-14 04:49:47,202 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-msx84到节点up-us-west1-n1-highcpu-2-92687成功
+2025-05-14 04:49:47,202 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-msx84 → up-us-west1-n1-highcpu-2-92687
+2025-05-14 04:49:47,231 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-px44t到节点up-us-west1-n1-highcpu-2-92687成功
+2025-05-14 04:49:47,231 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-px44t → up-us-west1-n1-highcpu-2-92687
+2025-05-14 04:49:47,240 [SAScheduler] INFO: pod default/nginx-7b6d77bd77-8nnlh not found, skip
+2025-05-14 04:49:47,249 [SAScheduler] INFO: pod default/nginx-7b6d77bd77-bp768 not found, skip
+2025-05-14 04:49:47,251 [SAScheduler] INFO: apply diff done: +1 nodes, -0 nodes
+2025-05-14 04:49:47,251 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 04:49:58,245 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 04:51:04,650 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-g4lph到节点up-us-east1-n4-highcpu-2-25143成功
+2025-05-14 04:51:04,650 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-g4lph → up-us-east1-n4-highcpu-2-25143
+2025-05-14 04:51:04,651 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 04:51:04,651 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 04:52:11,310 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-gctn4到节点up-us-west1-n1-highcpu-2-92687成功
+2025-05-14 04:52:11,311 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-gctn4 → up-us-west1-n1-highcpu-2-92687
+2025-05-14 04:52:11,311 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 04:52:11,311 [SAScheduler] INFO: schedule cycle finished | mode=FULL
+2025-05-14 04:52:58,263 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 04:53:59,501 [SAScheduler] INFO: [consolidate] try close rfsa-us-west1-n1-highcpu-4-44724 util=49.25%
+2025-05-14 04:53:59,502 [SAScheduler] INFO: [consolidate] try close up-us-west1-n1-highcpu-2-92687 util=73.50%
+2025-05-14 04:54:00,246 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node up-us-west1-n1-highcpu-2-92687,标记不可调度
+2025-05-14 04:54:00,255 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-west1-n1-highcpu-4-44724,标记不可调度
+2025-05-14 04:54:01,318 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node up-us-west1-n1-highcpu-2-92687
+2025-05-14 04:54:01,356 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object up-us-west1-n1-highcpu-2-92687
+2025-05-14 04:54:01,380 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-west1-n1-highcpu-4-44724
+2025-05-14 04:54:01,408 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-west1-n1-highcpu-4-44724
+2025-05-14 04:54:02,371 [VMManager.VMManager] INFO: Deleting VM rfsa-us-west1-n1-highcpu-4-44724 in zone us-west1-a
+2025-05-14 04:54:03,140 [VMManager.VMManager] INFO: Deleting VM up-us-west1-n1-highcpu-2-92687 in zone us-west1-a
+2025-05-14 04:55:05,541 [VMManager.VMManager] INFO: 实例 rfsa-us-west1-n1-highcpu-4-44724 在 zone us-west1-a 已确认删除
+2025-05-14 04:55:05,542 [SAScheduler] INFO: [consolidate] deleted node rfsa-us-west1-n1-highcpu-4-44724
+2025-05-14 04:55:11,943 [VMManager.VMManager] INFO: 实例 up-us-west1-n1-highcpu-2-92687 在 zone us-west1-a 已确认删除
+2025-05-14 04:55:11,944 [SAScheduler] INFO: [consolidate] deleted node up-us-west1-n1-highcpu-2-92687
+2025-05-14 04:55:12,696 [SAScheduler] INFO: [consolidate] closed nodes: rfsa-us-west1-n1-highcpu-4-44724,up-us-west1-n1-highcpu-2-92687
+2025-05-14 04:55:22,475 [VMManager.VMManager] INFO: 在 zone us-west1-a 找到机型 n1-standard-2
+2025-05-14 04:55:22,475 [VMManager.VMManager] INFO: Location us-west1 识别为 region，选用 zone us-west1-a
+2025-05-14 04:55:22,475 [VMManager.VMManager] INFO: 准备创建 VM pack-us-west1-n1-standard-2-89852 (zone=us-west1-a, type=n1-standard-2)...
+2025-05-14 04:55:22,980 [VMManager.VMManager] INFO: 在 zone us-west1-a 找到机型 n4-highcpu-2
+2025-05-14 04:55:22,981 [VMManager.VMManager] INFO: Location us-west1 识别为 region，选用 zone us-west1-a
+2025-05-14 04:55:22,981 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-west1-n4-highcpu-2-95583 (zone=us-west1-a, type=n4-highcpu-2)...
+2025-05-14 04:55:30,628 [SAScheduler] WARNING: region us-west1 unavailable (403 FORBIDDEN QUOTA_EXCEEDED), searching fallback...
+2025-05-14 04:55:33,098 [VMManager.VMManager] INFO: 在 zone us-east1-b 找到机型 n4-highcpu-2
+2025-05-14 04:55:33,098 [VMManager.VMManager] INFO: Location us-east1 识别为 region，选用 zone us-east1-b
+2025-05-14 04:55:33,098 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-west1-n4-highcpu-2-95583 (zone=us-east1-b, type=n4-highcpu-2)...
+2025-05-14 04:55:34,443 [VMManager.VMManager] INFO: VM pack-us-west1-n1-standard-2-89852 已运行（RUNNING）。
+2025-05-14 04:55:35,600 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.197.20.24（第 1/5 次）
+2025-05-14 04:55:47,181 [VMManager.VMManager] INFO: VM rfsa-us-west1-n4-highcpu-2-95583 已运行（RUNNING）。
+2025-05-14 04:55:48,748 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.74.167.104（第 1/5 次）
+2025-05-14 04:55:50,814 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 35.197.20.24
+2025-05-14 04:55:56,727 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.74.167.104
+2025-05-14 04:56:00,817 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.197.20.24（第 2/5 次）
+2025-05-14 04:56:01,232 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 04:56:02,333 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 04:56:02,333 [VMManager.VMManager] INFO: SSH 连接成功: 35.197.20.24
+2025-05-14 04:56:06,741 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.74.167.104（第 2/5 次）
+2025-05-14 04:56:07,203 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 04:56:08,410 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 04:56:08,410 [VMManager.VMManager] INFO: SSH 连接成功: 34.74.167.104
+2025-05-14 04:56:09,839 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 04:56:10,834 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 04:56:13,230 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 04:56:14,349 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 04:56:57,683 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 04:56:58,344 [VMManager.VMManager] INFO: 节点 rfsa-us-west1-n4-highcpu-2-95583 Ready。
+2025-05-14 04:56:58,344 [SAScheduler] INFO: fallback create rfsa-us-west1-n4-highcpu-2-95583 (us-east1/n4-highcpu-2) succeeded
+2025-05-14 04:57:10,696 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 04:57:10,757 [VMManager.VMManager] INFO: 节点 pack-us-west1-n1-standard-2-89852 Ready。
+2025-05-14 04:57:10,757 [SAScheduler] INFO: create node pack-us-west1-n1-standard-2-89852 (us-west1/n1-standard-2)
+2025-05-14 04:57:16,418 [SAScheduler] INFO: node rfsa-us-west1-n4-highcpu-2-95583 ready
+2025-05-14 04:57:36,554 [SAScheduler] INFO: node pack-us-west1-n1-standard-2-89852 ready
+2025-05-14 04:57:36,668 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-8s8h7到节点rfsa-us-west1-n4-highcpu-2-95583成功
+2025-05-14 04:57:36,668 [SAScheduler] INFO: bind Pending pod default/mbw-8s8h7 → rfsa-us-west1-n4-highcpu-2-95583
+2025-05-14 04:57:36,696 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-4kxwk到节点rfsa-us-west1-n4-highcpu-2-95583成功
+2025-05-14 04:57:36,696 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-4kxwk → rfsa-us-west1-n4-highcpu-2-95583
+2025-05-14 04:57:36,725 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-5ts2p到节点pack-us-west1-n1-standard-2-89852成功
+2025-05-14 04:57:36,725 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-5ts2p → pack-us-west1-n1-standard-2-89852
+2025-05-14 04:57:36,752 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-smckw到节点pack-us-west1-n1-standard-2-89852成功
+2025-05-14 04:57:36,752 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-smckw → pack-us-west1-n1-standard-2-89852
+2025-05-14 04:57:36,789 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-2t6tm到节点up-us-east1-n4-highcpu-2-25143成功
+2025-05-14 04:57:36,789 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-2t6tm → up-us-east1-n4-highcpu-2-25143
+2025-05-14 04:57:36,826 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-npbpb到节点rfsa-us-east4-n4-highcpu-2-70384成功
+2025-05-14 04:57:36,826 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-npbpb → rfsa-us-east4-n4-highcpu-2-70384
+2025-05-14 04:57:36,827 [SAScheduler] INFO: apply diff done: +2 nodes, -0 nodes
+2025-05-14 04:57:36,827 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 04:57:59,421 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node pack-us-west1-n1-standard-2-89852,标记不可调度
+2025-05-14 04:57:59,767 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node pack-us-west1-n1-standard-2-89852
+2025-05-14 04:57:59,782 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object pack-us-west1-n1-standard-2-89852
+2025-05-14 04:58:00,638 [VMManager.VMManager] INFO: Deleting VM pack-us-west1-n1-standard-2-89852 in zone us-west1-a
+2025-05-14 04:59:01,513 [VMManager.VMManager] INFO: 实例 pack-us-west1-n1-standard-2-89852 在 zone us-west1-a 已确认删除
+2025-05-14 04:59:01,513 [SAScheduler] INFO: delete node pack-us-west1-n1-standard-2-89852
+2025-05-14 04:59:01,552 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-42xrn到节点rfsa-us-west1-n4-highcpu-2-95583成功
+2025-05-14 04:59:01,553 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-42xrn → rfsa-us-west1-n4-highcpu-2-95583
+2025-05-14 04:59:01,585 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-h2rf7到节点rfsa-us-west1-n4-highcpu-2-95583成功
+2025-05-14 04:59:01,585 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-h2rf7 → rfsa-us-west1-n4-highcpu-2-95583
+2025-05-14 04:59:01,619 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-92g4b到节点node-1成功
+2025-05-14 04:59:01,619 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-92g4b → node-1
+2025-05-14 04:59:01,621 [SAScheduler] INFO: apply diff done: +0 nodes, -1 nodes
+2025-05-14 04:59:01,621 [SAScheduler] INFO: schedule cycle finished | mode=FULL
+2025-05-14 04:59:21,927 [VMManager.VMManager] INFO: 在 zone us-west1-a 找到机型 n1-standard-2
+2025-05-14 04:59:21,927 [VMManager.VMManager] INFO: Location us-west1 识别为 region，选用 zone us-west1-a
+2025-05-14 04:59:21,927 [VMManager.VMManager] INFO: 准备创建 VM pack-us-west1-n1-standard-2-74113 (zone=us-west1-a, type=n1-standard-2)...
+2025-05-14 04:59:36,938 [VMManager.VMManager] INFO: VM pack-us-west1-n1-standard-2-74113 已运行（RUNNING）。
+2025-05-14 04:59:38,090 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.19.102.98（第 1/5 次）
+2025-05-14 04:59:45,976 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.19.102.98
+2025-05-14 04:59:55,983 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.19.102.98（第 2/5 次）
+2025-05-14 04:59:56,414 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 04:59:57,485 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 04:59:57,486 [VMManager.VMManager] INFO: SSH 连接成功: 34.19.102.98
+2025-05-14 05:00:07,688 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 05:00:08,684 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 05:01:07,641 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 05:01:08,423 [VMManager.VMManager] INFO: 节点 pack-us-west1-n1-standard-2-74113 Ready。
+2025-05-14 05:01:08,423 [SAScheduler] INFO: create node pack-us-west1-n1-standard-2-74113 (us-west1/n1-standard-2)
+2025-05-14 05:01:29,259 [SAScheduler] INFO: node pack-us-west1-n1-standard-2-74113 ready
+2025-05-14 05:01:29,377 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-fctb5到节点up-us-east1-n4-highcpu-2-25143成功
+2025-05-14 05:01:29,377 [SAScheduler] INFO: bind Pending pod default/mbw-fctb5 → up-us-east1-n4-highcpu-2-25143
+2025-05-14 05:01:29,405 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-mbgsd到节点pack-us-west1-n1-standard-2-74113成功
+2025-05-14 05:01:29,405 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-mbgsd → pack-us-west1-n1-standard-2-74113
+2025-05-14 05:01:29,433 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-nq6jn到节点pack-us-west1-n1-standard-2-74113成功
+2025-05-14 05:01:29,433 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-nq6jn → pack-us-west1-n1-standard-2-74113
+2025-05-14 05:01:29,436 [SAScheduler] INFO: apply diff done: +1 nodes, -0 nodes
+2025-05-14 05:01:29,437 [SAScheduler] WARNING: unscheduled pod(s): ['default/step-load-7d6dd98f99-z6cts', 'default/step-load-7d6dd98f99-zfqbz']
+2025-05-14 05:01:29,437 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:01:47,040 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-25xgb到节点rfsa-us-east4-n4-highcpu-2-70384成功
+2025-05-14 05:01:47,040 [SAScheduler] INFO: bind Pending pod default/mbw-25xgb → rfsa-us-east4-n4-highcpu-2-70384
+2025-05-14 05:01:47,067 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-p7lq6到节点pack-us-west1-n1-standard-2-74113成功
+2025-05-14 05:01:47,067 [SAScheduler] INFO: bind Pending pod default/mbw-p7lq6 → pack-us-west1-n1-standard-2-74113
+2025-05-14 05:01:47,105 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-z6cts到节点pack-us-west1-n1-standard-2-74113成功
+2025-05-14 05:01:47,105 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-z6cts → pack-us-west1-n1-standard-2-74113
+2025-05-14 05:01:47,133 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-zfqbz到节点node-1成功
+2025-05-14 05:01:47,133 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-zfqbz → node-1
+2025-05-14 05:01:47,134 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 05:01:47,134 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:02:48,498 [VMManager.VMManager] INFO: 在 zone us-west1-a 找到机型 n4-highcpu-2
+2025-05-14 05:02:48,498 [VMManager.VMManager] INFO: Location us-west1 识别为 region，选用 zone us-west1-a
+2025-05-14 05:02:48,498 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-west1-n4-highcpu-2-61222 (zone=us-west1-a, type=n4-highcpu-2)...
+2025-05-14 05:02:54,204 [SAScheduler] WARNING: region us-west1 unavailable (403 FORBIDDEN QUOTA_EXCEEDED), searching fallback...
+2025-05-14 05:02:55,608 [VMManager.VMManager] INFO: 在 zone us-east1-b 找到机型 n4-highcpu-2
+2025-05-14 05:02:55,608 [VMManager.VMManager] INFO: Location us-east1 识别为 region，选用 zone us-east1-b
+2025-05-14 05:02:55,608 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-west1-n4-highcpu-2-61222 (zone=us-east1-b, type=n4-highcpu-2)...
+2025-05-14 05:03:10,512 [VMManager.VMManager] INFO: VM rfsa-us-west1-n4-highcpu-2-61222 已运行（RUNNING）。
+2025-05-14 05:03:10,966 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.227.58.188（第 1/5 次）
+2025-05-14 05:03:18,955 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 35.227.58.188
+2025-05-14 05:03:28,957 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.227.58.188（第 2/5 次）
+2025-05-14 05:03:30,868 [paramiko.transport] ERROR: Exception (client): Error reading SSH protocol banner[WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2025-05-14 05:03:30,870 [paramiko.transport] ERROR: Traceback (most recent call last):
+2025-05-14 05:03:30,870 [paramiko.transport] ERROR:   File "D:\Anaconda\envs\k8s\lib\site-packages\paramiko\transport.py", line 2369, in _check_banner
+2025-05-14 05:03:30,870 [paramiko.transport] ERROR:     buf = self.packetizer.readline(timeout)
+2025-05-14 05:03:30,870 [paramiko.transport] ERROR:   File "D:\Anaconda\envs\k8s\lib\site-packages\paramiko\packet.py", line 395, in readline
+2025-05-14 05:03:30,870 [paramiko.transport] ERROR:     buf += self._read_timeout(timeout)
+2025-05-14 05:03:30,870 [paramiko.transport] ERROR:   File "D:\Anaconda\envs\k8s\lib\site-packages\paramiko\packet.py", line 663, in _read_timeout
+2025-05-14 05:03:30,870 [paramiko.transport] ERROR:     x = self.__socket.recv(128)
+2025-05-14 05:03:30,870 [paramiko.transport] ERROR: ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2025-05-14 05:03:30,870 [paramiko.transport] ERROR: 
+2025-05-14 05:03:30,870 [paramiko.transport] ERROR: During handling of the above exception, another exception occurred:
+2025-05-14 05:03:30,870 [paramiko.transport] ERROR: 
+2025-05-14 05:03:30,870 [paramiko.transport] ERROR: Traceback (most recent call last):
+2025-05-14 05:03:30,871 [paramiko.transport] ERROR:   File "D:\Anaconda\envs\k8s\lib\site-packages\paramiko\transport.py", line 2185, in run
+2025-05-14 05:03:30,871 [paramiko.transport] ERROR:     self._check_banner()
+2025-05-14 05:03:30,871 [paramiko.transport] ERROR:   File "D:\Anaconda\envs\k8s\lib\site-packages\paramiko\transport.py", line 2373, in _check_banner
+2025-05-14 05:03:30,871 [paramiko.transport] ERROR:     raise SSHException(
+2025-05-14 05:03:30,871 [paramiko.transport] ERROR: paramiko.ssh_exception.SSHException: Error reading SSH protocol banner[WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2025-05-14 05:03:30,871 [paramiko.transport] ERROR: 
+2025-05-14 05:03:30,871 [VMManager.VMManager] WARNING: 第 2 次连接失败: Error reading SSH protocol banner[WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2025-05-14 05:03:40,881 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.227.58.188（第 3/5 次）
+2025-05-14 05:03:41,339 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 05:03:42,561 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 05:03:42,562 [VMManager.VMManager] INFO: SSH 连接成功: 35.227.58.188
+2025-05-14 05:03:47,703 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 05:03:48,823 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 05:04:30,269 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 05:04:30,958 [VMManager.VMManager] INFO: 节点 rfsa-us-west1-n4-highcpu-2-61222 Ready。
+2025-05-14 05:04:30,959 [SAScheduler] INFO: fallback create rfsa-us-west1-n4-highcpu-2-61222 (us-east1/n4-highcpu-2) succeeded
+2025-05-14 05:04:41,651 [SAScheduler] INFO: node rfsa-us-west1-n4-highcpu-2-61222 ready
+2025-05-14 05:04:41,810 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-skz5s到节点rfsa-us-west1-n4-highcpu-2-61222成功
+2025-05-14 05:04:41,810 [SAScheduler] INFO: bind Pending pod default/mbw-skz5s → rfsa-us-west1-n4-highcpu-2-61222
+2025-05-14 05:04:41,811 [SAScheduler] INFO: apply diff done: +1 nodes, -0 nodes
+2025-05-14 05:04:41,812 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:05:07,155 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-west1-n4-highcpu-2-61222,标记不可调度
+2025-05-14 05:05:07,596 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-west1-n4-highcpu-2-61222
+2025-05-14 05:05:07,627 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-west1-n4-highcpu-2-61222
+2025-05-14 05:05:08,493 [VMManager.VMManager] INFO: Deleting VM rfsa-us-west1-n4-highcpu-2-61222 in zone us-east1-b
+2025-05-14 05:06:20,026 [VMManager.VMManager] INFO: 实例 rfsa-us-west1-n4-highcpu-2-61222 在 zone us-east1-b 已确认删除
+2025-05-14 05:06:20,027 [SAScheduler] INFO: delete node rfsa-us-west1-n4-highcpu-2-61222
+2025-05-14 05:06:20,073 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-lw89h到节点rfsa-us-east4-n4-highcpu-2-70384成功
+2025-05-14 05:06:20,073 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-lw89h → rfsa-us-east4-n4-highcpu-2-70384
+2025-05-14 05:06:20,074 [SAScheduler] INFO: apply diff done: +0 nodes, -1 nodes
+2025-05-14 05:06:20,074 [SAScheduler] INFO: schedule cycle finished | mode=FULL
+2025-05-14 05:06:40,122 [VMManager.VMManager] INFO: 在 zone us-west1-a 找到机型 n4-highcpu-2
+2025-05-14 05:06:40,123 [VMManager.VMManager] INFO: Location us-west1 识别为 region，选用 zone us-west1-a
+2025-05-14 05:06:40,123 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-west1-n4-highcpu-2-42794 (zone=us-west1-a, type=n4-highcpu-2)...
+2025-05-14 05:06:51,179 [SAScheduler] WARNING: region us-west1 unavailable (403 FORBIDDEN QUOTA_EXCEEDED), searching fallback...
+2025-05-14 05:06:53,461 [VMManager.VMManager] INFO: 在 zone us-east1-b 找到机型 n4-highcpu-2
+2025-05-14 05:06:53,461 [VMManager.VMManager] INFO: Location us-east1 识别为 region，选用 zone us-east1-b
+2025-05-14 05:06:53,461 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-west1-n4-highcpu-2-42794 (zone=us-east1-b, type=n4-highcpu-2)...
+2025-05-14 05:07:10,558 [VMManager.VMManager] INFO: VM rfsa-us-west1-n4-highcpu-2-42794 已运行（RUNNING）。
+2025-05-14 05:07:10,989 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.138.110.247（第 1/5 次）
+2025-05-14 05:07:15,705 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.138.110.247
+2025-05-14 05:07:25,718 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.138.110.247（第 2/5 次）
+2025-05-14 05:07:26,176 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 05:07:27,398 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 05:07:27,398 [VMManager.VMManager] INFO: SSH 连接成功: 34.138.110.247
+2025-05-14 05:07:32,297 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 05:07:33,415 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 05:08:14,400 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 05:08:15,092 [VMManager.VMManager] INFO: 节点 rfsa-us-west1-n4-highcpu-2-42794 Ready。
+2025-05-14 05:08:15,092 [SAScheduler] INFO: fallback create rfsa-us-west1-n4-highcpu-2-42794 (us-east1/n4-highcpu-2) succeeded
+2025-05-14 05:08:30,807 [SAScheduler] INFO: node rfsa-us-west1-n4-highcpu-2-42794 ready
+2025-05-14 05:08:31,145 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-h4x5w到节点rfsa-us-west1-n4-highcpu-2-42794成功
+2025-05-14 05:08:31,145 [SAScheduler] INFO: bind Pending pod default/mbw-h4x5w → rfsa-us-west1-n4-highcpu-2-42794
+2025-05-14 05:08:31,174 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-6mtkv到节点node-1成功
+2025-05-14 05:08:31,174 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-6mtkv → node-1
+2025-05-14 05:08:31,175 [SAScheduler] INFO: apply diff done: +1 nodes, -0 nodes
+2025-05-14 05:08:31,175 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:08:49,794 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-kzxwj到节点up-us-east1-n4-highcpu-2-25143成功
+2025-05-14 05:08:49,794 [SAScheduler] INFO: bind Pending pod default/mbw-kzxwj → up-us-east1-n4-highcpu-2-25143
+2025-05-14 05:08:49,795 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 05:08:49,795 [SAScheduler] WARNING: unscheduled pod(s): ['default/renaissance-glzt9', 'default/renaissance-j8n6l', 'default/renaissance-wpjnk']
+2025-05-14 05:08:49,795 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:09:49,834 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-rxbm9到节点pack-us-west1-n1-standard-2-74113成功
+2025-05-14 05:09:49,834 [SAScheduler] INFO: bind Pending pod default/mbw-rxbm9 → pack-us-west1-n1-standard-2-74113
+2025-05-14 05:09:49,835 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 05:09:49,835 [SAScheduler] WARNING: unscheduled pod(s): ['default/renaissance-glzt9', 'default/renaissance-j8n6l', 'default/renaissance-wpjnk']
+2025-05-14 05:09:49,835 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:10:57,198 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-ftrn5到节点rfsa-us-west1-n4-highcpu-2-95583成功
+2025-05-14 05:10:57,199 [SAScheduler] INFO: bind Pending pod default/mbw-ftrn5 → rfsa-us-west1-n4-highcpu-2-95583
+2025-05-14 05:10:57,202 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 05:10:57,202 [SAScheduler] WARNING: unscheduled pod(s): ['default/renaissance-glzt9', 'default/renaissance-j8n6l', 'default/renaissance-wpjnk']
+2025-05-14 05:10:57,202 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:11:57,086 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-rwwhp到节点up-us-east1-n4-highcpu-2-25143成功
+2025-05-14 05:11:57,087 [SAScheduler] INFO: bind Pending pod default/mbw-rwwhp → up-us-east1-n4-highcpu-2-25143
+2025-05-14 05:11:57,089 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 05:11:57,090 [SAScheduler] WARNING: unscheduled pod(s): ['default/renaissance-glzt9', 'default/renaissance-j8n6l', 'default/renaissance-wpjnk']
+2025-05-14 05:11:57,090 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:12:57,166 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-4m4wt到节点rfsa-us-east4-n4-highcpu-2-70384成功
+2025-05-14 05:12:57,166 [SAScheduler] INFO: bind Pending pod default/mbw-4m4wt → rfsa-us-east4-n4-highcpu-2-70384
+2025-05-14 05:12:57,167 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 05:12:57,167 [SAScheduler] WARNING: unscheduled pod(s): ['default/renaissance-glzt9', 'default/renaissance-j8n6l', 'default/renaissance-wpjnk']
+2025-05-14 05:12:57,167 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:13:57,087 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 05:13:57,087 [SAScheduler] WARNING: unscheduled pod(s): ['default/renaissance-glzt9', 'default/renaissance-j8n6l', 'default/renaissance-wpjnk']
+2025-05-14 05:13:57,087 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:14:32,980 [SAScheduler] INFO: [consolidate] try close rfsa-us-east4-n4-highcpu-2-70384 util=98.50%
+2025-05-14 05:14:32,980 [SAScheduler] INFO: [consolidate] try close rfsa-us-west1-n4-highcpu-2-42794 util=63.50%
+2025-05-14 05:14:33,727 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-east4-n4-highcpu-2-70384,标记不可调度
+2025-05-14 05:14:33,734 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-west1-n4-highcpu-2-42794,标记不可调度
+2025-05-14 05:14:34,273 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-west1-n4-highcpu-2-42794
+2025-05-14 05:14:34,305 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-west1-n4-highcpu-2-42794
+2025-05-14 05:14:34,581 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-east4-n4-highcpu-2-70384
+2025-05-14 05:14:34,641 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-east4-n4-highcpu-2-70384
+2025-05-14 05:14:35,242 [VMManager.VMManager] INFO: Deleting VM rfsa-us-west1-n4-highcpu-2-42794 in zone us-east1-b
+2025-05-14 05:14:36,083 [VMManager.VMManager] INFO: Deleting VM rfsa-us-east4-n4-highcpu-2-70384 in zone us-east4-a
+2025-05-14 05:15:37,285 [VMManager.VMManager] INFO: 实例 rfsa-us-east4-n4-highcpu-2-70384 在 zone us-east4-a 已确认删除
+2025-05-14 05:15:37,285 [SAScheduler] INFO: [consolidate] deleted node rfsa-us-east4-n4-highcpu-2-70384
+2025-05-14 05:15:49,227 [VMManager.VMManager] INFO: 实例 rfsa-us-west1-n4-highcpu-2-42794 在 zone us-east1-b 已确认删除
+2025-05-14 05:15:49,228 [SAScheduler] INFO: [consolidate] deleted node rfsa-us-west1-n4-highcpu-2-42794
+2025-05-14 05:15:50,190 [SAScheduler] INFO: [consolidate] closed nodes: rfsa-us-east4-n4-highcpu-2-70384,rfsa-us-west1-n4-highcpu-2-42794
+2025-05-14 05:16:08,243 [VMManager.VMManager] INFO: 在 zone us-west1-a 找到机型 n1-highcpu-4
+2025-05-14 05:16:08,243 [VMManager.VMManager] INFO: Location us-west1 识别为 region，选用 zone us-west1-a
+2025-05-14 05:16:08,243 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-west1-n1-highcpu-4-77577 (zone=us-west1-a, type=n1-highcpu-4)...
+2025-05-14 05:16:09,527 [VMManager.VMManager] INFO: 在 zone us-west1-a 找到机型 n1-highcpu-4
+2025-05-14 05:16:09,527 [VMManager.VMManager] INFO: Location us-west1 识别为 region，选用 zone us-west1-a
+2025-05-14 05:16:09,527 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-west1-n1-highcpu-4-90504 (zone=us-west1-a, type=n1-highcpu-4)...
+2025-05-14 05:16:22,170 [VMManager.VMManager] INFO: VM rfsa-us-west1-n1-highcpu-4-77577 已运行（RUNNING）。
+2025-05-14 05:16:23,331 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.197.34.101（第 1/5 次）
+2025-05-14 05:16:25,358 [VMManager.VMManager] INFO: VM rfsa-us-west1-n1-highcpu-4-90504 已运行（RUNNING）。
+2025-05-14 05:16:26,551 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.19.118.254（第 1/5 次）
+2025-05-14 05:16:31,204 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 35.197.34.101
+2025-05-14 05:16:34,429 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.19.118.254
+2025-05-14 05:16:41,216 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.197.34.101（第 2/5 次）
+2025-05-14 05:16:41,576 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 05:16:42,515 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 05:16:42,516 [VMManager.VMManager] INFO: SSH 连接成功: 35.197.34.101
+2025-05-14 05:16:44,437 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.19.118.254（第 2/5 次）
+2025-05-14 05:16:44,846 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 05:16:45,940 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 05:16:45,941 [VMManager.VMManager] INFO: SSH 连接成功: 34.19.118.254
+2025-05-14 05:16:52,767 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 05:16:53,544 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 05:16:53,623 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 05:16:54,537 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 05:17:46,981 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 05:17:47,659 [VMManager.VMManager] INFO: 节点 rfsa-us-west1-n1-highcpu-4-77577 Ready。
+2025-05-14 05:17:47,660 [SAScheduler] INFO: create node rfsa-us-west1-n1-highcpu-4-77577 (us-west1/n1-highcpu-4)
+2025-05-14 05:17:49,978 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 05:17:50,035 [VMManager.VMManager] INFO: 节点 rfsa-us-west1-n1-highcpu-4-90504 Ready。
+2025-05-14 05:17:50,036 [SAScheduler] INFO: create node rfsa-us-west1-n1-highcpu-4-90504 (us-west1/n1-highcpu-4)
+2025-05-14 05:18:05,747 [SAScheduler] INFO: node rfsa-us-west1-n1-highcpu-4-77577 ready
+2025-05-14 05:18:10,786 [SAScheduler] INFO: node rfsa-us-west1-n1-highcpu-4-90504 ready
+2025-05-14 05:18:10,896 [SAScheduler] INFO: pod default/step-load-7d6dd98f99-nq6jn not found, skip
+2025-05-14 05:18:10,906 [SAScheduler] INFO: pod default/step-load-7d6dd98f99-z6cts not found, skip
+2025-05-14 05:18:10,940 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod renaissance-glzt9到节点rfsa-us-west1-n1-highcpu-4-90504成功
+2025-05-14 05:18:10,941 [SAScheduler] INFO: bind Pending pod default/renaissance-glzt9 → rfsa-us-west1-n1-highcpu-4-90504
+2025-05-14 05:18:10,971 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod renaissance-j8n6l到节点rfsa-us-west1-n1-highcpu-4-77577成功
+2025-05-14 05:18:10,971 [SAScheduler] INFO: bind Pending pod default/renaissance-j8n6l → rfsa-us-west1-n1-highcpu-4-77577
+2025-05-14 05:18:10,982 [SAScheduler] INFO: pod default/step-load-7d6dd98f99-mtlzb not found, skip
+2025-05-14 05:18:11,035 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-sl57l到节点rfsa-us-west1-n4-highcpu-2-95583成功
+2025-05-14 05:18:11,036 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-sl57l → rfsa-us-west1-n4-highcpu-2-95583
+2025-05-14 05:18:11,038 [SAScheduler] INFO: apply diff done: +2 nodes, -0 nodes
+2025-05-14 05:18:11,038 [SAScheduler] WARNING: unscheduled pod(s): ['default/renaissance-wpjnk', 'default/mbw-5gp7h', 'default/mbw-fsxp2']
+2025-05-14 05:18:11,038 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:18:34,908 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-west1-n4-highcpu-2-95583,标记不可调度
+2025-05-14 05:18:35,527 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-west1-n1-highcpu-4-77577,标记不可调度
+2025-05-14 05:18:35,775 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-west1-n4-highcpu-2-95583
+2025-05-14 05:18:35,815 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-west1-n4-highcpu-2-95583
+2025-05-14 05:18:35,975 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-west1-n1-highcpu-4-77577
+2025-05-14 05:18:35,995 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-west1-n1-highcpu-4-77577
+2025-05-14 05:18:36,731 [VMManager.VMManager] INFO: Deleting VM rfsa-us-west1-n4-highcpu-2-95583 in zone us-east1-b
+2025-05-14 05:18:37,536 [VMManager.VMManager] INFO: Deleting VM rfsa-us-west1-n1-highcpu-4-77577 in zone us-west1-a
+2025-05-14 05:19:36,384 [VMManager.VMManager] INFO: 实例 rfsa-us-west1-n4-highcpu-2-95583 在 zone us-east1-b 已确认删除
+2025-05-14 05:19:36,385 [SAScheduler] INFO: delete node rfsa-us-west1-n4-highcpu-2-95583
+2025-05-14 05:19:38,169 [VMManager.VMManager] INFO: 实例 rfsa-us-west1-n1-highcpu-4-77577 在 zone us-west1-a 已确认删除
+2025-05-14 05:19:38,170 [SAScheduler] INFO: delete node rfsa-us-west1-n1-highcpu-4-77577
+2025-05-14 05:19:40,861 [VMManager.VMManager] INFO: 在 zone us-west1-a 找到机型 n4-highcpu-2
+2025-05-14 05:19:40,861 [VMManager.VMManager] INFO: Location us-west1 识别为 region，选用 zone us-west1-a
+2025-05-14 05:19:40,861 [VMManager.VMManager] INFO: 准备创建 VM up-us-west1-n4-highcpu-2-92705 (zone=us-west1-a, type=n4-highcpu-2)...
+2025-05-14 05:19:46,742 [SAScheduler] WARNING: region us-west1 unavailable (403 FORBIDDEN QUOTA_EXCEEDED), searching fallback...
+2025-05-14 05:19:48,164 [VMManager.VMManager] INFO: 在 zone us-east1-b 找到机型 n4-highcpu-2
+2025-05-14 05:19:48,165 [VMManager.VMManager] INFO: Location us-east1 识别为 region，选用 zone us-east1-b
+2025-05-14 05:19:48,165 [VMManager.VMManager] INFO: 准备创建 VM up-us-west1-n4-highcpu-2-92705 (zone=us-east1-b, type=n4-highcpu-2)...
+2025-05-14 05:20:01,796 [VMManager.VMManager] INFO: VM up-us-west1-n4-highcpu-2-92705 已运行（RUNNING）。
+2025-05-14 05:20:03,338 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.227.58.188（第 1/5 次）
+2025-05-14 05:20:11,302 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 35.227.58.188
+2025-05-14 05:20:21,307 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.227.58.188（第 2/5 次）
+2025-05-14 05:20:21,769 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 05:20:22,988 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 05:20:22,988 [VMManager.VMManager] INFO: SSH 连接成功: 35.227.58.188
+2025-05-14 05:20:27,845 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 05:20:28,972 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 05:21:11,985 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 05:21:12,701 [VMManager.VMManager] INFO: 节点 up-us-west1-n4-highcpu-2-92705 Ready。
+2025-05-14 05:21:12,701 [SAScheduler] INFO: fallback create up-us-west1-n4-highcpu-2-92705 (us-east1/n4-highcpu-2) succeeded
+2025-05-14 05:21:28,422 [SAScheduler] INFO: node up-us-west1-n4-highcpu-2-92705 ready
+2025-05-14 05:21:28,432 [SAScheduler] INFO: pod default/mbw-ftrn5 not found, skip
+2025-05-14 05:21:28,515 [SAScheduler] INFO: pod default/step-load-7d6dd98f99-4kxwk not found, skip
+2025-05-14 05:21:28,567 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod renaissance-wpjnk到节点rfsa-us-west1-n1-highcpu-4-90504成功
+2025-05-14 05:21:28,568 [SAScheduler] INFO: bind Pending pod default/renaissance-wpjnk → rfsa-us-west1-n1-highcpu-4-90504
+2025-05-14 05:21:28,593 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-5gp7h到节点up-us-west1-n4-highcpu-2-92705成功
+2025-05-14 05:21:28,593 [SAScheduler] INFO: bind Pending pod default/mbw-5gp7h → up-us-west1-n4-highcpu-2-92705
+2025-05-14 05:21:28,625 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-fsxp2到节点pack-us-west1-n1-standard-2-74113成功
+2025-05-14 05:21:28,625 [SAScheduler] INFO: bind Pending pod default/mbw-fsxp2 → pack-us-west1-n1-standard-2-74113
+2025-05-14 05:21:28,626 [SAScheduler] INFO: apply diff done: +1 nodes, -2 nodes
+2025-05-14 05:21:28,627 [SAScheduler] INFO: schedule cycle finished | mode=FULL
+2025-05-14 05:21:48,456 [VMManager.VMManager] INFO: 在 zone us-west1-a 找到机型 n1-highcpu-4
+2025-05-14 05:21:48,456 [VMManager.VMManager] INFO: Location us-west1 识别为 region，选用 zone us-west1-a
+2025-05-14 05:21:48,456 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-west1-n1-highcpu-4-82074 (zone=us-west1-a, type=n1-highcpu-4)...
+2025-05-14 05:21:59,746 [VMManager.VMManager] INFO: VM rfsa-us-west1-n1-highcpu-4-82074 已运行（RUNNING）。
+2025-05-14 05:22:00,165 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.197.20.24（第 1/5 次）
+2025-05-14 05:22:15,375 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 35.197.20.24
+2025-05-14 05:22:25,385 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.197.20.24（第 2/5 次）
+2025-05-14 05:22:25,734 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 05:22:26,657 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 05:22:26,657 [VMManager.VMManager] INFO: SSH 连接成功: 35.197.20.24
+2025-05-14 05:22:31,356 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 05:22:32,198 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 05:23:22,800 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 05:23:23,497 [VMManager.VMManager] INFO: 节点 rfsa-us-west1-n1-highcpu-4-82074 Ready。
+2025-05-14 05:23:23,497 [SAScheduler] INFO: create node rfsa-us-west1-n1-highcpu-4-82074 (us-west1/n1-highcpu-4)
+2025-05-14 05:23:39,215 [SAScheduler] INFO: node rfsa-us-west1-n1-highcpu-4-82074 ready
+2025-05-14 05:23:39,240 [SAScheduler] INFO: pod default/nginx-7b6d77bd77-6mtkv not found, skip
+2025-05-14 05:23:39,247 [SAScheduler] INFO: pod default/nginx-7b6d77bd77-92g4b not found, skip
+2025-05-14 05:23:39,355 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod renaissance-8q6fk到节点rfsa-us-west1-n1-highcpu-4-82074成功
+2025-05-14 05:23:39,355 [SAScheduler] INFO: bind Pending pod default/renaissance-8q6fk → rfsa-us-west1-n1-highcpu-4-82074
+2025-05-14 05:23:39,385 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-bb722到节点up-us-west1-n4-highcpu-2-92705成功
+2025-05-14 05:23:39,385 [SAScheduler] INFO: bind Pending pod default/mbw-bb722 → up-us-west1-n4-highcpu-2-92705
+2025-05-14 05:23:39,412 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-d5j4q到节点up-us-east1-n4-highcpu-2-25143成功
+2025-05-14 05:23:39,412 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-d5j4q → up-us-east1-n4-highcpu-2-25143
+2025-05-14 05:23:39,421 [SAScheduler] INFO: pod default/nginx-7b6d77bd77-5qgtd not found, skip
+2025-05-14 05:23:39,421 [SAScheduler] INFO: apply diff done: +1 nodes, -0 nodes
+2025-05-14 05:23:39,421 [SAScheduler] WARNING: unscheduled pod(s): ['default/renaissance-fqdwl']
+2025-05-14 05:23:39,422 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:23:56,385 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod renaissance-fqdwl到节点rfsa-us-west1-n1-highcpu-4-82074成功
+2025-05-14 05:23:56,386 [SAScheduler] INFO: bind Pending pod default/renaissance-fqdwl → rfsa-us-west1-n1-highcpu-4-82074
+2025-05-14 05:23:56,386 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 05:23:56,387 [SAScheduler] WARNING: unscheduled pod(s): ['default/mbw-ghsn8']
+2025-05-14 05:23:56,387 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:24:56,388 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 05:24:56,389 [SAScheduler] WARNING: unscheduled pod(s): ['default/renaissance-89jc4', 'default/mbw-ghsn8']
+2025-05-14 05:24:56,389 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:26:02,663 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node pack-us-west1-n1-standard-2-74113,标记不可调度
+2025-05-14 05:26:03,199 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node pack-us-west1-n1-standard-2-74113
+2025-05-14 05:26:03,221 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object pack-us-west1-n1-standard-2-74113
+2025-05-14 05:26:04,310 [VMManager.VMManager] INFO: Deleting VM pack-us-west1-n1-standard-2-74113 in zone us-west1-a
+2025-05-14 05:27:04,333 [VMManager.VMManager] INFO: 实例 pack-us-west1-n1-standard-2-74113 在 zone us-west1-a 已确认删除
+2025-05-14 05:27:04,334 [SAScheduler] INFO: delete node pack-us-west1-n1-standard-2-74113
+2025-05-14 05:27:04,353 [SAScheduler] INFO: pod default/mbw-fsxp2 not found, skip
+2025-05-14 05:27:04,425 [SAScheduler] INFO: apply diff done: +0 nodes, -1 nodes
+2025-05-14 05:27:04,425 [SAScheduler] WARNING: unscheduled pod(s): ['default/renaissance-89jc4', 'default/mbw-ghsn8']
+2025-05-14 05:27:04,425 [SAScheduler] INFO: schedule cycle finished | mode=FULL
+2025-05-14 05:27:23,369 [VMManager.VMManager] INFO: 在 zone us-west1-a 找到机型 n1-highcpu-4
+2025-05-14 05:27:23,369 [VMManager.VMManager] INFO: Location us-west1 识别为 region，选用 zone us-west1-a
+2025-05-14 05:27:23,369 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-west1-n1-highcpu-4-17488 (zone=us-west1-a, type=n1-highcpu-4)...
+2025-05-14 05:27:36,545 [VMManager.VMManager] INFO: VM rfsa-us-west1-n1-highcpu-4-17488 已运行（RUNNING）。
+2025-05-14 05:27:37,679 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.197.34.101（第 1/5 次）
+2025-05-14 05:27:45,549 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 35.197.34.101
+2025-05-14 05:27:55,562 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.197.34.101（第 2/5 次）
+2025-05-14 05:27:55,918 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 05:27:56,845 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 05:27:56,846 [VMManager.VMManager] INFO: SSH 连接成功: 35.197.34.101
+2025-05-14 05:28:05,647 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 05:28:06,502 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 05:28:58,330 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 05:28:59,021 [VMManager.VMManager] INFO: 节点 rfsa-us-west1-n1-highcpu-4-17488 Ready。
+2025-05-14 05:28:59,021 [SAScheduler] INFO: create node rfsa-us-west1-n1-highcpu-4-17488 (us-west1/n1-highcpu-4)
+2025-05-14 05:29:14,745 [SAScheduler] INFO: node rfsa-us-west1-n1-highcpu-4-17488 ready
+2025-05-14 05:29:14,881 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod renaissance-89jc4到节点rfsa-us-west1-n1-highcpu-4-17488成功
+2025-05-14 05:29:14,881 [SAScheduler] INFO: bind Pending pod default/renaissance-89jc4 → rfsa-us-west1-n1-highcpu-4-17488
+2025-05-14 05:29:14,882 [SAScheduler] INFO: apply diff done: +1 nodes, -0 nodes
+2025-05-14 05:29:14,882 [SAScheduler] WARNING: unscheduled pod(s): ['default/mbw-gftdg', 'default/mbw-ghsn8']
+2025-05-14 05:29:14,882 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:29:31,908 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-gftdg到节点up-us-west1-n4-highcpu-2-92705成功
+2025-05-14 05:29:31,908 [SAScheduler] INFO: bind Pending pod default/mbw-gftdg → up-us-west1-n4-highcpu-2-92705
+2025-05-14 05:29:31,909 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 05:29:31,909 [SAScheduler] WARNING: unscheduled pod(s): ['default/mbw-ghsn8']
+2025-05-14 05:29:31,909 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:30:31,696 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 05:30:31,697 [SAScheduler] WARNING: unscheduled pod(s): ['default/mbw-7pmjb', 'default/mbw-ghsn8']
+2025-05-14 05:30:31,697 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:31:38,129 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node up-us-east1-n4-highcpu-2-25143,标记不可调度
+2025-05-14 05:31:39,073 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node up-us-east1-n4-highcpu-2-25143
+2025-05-14 05:31:39,094 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object up-us-east1-n4-highcpu-2-25143
+2025-05-14 05:31:40,060 [VMManager.VMManager] INFO: Deleting VM up-us-east1-n4-highcpu-2-25143 in zone us-east1-b
+2025-05-14 05:32:41,993 [VMManager.VMManager] INFO: 实例 up-us-east1-n4-highcpu-2-25143 在 zone us-east1-b 已确认删除
+2025-05-14 05:32:41,993 [SAScheduler] INFO: delete node up-us-east1-n4-highcpu-2-25143
+2025-05-14 05:32:42,002 [SAScheduler] INFO: pod default/nginx-7b6d77bd77-g4lph not found, skip
+2025-05-14 05:32:42,010 [SAScheduler] INFO: pod default/step-load-7d6dd98f99-d5j4q not found, skip
+2025-05-14 05:32:42,018 [SAScheduler] INFO: pod default/step-load-7d6dd98f99-t27nw not found, skip
+2025-05-14 05:32:42,043 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod renaissance-js6s6到节点rfsa-us-west1-n1-highcpu-4-90504成功
+2025-05-14 05:32:42,043 [SAScheduler] INFO: bind Pending pod default/renaissance-js6s6 → rfsa-us-west1-n1-highcpu-4-90504
+2025-05-14 05:32:42,045 [SAScheduler] INFO: apply diff done: +0 nodes, -1 nodes
+2025-05-14 05:32:42,045 [SAScheduler] WARNING: unscheduled pod(s): ['default/mbw-7pmjb', 'default/mbw-ghsn8']
+2025-05-14 05:32:42,045 [SAScheduler] INFO: schedule cycle finished | mode=FULL
+2025-05-14 05:33:01,166 [VMManager.VMManager] INFO: 在 zone us-east4-a 找到机型 n4-highcpu-2
+2025-05-14 05:33:01,166 [VMManager.VMManager] INFO: Location us-east4 识别为 region，选用 zone us-east4-a
+2025-05-14 05:33:01,166 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-east4-n4-highcpu-2-76439 (zone=us-east4-a, type=n4-highcpu-2)...
+2025-05-14 05:33:22,330 [VMManager.VMManager] INFO: VM rfsa-us-east4-n4-highcpu-2-76439 已运行（RUNNING）。
+2025-05-14 05:33:23,837 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.245.153.142（第 1/5 次）
+2025-05-14 05:33:27,113 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 35.245.153.142
+2025-05-14 05:33:37,118 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.245.153.142（第 2/5 次）
+2025-05-14 05:33:37,572 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 05:33:38,746 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 05:33:38,747 [VMManager.VMManager] INFO: SSH 连接成功: 35.245.153.142
+2025-05-14 05:33:43,529 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 05:33:44,633 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 05:34:24,071 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 05:34:24,757 [VMManager.VMManager] INFO: 节点 rfsa-us-east4-n4-highcpu-2-76439 Ready。
+2025-05-14 05:34:24,757 [SAScheduler] INFO: create node rfsa-us-east4-n4-highcpu-2-76439 (us-east4/n4-highcpu-2)
+2025-05-14 05:34:40,561 [SAScheduler] INFO: node rfsa-us-east4-n4-highcpu-2-76439 ready
+2025-05-14 05:34:40,678 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-7pmjb到节点up-us-west1-n4-highcpu-2-92705成功
+2025-05-14 05:34:40,678 [SAScheduler] INFO: bind Pending pod default/mbw-7pmjb → up-us-west1-n4-highcpu-2-92705
+2025-05-14 05:34:40,718 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-ghsn8到节点rfsa-us-east4-n4-highcpu-2-76439成功
+2025-05-14 05:34:40,718 [SAScheduler] INFO: bind Pending pod default/mbw-ghsn8 → rfsa-us-east4-n4-highcpu-2-76439
+2025-05-14 05:34:40,754 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-5rdmc到节点rfsa-us-east4-n4-highcpu-2-76439成功
+2025-05-14 05:34:40,754 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-5rdmc → rfsa-us-east4-n4-highcpu-2-76439
+2025-05-14 05:34:40,794 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-795wr到节点rfsa-us-west1-n1-highcpu-4-90504成功
+2025-05-14 05:34:40,794 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-795wr → rfsa-us-west1-n1-highcpu-4-90504
+2025-05-14 05:34:40,807 [SAScheduler] INFO: pod default/nginx-7b6d77bd77-dqr8l not found, skip
+2025-05-14 05:34:40,808 [SAScheduler] INFO: apply diff done: +1 nodes, -0 nodes
+2025-05-14 05:34:40,808 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:34:51,840 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 05:35:57,916 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-wmxrp到节点rfsa-us-west1-n1-highcpu-4-82074成功
+2025-05-14 05:35:57,916 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-wmxrp → rfsa-us-west1-n1-highcpu-4-82074
+2025-05-14 05:35:57,917 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 05:35:57,917 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:37:04,489 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod renaissance-lkbds到节点rfsa-us-west1-n1-highcpu-4-82074成功
+2025-05-14 05:37:04,489 [SAScheduler] INFO: bind Pending pod default/renaissance-lkbds → rfsa-us-west1-n1-highcpu-4-82074
+2025-05-14 05:37:04,515 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-bqfbs到节点rfsa-us-west1-n1-highcpu-4-82074成功
+2025-05-14 05:37:04,515 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-bqfbs → rfsa-us-west1-n1-highcpu-4-82074
+2025-05-14 05:37:04,539 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-x25fd到节点rfsa-us-west1-n1-highcpu-4-90504成功
+2025-05-14 05:37:04,540 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-x25fd → rfsa-us-west1-n1-highcpu-4-90504
+2025-05-14 05:37:04,540 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 05:37:04,540 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:38:05,070 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-east4-n4-highcpu-2-76439,标记不可调度
+2025-05-14 05:38:05,615 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-east4-n4-highcpu-2-76439
+2025-05-14 05:38:05,632 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-east4-n4-highcpu-2-76439
+2025-05-14 05:38:06,626 [VMManager.VMManager] INFO: Deleting VM rfsa-us-east4-n4-highcpu-2-76439 in zone us-east4-a
+2025-05-14 05:39:05,202 [VMManager.VMManager] INFO: 实例 rfsa-us-east4-n4-highcpu-2-76439 在 zone us-east4-a 已确认删除
+2025-05-14 05:39:05,202 [SAScheduler] INFO: delete node rfsa-us-east4-n4-highcpu-2-76439
+2025-05-14 05:39:05,214 [SAScheduler] INFO: pod default/mbw-ghsn8 not found, skip
+2025-05-14 05:39:05,274 [SAScheduler] INFO: pod default/step-load-7d6dd98f99-5rdmc not found, skip
+2025-05-14 05:39:05,366 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-htqzr到节点up-us-west1-n4-highcpu-2-92705成功
+2025-05-14 05:39:05,366 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-htqzr → up-us-west1-n4-highcpu-2-92705
+2025-05-14 05:39:05,367 [SAScheduler] INFO: apply diff done: +0 nodes, -1 nodes
+2025-05-14 05:39:05,367 [SAScheduler] INFO: schedule cycle finished | mode=FULL
+2025-05-14 05:39:28,284 [VMManager.VMManager] INFO: 在 zone us-east4-a 找到机型 n4-highcpu-2
+2025-05-14 05:39:28,284 [VMManager.VMManager] INFO: Location us-east4 识别为 region，选用 zone us-east4-a
+2025-05-14 05:39:28,284 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-east4-n4-highcpu-2-78346 (zone=us-east4-a, type=n4-highcpu-2)...
+2025-05-14 05:39:43,669 [VMManager.VMManager] INFO: VM rfsa-us-east4-n4-highcpu-2-78346 已运行（RUNNING）。
+2025-05-14 05:39:45,184 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.145.208.68（第 1/5 次）
+2025-05-14 05:39:53,154 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.145.208.68
+2025-05-14 05:40:03,160 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.145.208.68（第 2/5 次）
+2025-05-14 05:40:03,611 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 05:40:04,794 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 05:40:04,795 [VMManager.VMManager] INFO: SSH 连接成功: 34.145.208.68
+2025-05-14 05:40:09,540 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 05:40:10,642 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 05:40:49,462 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 05:40:50,130 [VMManager.VMManager] INFO: 节点 rfsa-us-east4-n4-highcpu-2-78346 Ready。
+2025-05-14 05:40:50,130 [SAScheduler] INFO: create node rfsa-us-east4-n4-highcpu-2-78346 (us-east4/n4-highcpu-2)
+2025-05-14 05:41:00,805 [SAScheduler] INFO: node rfsa-us-east4-n4-highcpu-2-78346 ready
+2025-05-14 05:41:00,948 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-ptcxm到节点rfsa-us-east4-n4-highcpu-2-78346成功
+2025-05-14 05:41:00,948 [SAScheduler] INFO: bind Pending pod default/mbw-ptcxm → rfsa-us-east4-n4-highcpu-2-78346
+2025-05-14 05:41:00,979 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-5qgpc到节点rfsa-us-east4-n4-highcpu-2-78346成功
+2025-05-14 05:41:00,979 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-5qgpc → rfsa-us-east4-n4-highcpu-2-78346
+2025-05-14 05:41:00,980 [SAScheduler] INFO: apply diff done: +1 nodes, -0 nodes
+2025-05-14 05:41:00,980 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:41:18,417 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-bwxvp到节点rfsa-us-east4-n4-highcpu-2-78346成功
+2025-05-14 05:41:18,417 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-bwxvp → rfsa-us-east4-n4-highcpu-2-78346
+2025-05-14 05:41:18,418 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 05:41:18,418 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:42:11,970 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 05:43:25,750 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod renaissance-mts5h到节点rfsa-us-west1-n1-highcpu-4-17488成功
+2025-05-14 05:43:25,750 [SAScheduler] INFO: bind Pending pod default/renaissance-mts5h → rfsa-us-west1-n1-highcpu-4-17488
+2025-05-14 05:43:25,780 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-4w82x到节点rfsa-us-east4-n4-highcpu-2-78346成功
+2025-05-14 05:43:25,780 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-4w82x → rfsa-us-east4-n4-highcpu-2-78346
+2025-05-14 05:43:25,781 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 05:43:25,781 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:43:38,797 [SAScheduler] INFO: [consolidate] try close rfsa-us-west1-n1-highcpu-4-17488 util=84.25%
+2025-05-14 05:43:39,428 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-west1-n1-highcpu-4-17488,标记不可调度
+2025-05-14 05:43:39,954 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-west1-n1-highcpu-4-17488
+2025-05-14 05:43:39,974 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-west1-n1-highcpu-4-17488
+2025-05-14 05:43:40,785 [VMManager.VMManager] INFO: Deleting VM rfsa-us-west1-n1-highcpu-4-17488 in zone us-west1-a
+2025-05-14 05:44:45,817 [VMManager.VMManager] INFO: 实例 rfsa-us-west1-n1-highcpu-4-17488 在 zone us-west1-a 已确认删除
+2025-05-14 05:44:45,817 [SAScheduler] INFO: [consolidate] deleted node rfsa-us-west1-n1-highcpu-4-17488
+2025-05-14 05:44:46,716 [SAScheduler] INFO: [consolidate] closed nodes: rfsa-us-west1-n1-highcpu-4-17488
+2025-05-14 05:45:04,916 [VMManager.VMManager] INFO: 在 zone us-east1-b 找到机型 n1-highcpu-4
+2025-05-14 05:45:04,916 [VMManager.VMManager] INFO: Location us-east1 识别为 region，选用 zone us-east1-b
+2025-05-14 05:45:04,916 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-east1-n1-highcpu-4-23344 (zone=us-east1-b, type=n1-highcpu-4)...
+2025-05-14 05:45:20,772 [VMManager.VMManager] INFO: VM rfsa-us-east1-n1-highcpu-4-23344 已运行（RUNNING）。
+2025-05-14 05:45:22,320 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.138.110.247（第 1/5 次）
+2025-05-14 05:45:30,300 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.138.110.247
+2025-05-14 05:45:40,315 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.138.110.247（第 2/5 次）
+2025-05-14 05:45:40,782 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 05:45:42,000 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 05:45:42,000 [VMManager.VMManager] INFO: SSH 连接成功: 34.138.110.247
+2025-05-14 05:45:52,074 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 05:45:53,190 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 05:46:47,855 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 05:46:48,544 [VMManager.VMManager] INFO: 节点 rfsa-us-east1-n1-highcpu-4-23344 Ready。
+2025-05-14 05:46:48,544 [SAScheduler] INFO: create node rfsa-us-east1-n1-highcpu-4-23344 (us-east1/n1-highcpu-4)
+2025-05-14 05:47:04,257 [SAScheduler] INFO: node rfsa-us-east1-n1-highcpu-4-23344 ready
+2025-05-14 05:47:04,403 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod renaissance-kfnt2到节点rfsa-us-east1-n1-highcpu-4-23344成功
+2025-05-14 05:47:04,403 [SAScheduler] INFO: bind Pending pod default/renaissance-kfnt2 → rfsa-us-east1-n1-highcpu-4-23344
+2025-05-14 05:47:04,431 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-fbgh8到节点rfsa-us-west1-n1-highcpu-4-82074成功
+2025-05-14 05:47:04,431 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-fbgh8 → rfsa-us-west1-n1-highcpu-4-82074
+2025-05-14 05:47:04,432 [SAScheduler] INFO: apply diff done: +1 nodes, -0 nodes
+2025-05-14 05:47:04,432 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:47:28,183 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node up-us-west1-n4-highcpu-2-92705,标记不可调度
+2025-05-14 05:47:28,714 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node up-us-west1-n4-highcpu-2-92705
+2025-05-14 05:47:28,729 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object up-us-west1-n4-highcpu-2-92705
+2025-05-14 05:47:28,857 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-east1-n1-highcpu-4-23344,标记不可调度
+2025-05-14 05:47:29,184 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-east1-n1-highcpu-4-23344
+2025-05-14 05:47:29,200 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-east1-n1-highcpu-4-23344
+2025-05-14 05:47:29,564 [VMManager.VMManager] INFO: Deleting VM up-us-west1-n4-highcpu-2-92705 in zone us-east1-b
+2025-05-14 05:47:30,443 [VMManager.VMManager] INFO: Deleting VM rfsa-us-east1-n1-highcpu-4-23344 in zone us-east1-b
+2025-05-14 05:48:35,388 [VMManager.VMManager] INFO: 实例 up-us-west1-n4-highcpu-2-92705 在 zone us-east1-b 已确认删除
+2025-05-14 05:48:35,389 [SAScheduler] INFO: delete node up-us-west1-n4-highcpu-2-92705
+2025-05-14 05:48:35,415 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-west1-n1-highcpu-4-90504,标记不可调度
+2025-05-14 05:48:36,039 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-west1-n1-highcpu-4-90504
+2025-05-14 05:48:36,054 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-west1-n1-highcpu-4-90504
+2025-05-14 05:48:36,945 [VMManager.VMManager] INFO: Deleting VM rfsa-us-west1-n1-highcpu-4-90504 in zone us-west1-a
+2025-05-14 05:48:39,044 [VMManager.VMManager] INFO: 实例 rfsa-us-east1-n1-highcpu-4-23344 在 zone us-east1-b 已确认删除
+2025-05-14 05:48:39,044 [SAScheduler] INFO: delete node rfsa-us-east1-n1-highcpu-4-23344
+2025-05-14 05:49:34,624 [VMManager.VMManager] INFO: 实例 rfsa-us-west1-n1-highcpu-4-90504 在 zone us-west1-a 已确认删除
+2025-05-14 05:49:34,624 [SAScheduler] INFO: delete node rfsa-us-west1-n1-highcpu-4-90504
+2025-05-14 05:49:37,327 [VMManager.VMManager] INFO: 在 zone us-west1-a 找到机型 n1-standard-2
+2025-05-14 05:49:37,327 [VMManager.VMManager] INFO: Location us-west1 识别为 region，选用 zone us-west1-a
+2025-05-14 05:49:37,327 [VMManager.VMManager] INFO: 准备创建 VM pack-us-west1-n1-standard-2-38060 (zone=us-west1-a, type=n1-standard-2)...
+2025-05-14 05:49:50,349 [VMManager.VMManager] INFO: VM pack-us-west1-n1-standard-2-38060 已运行（RUNNING）。
+2025-05-14 05:49:51,484 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.19.102.98（第 1/5 次）
+2025-05-14 05:50:06,724 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.19.102.98
+2025-05-14 05:50:16,732 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.19.102.98（第 2/5 次）
+2025-05-14 05:50:17,153 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 05:50:18,229 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 05:50:18,229 [VMManager.VMManager] INFO: SSH 连接成功: 34.19.102.98
+2025-05-14 05:50:25,176 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 05:50:26,175 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 05:51:25,189 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 05:51:25,942 [VMManager.VMManager] INFO: 节点 pack-us-west1-n1-standard-2-38060 Ready。
+2025-05-14 05:51:25,942 [SAScheduler] INFO: create node pack-us-west1-n1-standard-2-38060 (us-west1/n1-standard-2)
+2025-05-14 05:51:46,689 [SAScheduler] INFO: node pack-us-west1-n1-standard-2-38060 ready
+2025-05-14 05:51:46,697 [SAScheduler] INFO: pod default/step-load-7d6dd98f99-795wr not found, skip
+2025-05-14 05:51:46,706 [SAScheduler] INFO: pod default/step-load-7d6dd98f99-htqzr not found, skip
+2025-05-14 05:51:46,734 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-c75nj到节点pack-us-west1-n1-standard-2-38060成功
+2025-05-14 05:51:46,734 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-c75nj → pack-us-west1-n1-standard-2-38060
+2025-05-14 05:51:46,735 [SAScheduler] INFO: apply diff done: +1 nodes, -3 nodes
+2025-05-14 05:51:46,735 [SAScheduler] INFO: schedule cycle finished | mode=FULL
+2025-05-14 05:52:08,108 [VMManager.VMManager] INFO: 在 zone us-east1-b 找到机型 n4-highcpu-2
+2025-05-14 05:52:08,108 [VMManager.VMManager] INFO: Location us-east1 识别为 region，选用 zone us-east1-b
+2025-05-14 05:52:08,108 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-east1-n4-highcpu-2-68498 (zone=us-east1-b, type=n4-highcpu-2)...
+2025-05-14 05:52:08,712 [VMManager.VMManager] INFO: 在 zone us-east1-b 找到机型 n1-highcpu-4
+2025-05-14 05:52:08,713 [VMManager.VMManager] INFO: Location us-east1 识别为 region，选用 zone us-east1-b
+2025-05-14 05:52:08,713 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-east1-n1-highcpu-4-87891 (zone=us-east1-b, type=n1-highcpu-4)...
+2025-05-14 05:52:22,558 [VMManager.VMManager] INFO: VM rfsa-us-east1-n4-highcpu-2-68498 已运行（RUNNING）。
+2025-05-14 05:52:22,993 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.139.134.121（第 1/5 次）
+2025-05-14 05:52:23,208 [VMManager.VMManager] INFO: VM rfsa-us-east1-n1-highcpu-4-87891 已运行（RUNNING）。
+2025-05-14 05:52:23,638 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.74.167.104（第 1/5 次）
+2025-05-14 05:52:30,985 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.139.134.121
+2025-05-14 05:52:31,635 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.74.167.104
+2025-05-14 05:52:41,001 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.139.134.121（第 2/5 次）
+2025-05-14 05:52:41,461 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 05:52:41,646 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.74.167.104（第 2/5 次）
+2025-05-14 05:52:42,121 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 05:52:42,656 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 05:52:42,657 [VMManager.VMManager] INFO: SSH 连接成功: 34.139.134.121
+2025-05-14 05:52:43,330 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 05:52:43,330 [VMManager.VMManager] INFO: SSH 连接成功: 34.74.167.104
+2025-05-14 05:52:47,503 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 05:52:48,623 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 05:52:53,651 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 05:52:54,769 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 05:53:25,812 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 05:53:26,526 [VMManager.VMManager] INFO: 节点 rfsa-us-east1-n4-highcpu-2-68498 Ready。
+2025-05-14 05:53:26,526 [SAScheduler] INFO: create node rfsa-us-east1-n4-highcpu-2-68498 (us-east1/n4-highcpu-2)
+2025-05-14 05:53:50,119 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 05:53:50,180 [VMManager.VMManager] INFO: 节点 rfsa-us-east1-n1-highcpu-4-87891 Ready。
+2025-05-14 05:53:50,180 [SAScheduler] INFO: create node rfsa-us-east1-n1-highcpu-4-87891 (us-east1/n1-highcpu-4)
+2025-05-14 05:53:50,819 [SAScheduler] INFO: node rfsa-us-east1-n4-highcpu-2-68498 ready
+2025-05-14 05:54:05,916 [SAScheduler] INFO: node rfsa-us-east1-n1-highcpu-4-87891 ready
+2025-05-14 05:54:05,992 [SAScheduler] INFO: pod default/nginx-7b6d77bd77-zdf8f not found, skip
+2025-05-14 05:54:06,095 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod renaissance-dkr66到节点rfsa-us-east1-n1-highcpu-4-87891成功
+2025-05-14 05:54:06,095 [SAScheduler] INFO: bind Pending pod default/renaissance-dkr66 → rfsa-us-east1-n1-highcpu-4-87891
+2025-05-14 05:54:06,126 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-5sm8h到节点pack-us-west1-n1-standard-2-38060成功
+2025-05-14 05:54:06,126 [SAScheduler] INFO: bind Pending pod default/mbw-5sm8h → pack-us-west1-n1-standard-2-38060
+2025-05-14 05:54:06,155 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-6mlzd到节点rfsa-us-west1-n1-highcpu-4-82074成功
+2025-05-14 05:54:06,155 [SAScheduler] INFO: bind Pending pod default/mbw-6mlzd → rfsa-us-west1-n1-highcpu-4-82074
+2025-05-14 05:54:06,180 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-ntpp4到节点rfsa-us-east4-n4-highcpu-2-78346成功
+2025-05-14 05:54:06,180 [SAScheduler] INFO: bind Pending pod default/mbw-ntpp4 → rfsa-us-east4-n4-highcpu-2-78346
+2025-05-14 05:54:06,208 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-x8xgs到节点rfsa-us-east1-n4-highcpu-2-68498成功
+2025-05-14 05:54:06,208 [SAScheduler] INFO: bind Pending pod default/mbw-x8xgs → rfsa-us-east1-n4-highcpu-2-68498
+2025-05-14 05:54:06,248 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-c86zp到节点rfsa-us-east4-n4-highcpu-2-78346成功
+2025-05-14 05:54:06,250 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-c86zp → rfsa-us-east4-n4-highcpu-2-78346
+2025-05-14 05:54:06,284 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-f4m4r到节点rfsa-us-west1-n1-highcpu-4-82074成功
+2025-05-14 05:54:06,284 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-f4m4r → rfsa-us-west1-n1-highcpu-4-82074
+2025-05-14 05:54:06,285 [SAScheduler] INFO: apply diff done: +2 nodes, -0 nodes
+2025-05-14 05:54:06,285 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:54:23,425 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-rwqt2到节点rfsa-us-east1-n4-highcpu-2-68498成功
+2025-05-14 05:54:23,425 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-rwqt2 → rfsa-us-east1-n4-highcpu-2-68498
+2025-05-14 05:54:23,426 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 05:54:23,426 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:55:17,216 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 05:56:31,282 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-c52gh到节点rfsa-us-east1-n4-highcpu-2-68498成功
+2025-05-14 05:56:31,283 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-c52gh → rfsa-us-east1-n4-highcpu-2-68498
+2025-05-14 05:56:31,316 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-vfz9d到节点pack-us-west1-n1-standard-2-38060成功
+2025-05-14 05:56:31,316 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-vfz9d → pack-us-west1-n1-standard-2-38060
+2025-05-14 05:56:31,317 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 05:56:31,317 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 05:57:17,263 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 05:58:17,339 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 05:59:17,373 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 05:59:59,513 [SAScheduler] INFO: [consolidate] try close pack-us-west1-n1-standard-2-38060 util=73.50%
+2025-05-14 05:59:59,513 [SAScheduler] INFO: [consolidate] try close rfsa-us-west1-n1-highcpu-4-82074 util=61.75%
+2025-05-14 06:00:00,250 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node pack-us-west1-n1-standard-2-38060,标记不可调度
+2025-05-14 06:00:00,258 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-west1-n1-highcpu-4-82074,标记不可调度
+2025-05-14 06:00:01,022 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node pack-us-west1-n1-standard-2-38060
+2025-05-14 06:00:01,050 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object pack-us-west1-n1-standard-2-38060
+2025-05-14 06:00:01,418 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-west1-n1-highcpu-4-82074
+2025-05-14 06:00:01,444 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-west1-n1-highcpu-4-82074
+2025-05-14 06:00:02,088 [VMManager.VMManager] INFO: Deleting VM pack-us-west1-n1-standard-2-38060 in zone us-west1-a
+2025-05-14 06:00:02,875 [VMManager.VMManager] INFO: Deleting VM rfsa-us-west1-n1-highcpu-4-82074 in zone us-west1-a
+2025-05-14 06:01:01,079 [VMManager.VMManager] INFO: 实例 rfsa-us-west1-n1-highcpu-4-82074 在 zone us-west1-a 已确认删除
+2025-05-14 06:01:01,079 [SAScheduler] INFO: [consolidate] deleted node rfsa-us-west1-n1-highcpu-4-82074
+2025-05-14 06:01:17,788 [VMManager.VMManager] INFO: 实例 pack-us-west1-n1-standard-2-38060 在 zone us-west1-a 已确认删除
+2025-05-14 06:01:17,788 [SAScheduler] INFO: [consolidate] deleted node pack-us-west1-n1-standard-2-38060
+2025-05-14 06:01:18,642 [SAScheduler] INFO: [consolidate] closed nodes: pack-us-west1-n1-standard-2-38060,rfsa-us-west1-n1-highcpu-4-82074
+2025-05-14 06:01:35,551 [VMManager.VMManager] INFO: 在 zone us-west1-a 找到机型 n4-highcpu-4
+2025-05-14 06:01:35,551 [VMManager.VMManager] INFO: Location us-west1 识别为 region，选用 zone us-west1-a
+2025-05-14 06:01:35,551 [VMManager.VMManager] INFO: 准备创建 VM pack-us-west1-n4-highcpu-4-91758 (zone=us-west1-a, type=n4-highcpu-4)...
+2025-05-14 06:01:48,700 [SAScheduler] WARNING: region us-west1 unavailable (403 FORBIDDEN QUOTA_EXCEEDED), searching fallback...
+2025-05-14 06:01:51,931 [VMManager.VMManager] INFO: 在 zone us-east1-b 找到机型 n4-highcpu-4
+2025-05-14 06:01:51,931 [VMManager.VMManager] INFO: Location us-east1 识别为 region，选用 zone us-east1-b
+2025-05-14 06:01:51,931 [VMManager.VMManager] INFO: 准备创建 VM pack-us-west1-n4-highcpu-4-91758 (zone=us-east1-b, type=n4-highcpu-4)...
+2025-05-14 06:02:10,308 [VMManager.VMManager] INFO: VM pack-us-west1-n4-highcpu-4-91758 已运行（RUNNING）。
+2025-05-14 06:02:11,841 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.227.58.188（第 1/5 次）
+2025-05-14 06:02:14,976 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 35.227.58.188
+2025-05-14 06:02:24,992 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.227.58.188（第 2/5 次）
+2025-05-14 06:02:25,451 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 06:02:26,663 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 06:02:26,663 [VMManager.VMManager] INFO: SSH 连接成功: 35.227.58.188
+2025-05-14 06:02:31,546 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 06:02:32,670 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 06:03:13,606 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 06:03:14,331 [VMManager.VMManager] INFO: 节点 pack-us-west1-n4-highcpu-4-91758 Ready。
+2025-05-14 06:03:14,332 [SAScheduler] INFO: fallback create pack-us-west1-n4-highcpu-4-91758 (us-east1/n4-highcpu-4) succeeded
+2025-05-14 06:03:30,047 [SAScheduler] INFO: node pack-us-west1-n4-highcpu-4-91758 ready
+2025-05-14 06:03:30,096 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-4gfsq到节点pack-us-west1-n4-highcpu-4-91758成功
+2025-05-14 06:03:30,096 [SAScheduler] INFO: bind Pending pod default/mbw-4gfsq → pack-us-west1-n4-highcpu-4-91758
+2025-05-14 06:03:30,126 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-fll5m到节点pack-us-west1-n4-highcpu-4-91758成功
+2025-05-14 06:03:30,126 [SAScheduler] INFO: bind Pending pod default/mbw-fll5m → pack-us-west1-n4-highcpu-4-91758
+2025-05-14 06:03:30,153 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-6v2zg到节点pack-us-west1-n4-highcpu-4-91758成功
+2025-05-14 06:03:30,153 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-6v2zg → pack-us-west1-n4-highcpu-4-91758
+2025-05-14 06:03:30,183 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-8wmhf到节点pack-us-west1-n4-highcpu-4-91758成功
+2025-05-14 06:03:30,183 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-8wmhf → pack-us-west1-n4-highcpu-4-91758
+2025-05-14 06:03:30,213 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-nrk5x到节点pack-us-west1-n4-highcpu-4-91758成功
+2025-05-14 06:03:30,213 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-nrk5x → pack-us-west1-n4-highcpu-4-91758
+2025-05-14 06:03:30,241 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-wcr9k到节点pack-us-west1-n4-highcpu-4-91758成功
+2025-05-14 06:03:30,241 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-wcr9k → pack-us-west1-n4-highcpu-4-91758
+2025-05-14 06:03:30,242 [SAScheduler] INFO: apply diff done: +1 nodes, -0 nodes
+2025-05-14 06:03:30,242 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 06:03:41,256 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:04:54,750 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-8vwq8到节点rfsa-us-east4-n4-highcpu-2-78346成功
+2025-05-14 06:04:54,750 [SAScheduler] INFO: bind Pending pod default/mbw-8vwq8 → rfsa-us-east4-n4-highcpu-2-78346
+2025-05-14 06:04:54,774 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-tb9zx到节点rfsa-us-east1-n4-highcpu-2-68498成功
+2025-05-14 06:04:54,775 [SAScheduler] INFO: bind Pending pod default/mbw-tb9zx → rfsa-us-east1-n4-highcpu-2-68498
+2025-05-14 06:04:54,775 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 06:04:54,776 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 06:05:41,192 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:06:41,242 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:07:41,133 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:08:41,214 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:09:21,049 [SAScheduler] INFO: [consolidate] try close rfsa-us-east1-n1-highcpu-4-87891 util=6.75%
+2025-05-14 06:09:21,695 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-east1-n1-highcpu-4-87891,标记不可调度
+2025-05-14 06:09:22,234 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-east1-n1-highcpu-4-87891
+2025-05-14 06:09:22,256 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-east1-n1-highcpu-4-87891
+2025-05-14 06:09:23,190 [VMManager.VMManager] INFO: Deleting VM rfsa-us-east1-n1-highcpu-4-87891 in zone us-east1-b
+2025-05-14 06:10:26,872 [VMManager.VMManager] INFO: 实例 rfsa-us-east1-n1-highcpu-4-87891 在 zone us-east1-b 已确认删除
+2025-05-14 06:10:26,873 [SAScheduler] INFO: [consolidate] deleted node rfsa-us-east1-n1-highcpu-4-87891
+2025-05-14 06:10:27,744 [SAScheduler] INFO: [consolidate] closed nodes: rfsa-us-east1-n1-highcpu-4-87891
+2025-05-14 06:10:28,560 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:10:41,168 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:11:41,101 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:12:41,225 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:13:41,146 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:14:29,718 [SAScheduler] INFO: [consolidate] try close pack-us-west1-n4-highcpu-4-91758 util=36.75%
+2025-05-14 06:14:30,370 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node pack-us-west1-n4-highcpu-4-91758,标记不可调度
+2025-05-14 06:14:31,252 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node pack-us-west1-n4-highcpu-4-91758
+2025-05-14 06:14:31,281 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object pack-us-west1-n4-highcpu-4-91758
+2025-05-14 06:14:32,283 [VMManager.VMManager] INFO: Deleting VM pack-us-west1-n4-highcpu-4-91758 in zone us-east1-b
+2025-05-14 06:15:34,394 [VMManager.VMManager] INFO: 实例 pack-us-west1-n4-highcpu-4-91758 在 zone us-east1-b 已确认删除
+2025-05-14 06:15:34,394 [SAScheduler] INFO: [consolidate] deleted node pack-us-west1-n4-highcpu-4-91758
+2025-05-14 06:15:35,074 [SAScheduler] INFO: [consolidate] closed nodes: pack-us-west1-n4-highcpu-4-91758
+2025-05-14 06:15:49,984 [VMManager.VMManager] INFO: 在 zone us-west1-a 找到机型 n4-highcpu-4
+2025-05-14 06:15:49,984 [VMManager.VMManager] INFO: Location us-west1 识别为 region，选用 zone us-west1-a
+2025-05-14 06:15:49,984 [VMManager.VMManager] INFO: 准备创建 VM pack-us-west1-n4-highcpu-4-66466 (zone=us-west1-a, type=n4-highcpu-4)...
+2025-05-14 06:15:57,590 [SAScheduler] WARNING: region us-west1 unavailable (403 FORBIDDEN QUOTA_EXCEEDED), searching fallback...
+2025-05-14 06:16:00,956 [VMManager.VMManager] INFO: 在 zone us-east1-b 找到机型 n4-highcpu-4
+2025-05-14 06:16:00,956 [VMManager.VMManager] INFO: Location us-east1 识别为 region，选用 zone us-east1-b
+2025-05-14 06:16:00,956 [VMManager.VMManager] INFO: 准备创建 VM pack-us-west1-n4-highcpu-4-66466 (zone=us-east1-b, type=n4-highcpu-4)...
+2025-05-14 06:16:12,689 [VMManager.VMManager] INFO: VM pack-us-west1-n4-highcpu-4-66466 已运行（RUNNING）。
+2025-05-14 06:16:14,250 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.138.110.247（第 1/5 次）
+2025-05-14 06:16:22,224 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.138.110.247
+2025-05-14 06:16:32,237 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.138.110.247（第 2/5 次）
+2025-05-14 06:16:32,695 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 06:16:33,898 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 06:16:33,899 [VMManager.VMManager] INFO: SSH 连接成功: 34.138.110.247
+2025-05-14 06:16:38,755 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 06:16:39,877 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 06:17:18,276 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 06:17:19,038 [VMManager.VMManager] INFO: 节点 pack-us-west1-n4-highcpu-4-66466 Ready。
+2025-05-14 06:17:19,038 [SAScheduler] INFO: fallback create pack-us-west1-n4-highcpu-4-66466 (us-east1/n4-highcpu-4) succeeded
+2025-05-14 06:17:34,842 [SAScheduler] INFO: node pack-us-west1-n4-highcpu-4-66466 ready
+2025-05-14 06:17:34,874 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-b9jdq到节点rfsa-us-east4-n4-highcpu-2-78346成功
+2025-05-14 06:17:34,874 [SAScheduler] INFO: bind Pending pod default/mbw-b9jdq → rfsa-us-east4-n4-highcpu-2-78346
+2025-05-14 06:17:34,906 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-ljf8q到节点rfsa-us-east1-n4-highcpu-2-68498成功
+2025-05-14 06:17:34,906 [SAScheduler] INFO: bind Pending pod default/mbw-ljf8q → rfsa-us-east1-n4-highcpu-2-68498
+2025-05-14 06:17:34,931 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-mk6tm到节点pack-us-west1-n4-highcpu-4-66466成功
+2025-05-14 06:17:34,931 [SAScheduler] INFO: bind Pending pod default/mbw-mk6tm → pack-us-west1-n4-highcpu-4-66466
+2025-05-14 06:17:34,955 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-qqxmx到节点pack-us-west1-n4-highcpu-4-66466成功
+2025-05-14 06:17:34,955 [SAScheduler] INFO: bind Pending pod default/mbw-qqxmx → pack-us-west1-n4-highcpu-4-66466
+2025-05-14 06:17:34,981 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-jxd2d到节点pack-us-west1-n4-highcpu-4-66466成功
+2025-05-14 06:17:34,982 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-jxd2d → pack-us-west1-n4-highcpu-4-66466
+2025-05-14 06:17:35,008 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-r6tbv到节点pack-us-west1-n4-highcpu-4-66466成功
+2025-05-14 06:17:35,008 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-r6tbv → pack-us-west1-n4-highcpu-4-66466
+2025-05-14 06:17:35,034 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-5rnqk到节点pack-us-west1-n4-highcpu-4-66466成功
+2025-05-14 06:17:35,034 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-5rnqk → pack-us-west1-n4-highcpu-4-66466
+2025-05-14 06:17:35,035 [SAScheduler] INFO: apply diff done: +1 nodes, -0 nodes
+2025-05-14 06:17:35,035 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 06:17:45,860 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:18:45,939 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:19:45,946 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:20:46,170 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:21:45,931 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:22:46,103 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:23:45,972 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:24:45,881 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:25:45,995 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:26:45,901 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:27:38,932 [SAScheduler] INFO: [consolidate] try close rfsa-us-east1-n4-highcpu-2-68498 util=98.50%
+2025-05-14 06:27:39,601 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-east1-n4-highcpu-2-68498,标记不可调度
+2025-05-14 06:27:40,354 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-east1-n4-highcpu-2-68498
+2025-05-14 06:27:40,370 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-east1-n4-highcpu-2-68498
+2025-05-14 06:27:41,435 [VMManager.VMManager] INFO: Deleting VM rfsa-us-east1-n4-highcpu-2-68498 in zone us-east1-b
+2025-05-14 06:28:41,724 [VMManager.VMManager] INFO: 实例 rfsa-us-east1-n4-highcpu-2-68498 在 zone us-east1-b 已确认删除
+2025-05-14 06:28:41,724 [SAScheduler] INFO: [consolidate] deleted node rfsa-us-east1-n4-highcpu-2-68498
+2025-05-14 06:28:42,462 [SAScheduler] INFO: [consolidate] closed nodes: rfsa-us-east1-n4-highcpu-2-68498
+2025-05-14 06:28:56,616 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-68zsv到节点rfsa-us-east4-n4-highcpu-2-78346成功
+2025-05-14 06:28:56,617 [SAScheduler] INFO: bind Pending pod default/mbw-68zsv → rfsa-us-east4-n4-highcpu-2-78346
+2025-05-14 06:28:56,643 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-kflr7到节点pack-us-west1-n4-highcpu-4-66466成功
+2025-05-14 06:28:56,644 [SAScheduler] INFO: bind Pending pod default/mbw-kflr7 → pack-us-west1-n4-highcpu-4-66466
+2025-05-14 06:28:56,674 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-g2fks到节点pack-us-west1-n4-highcpu-4-66466成功
+2025-05-14 06:28:56,674 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-g2fks → pack-us-west1-n4-highcpu-4-66466
+2025-05-14 06:28:56,701 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-jjnjr到节点pack-us-west1-n4-highcpu-4-66466成功
+2025-05-14 06:28:56,702 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-jjnjr → pack-us-west1-n4-highcpu-4-66466
+2025-05-14 06:28:56,702 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 06:28:56,703 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 06:29:07,526 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:30:07,571 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:31:07,500 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:32:07,611 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:32:44,194 [SAScheduler] INFO: [consolidate] try close pack-us-west1-n4-highcpu-4-66466 util=79.25%
+2025-05-14 06:32:44,939 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node pack-us-west1-n4-highcpu-4-66466,标记不可调度
+2025-05-14 06:32:45,962 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node pack-us-west1-n4-highcpu-4-66466
+2025-05-14 06:32:45,979 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object pack-us-west1-n4-highcpu-4-66466
+2025-05-14 06:32:47,037 [VMManager.VMManager] INFO: Deleting VM pack-us-west1-n4-highcpu-4-66466 in zone us-east1-b
+2025-05-14 06:33:43,649 [VMManager.VMManager] INFO: 实例 pack-us-west1-n4-highcpu-4-66466 在 zone us-east1-b 已确认删除
+2025-05-14 06:33:43,650 [SAScheduler] INFO: [consolidate] deleted node pack-us-west1-n4-highcpu-4-66466
+2025-05-14 06:33:44,377 [SAScheduler] INFO: [consolidate] closed nodes: pack-us-west1-n4-highcpu-4-66466
+2025-05-14 06:34:00,259 [VMManager.VMManager] INFO: 在 zone us-east1-b 找到机型 n1-standard-1
+2025-05-14 06:34:00,260 [VMManager.VMManager] INFO: Location us-east1 识别为 region，选用 zone us-east1-b
+2025-05-14 06:34:00,260 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-east1-n1-standard-1-77354 (zone=us-east1-b, type=n1-standard-1)...
+2025-05-14 06:34:00,661 [VMManager.VMManager] INFO: 在 zone us-west1-a 找到机型 n4-highcpu-2
+2025-05-14 06:34:00,661 [VMManager.VMManager] INFO: Location us-west1 识别为 region，选用 zone us-west1-a
+2025-05-14 06:34:00,661 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-west1-n4-highcpu-2-16033 (zone=us-west1-a, type=n4-highcpu-2)...
+2025-05-14 06:34:07,131 [SAScheduler] WARNING: region us-west1 unavailable (403 FORBIDDEN QUOTA_EXCEEDED), searching fallback...
+2025-05-14 06:34:09,304 [VMManager.VMManager] INFO: 在 zone us-east1-b 找到机型 n4-highcpu-2
+2025-05-14 06:34:09,304 [VMManager.VMManager] INFO: Location us-east1 识别为 region，选用 zone us-east1-b
+2025-05-14 06:34:09,304 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-west1-n4-highcpu-2-16033 (zone=us-east1-b, type=n4-highcpu-2)...
+2025-05-14 06:34:17,853 [VMManager.VMManager] INFO: VM rfsa-us-east1-n1-standard-1-77354 已运行（RUNNING）。
+2025-05-14 06:34:19,402 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.74.167.104（第 1/5 次）
+2025-05-14 06:34:24,114 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.74.167.104
+2025-05-14 06:34:25,315 [VMManager.VMManager] INFO: VM rfsa-us-west1-n4-highcpu-2-16033 已运行（RUNNING）。
+2025-05-14 06:34:25,740 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.227.58.188（第 1/5 次）
+2025-05-14 06:34:33,733 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 35.227.58.188
+2025-05-14 06:34:34,125 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.74.167.104（第 2/5 次）
+2025-05-14 06:34:36,058 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 06:34:37,293 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 06:34:37,293 [VMManager.VMManager] INFO: SSH 连接成功: 34.74.167.104
+2025-05-14 06:34:43,744 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.227.58.188（第 2/5 次）
+2025-05-14 06:34:44,199 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 06:34:45,412 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 06:34:45,412 [VMManager.VMManager] INFO: SSH 连接成功: 35.227.58.188
+2025-05-14 06:34:46,506 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 06:34:47,628 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 06:34:50,220 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 06:34:51,339 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 06:35:29,631 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 06:35:30,359 [VMManager.VMManager] INFO: 节点 rfsa-us-west1-n4-highcpu-2-16033 Ready。
+2025-05-14 06:35:30,359 [SAScheduler] INFO: fallback create rfsa-us-west1-n4-highcpu-2-16033 (us-east1/n4-highcpu-2) succeeded
+2025-05-14 06:35:49,385 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 06:35:49,435 [VMManager.VMManager] INFO: 节点 rfsa-us-east1-n1-standard-1-77354 Ready。
+2025-05-14 06:35:49,435 [SAScheduler] INFO: create node rfsa-us-east1-n1-standard-1-77354 (us-east1/n1-standard-1)
+2025-05-14 06:35:50,126 [SAScheduler] INFO: node rfsa-us-west1-n4-highcpu-2-16033 ready
+2025-05-14 06:36:15,245 [SAScheduler] INFO: node rfsa-us-east1-n1-standard-1-77354 ready
+2025-05-14 06:36:15,272 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod mbw-x8jhc到节点rfsa-us-west1-n4-highcpu-2-16033成功
+2025-05-14 06:36:15,272 [SAScheduler] INFO: bind Pending pod default/mbw-x8jhc → rfsa-us-west1-n4-highcpu-2-16033
+2025-05-14 06:36:15,304 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-gjp2w到节点rfsa-us-west1-n4-highcpu-2-16033成功
+2025-05-14 06:36:15,304 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-gjp2w → rfsa-us-west1-n4-highcpu-2-16033
+2025-05-14 06:36:15,332 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-lsv8q到节点node-1成功
+2025-05-14 06:36:15,332 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-lsv8q → node-1
+2025-05-14 06:36:15,362 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-nvq44到节点rfsa-us-east1-n1-standard-1-77354成功
+2025-05-14 06:36:15,362 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-nvq44 → rfsa-us-east1-n1-standard-1-77354
+2025-05-14 06:36:15,390 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-5mqbc到节点rfsa-us-east1-n1-standard-1-77354成功
+2025-05-14 06:36:15,390 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-5mqbc → rfsa-us-east1-n1-standard-1-77354
+2025-05-14 06:36:15,421 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-mwjc6到节点rfsa-us-west1-n4-highcpu-2-16033成功
+2025-05-14 06:36:15,422 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-mwjc6 → rfsa-us-west1-n4-highcpu-2-16033
+2025-05-14 06:36:15,423 [SAScheduler] INFO: apply diff done: +2 nodes, -0 nodes
+2025-05-14 06:36:15,423 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 06:36:26,357 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:37:26,259 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:38:26,289 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:39:26,322 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:40:26,351 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:41:26,321 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:41:46,531 [SAScheduler] INFO: [consolidate] try close rfsa-us-east1-n1-standard-1-77354 util=97.00%
+2025-05-14 06:41:46,532 [SAScheduler] INFO: [consolidate] try close rfsa-us-east4-n4-highcpu-2-78346 util=48.50%
+2025-05-14 06:41:47,326 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-east4-n4-highcpu-2-78346,标记不可调度
+2025-05-14 06:41:47,352 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-east1-n1-standard-1-77354,标记不可调度
+2025-05-14 06:41:48,112 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-east4-n4-highcpu-2-78346
+2025-05-14 06:41:48,115 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-east1-n1-standard-1-77354
+2025-05-14 06:41:48,136 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-east4-n4-highcpu-2-78346
+2025-05-14 06:41:48,139 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-east1-n1-standard-1-77354
+2025-05-14 06:41:49,097 [VMManager.VMManager] INFO: Deleting VM rfsa-us-east1-n1-standard-1-77354 in zone us-east1-b
+2025-05-14 06:41:49,900 [VMManager.VMManager] INFO: Deleting VM rfsa-us-east4-n4-highcpu-2-78346 in zone us-east4-a
+2025-05-14 06:42:52,886 [VMManager.VMManager] INFO: 实例 rfsa-us-east1-n1-standard-1-77354 在 zone us-east1-b 已确认删除
+2025-05-14 06:42:52,886 [SAScheduler] INFO: [consolidate] deleted node rfsa-us-east1-n1-standard-1-77354
+2025-05-14 06:42:54,859 [VMManager.VMManager] INFO: 实例 rfsa-us-east4-n4-highcpu-2-78346 在 zone us-east4-a 已确认删除
+2025-05-14 06:42:54,859 [SAScheduler] INFO: [consolidate] deleted node rfsa-us-east4-n4-highcpu-2-78346
+2025-05-14 06:42:56,245 [SAScheduler] INFO: [consolidate] closed nodes: rfsa-us-east1-n1-standard-1-77354,rfsa-us-east4-n4-highcpu-2-78346
+2025-05-14 06:43:11,081 [VMManager.VMManager] INFO: 在 zone us-west1-a 找到机型 n1-standard-2
+2025-05-14 06:43:11,081 [VMManager.VMManager] INFO: Location us-west1 识别为 region，选用 zone us-west1-a
+2025-05-14 06:43:11,081 [VMManager.VMManager] INFO: 准备创建 VM pack-us-west1-n1-standard-2-30114 (zone=us-west1-a, type=n1-standard-2)...
+2025-05-14 06:43:26,635 [VMManager.VMManager] INFO: VM pack-us-west1-n1-standard-2-30114 已运行（RUNNING）。
+2025-05-14 06:43:26,992 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.197.34.101（第 1/5 次）
+2025-05-14 06:43:42,216 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 35.197.34.101
+2025-05-14 06:43:52,226 [VMManager.VMManager] INFO: 尝试 SSH 连接到 35.197.34.101（第 2/5 次）
+2025-05-14 06:43:52,642 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 06:43:53,737 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 06:43:53,737 [VMManager.VMManager] INFO: SSH 连接成功: 35.197.34.101
+2025-05-14 06:43:59,101 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 06:44:00,114 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 06:45:01,012 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 06:45:01,811 [VMManager.VMManager] INFO: 节点 pack-us-west1-n1-standard-2-30114 Ready。
+2025-05-14 06:45:01,811 [SAScheduler] INFO: create node pack-us-west1-n1-standard-2-30114 (us-west1/n1-standard-2)
+2025-05-14 06:45:22,648 [SAScheduler] INFO: node pack-us-west1-n1-standard-2-30114 ready
+2025-05-14 06:45:22,676 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-2x2dn到节点pack-us-west1-n1-standard-2-30114成功
+2025-05-14 06:45:22,676 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-2x2dn → pack-us-west1-n1-standard-2-30114
+2025-05-14 06:45:22,700 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-qv778到节点pack-us-west1-n1-standard-2-30114成功
+2025-05-14 06:45:22,700 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-qv778 → pack-us-west1-n1-standard-2-30114
+2025-05-14 06:45:22,725 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-ws74g到节点pack-us-west1-n1-standard-2-30114成功
+2025-05-14 06:45:22,725 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-ws74g → pack-us-west1-n1-standard-2-30114
+2025-05-14 06:45:22,748 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-xhw2m到节点pack-us-west1-n1-standard-2-30114成功
+2025-05-14 06:45:22,748 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-xhw2m → pack-us-west1-n1-standard-2-30114
+2025-05-14 06:45:22,750 [SAScheduler] INFO: apply diff done: +1 nodes, -0 nodes
+2025-05-14 06:45:22,750 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 06:45:33,686 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:46:33,557 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:47:33,589 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:48:34,010 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:49:33,674 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:50:33,581 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:50:58,054 [SAScheduler] INFO: [consolidate] try close rfsa-us-west1-n4-highcpu-2-16033 util=48.50%
+2025-05-14 06:50:58,828 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-west1-n4-highcpu-2-16033,标记不可调度
+2025-05-14 06:50:59,471 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-west1-n4-highcpu-2-16033
+2025-05-14 06:50:59,489 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-west1-n4-highcpu-2-16033
+2025-05-14 06:51:00,453 [VMManager.VMManager] INFO: Deleting VM rfsa-us-west1-n4-highcpu-2-16033 in zone us-east1-b
+2025-05-14 06:52:10,805 [VMManager.VMManager] INFO: 实例 rfsa-us-west1-n4-highcpu-2-16033 在 zone us-east1-b 已确认删除
+2025-05-14 06:52:10,805 [SAScheduler] INFO: [consolidate] deleted node rfsa-us-west1-n4-highcpu-2-16033
+2025-05-14 06:52:11,426 [SAScheduler] INFO: [consolidate] closed nodes: rfsa-us-west1-n4-highcpu-2-16033
+2025-05-14 06:52:26,794 [VMManager.VMManager] INFO: 在 zone us-east1-b 找到机型 n1-standard-1
+2025-05-14 06:52:26,794 [VMManager.VMManager] INFO: Location us-east1 识别为 region，选用 zone us-east1-b
+2025-05-14 06:52:26,794 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-east1-n1-standard-1-76814 (zone=us-east1-b, type=n1-standard-1)...
+2025-05-14 06:52:41,139 [VMManager.VMManager] INFO: VM rfsa-us-east1-n1-standard-1-76814 已运行（RUNNING）。
+2025-05-14 06:52:42,701 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.139.134.121（第 1/5 次）
+2025-05-14 06:52:57,958 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.139.134.121
+2025-05-14 06:53:07,972 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.139.134.121（第 2/5 次）
+2025-05-14 06:53:08,450 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 06:53:09,720 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 06:53:09,720 [VMManager.VMManager] INFO: SSH 连接成功: 34.139.134.121
+2025-05-14 06:53:19,004 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 06:53:20,121 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 06:54:23,575 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 06:54:24,233 [VMManager.VMManager] INFO: 节点 rfsa-us-east1-n1-standard-1-76814 Ready。
+2025-05-14 06:54:24,233 [SAScheduler] INFO: create node rfsa-us-east1-n1-standard-1-76814 (us-east1/n1-standard-1)
+2025-05-14 06:54:44,992 [SAScheduler] INFO: node rfsa-us-east1-n1-standard-1-76814 ready
+2025-05-14 06:54:45,023 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-zjl5k到节点rfsa-us-east1-n1-standard-1-76814成功
+2025-05-14 06:54:45,023 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-zjl5k → rfsa-us-east1-n1-standard-1-76814
+2025-05-14 06:54:45,061 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-prl9s到节点rfsa-us-east1-n1-standard-1-76814成功
+2025-05-14 06:54:45,061 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-prl9s → rfsa-us-east1-n1-standard-1-76814
+2025-05-14 06:54:45,063 [SAScheduler] INFO: apply diff done: +1 nodes, -0 nodes
+2025-05-14 06:54:45,063 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 06:54:55,845 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:55:55,752 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:56:55,812 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:57:55,742 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:58:55,826 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 06:59:56,000 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 07:00:13,361 [SAScheduler] INFO: [consolidate] try close rfsa-us-east1-n1-standard-1-76814 util=97.00%
+2025-05-14 07:00:14,017 [ClusterMonitor.ClusterMonitor] INFO: Cordoned node rfsa-us-east1-n1-standard-1-76814,标记不可调度
+2025-05-14 07:00:14,649 [ClusterMonitor.ClusterMonitor] INFO: Eviction/delete attempted once for all pods on node rfsa-us-east1-n1-standard-1-76814
+2025-05-14 07:00:14,670 [VMManager.VMManager] INFO: 从集群中删除节点Deleted Kubernetes Node object rfsa-us-east1-n1-standard-1-76814
+2025-05-14 07:00:15,731 [VMManager.VMManager] INFO: Deleting VM rfsa-us-east1-n1-standard-1-76814 in zone us-east1-b
+2025-05-14 07:01:19,584 [VMManager.VMManager] INFO: 实例 rfsa-us-east1-n1-standard-1-76814 在 zone us-east1-b 已确认删除
+2025-05-14 07:01:19,585 [SAScheduler] INFO: [consolidate] deleted node rfsa-us-east1-n1-standard-1-76814
+2025-05-14 07:01:20,267 [SAScheduler] INFO: [consolidate] closed nodes: rfsa-us-east1-n1-standard-1-76814
+2025-05-14 07:01:37,036 [VMManager.VMManager] INFO: 在 zone us-east1-b 找到机型 n1-standard-1
+2025-05-14 07:01:37,036 [VMManager.VMManager] INFO: Location us-east1 识别为 region，选用 zone us-east1-b
+2025-05-14 07:01:37,036 [VMManager.VMManager] INFO: 准备创建 VM rfsa-us-east1-n1-standard-1-10115 (zone=us-east1-b, type=n1-standard-1)...
+2025-05-14 07:01:50,422 [VMManager.VMManager] INFO: VM rfsa-us-east1-n1-standard-1-10115 已运行（RUNNING）。
+2025-05-14 07:01:51,958 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.138.110.247（第 1/5 次）
+2025-05-14 07:02:07,210 [VMManager.VMManager] WARNING: 第 1 次连接失败: [Errno None] Unable to connect to port 22 on 34.138.110.247
+2025-05-14 07:02:17,224 [VMManager.VMManager] INFO: 尝试 SSH 连接到 34.138.110.247（第 2/5 次）
+2025-05-14 07:02:17,717 [paramiko.transport] INFO: Connected (version 2.0, client OpenSSH_8.9p1)
+2025-05-14 07:02:18,992 [paramiko.transport] INFO: Authentication (publickey) successful!
+2025-05-14 07:02:18,993 [VMManager.VMManager] INFO: SSH 连接成功: 34.138.110.247
+2025-05-14 07:02:26,145 [paramiko.transport.sftp] INFO: [chan 2] Opened sftp connection (server version 3)
+2025-05-14 07:02:27,268 [paramiko.transport.sftp] INFO: [chan 2] sftp session closed.
+2025-05-14 07:03:30,909 [VMManager.VMManager] INFO: 初始化脚本执行成功。
+2025-05-14 07:03:31,752 [VMManager.VMManager] INFO: 节点 rfsa-us-east1-n1-standard-1-10115 Ready。
+2025-05-14 07:03:31,752 [SAScheduler] INFO: create node rfsa-us-east1-n1-standard-1-10115 (us-east1/n1-standard-1)
+2025-05-14 07:03:52,634 [SAScheduler] INFO: node rfsa-us-east1-n1-standard-1-10115 ready
+2025-05-14 07:03:52,663 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod step-load-7d6dd98f99-8ghtb到节点rfsa-us-east1-n1-standard-1-10115成功
+2025-05-14 07:03:52,663 [SAScheduler] INFO: bind Pending pod default/step-load-7d6dd98f99-8ghtb → rfsa-us-east1-n1-standard-1-10115
+2025-05-14 07:03:52,695 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-j8dsl到节点rfsa-us-east1-n1-standard-1-10115成功
+2025-05-14 07:03:52,695 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-j8dsl → rfsa-us-east1-n1-standard-1-10115
+2025-05-14 07:03:52,699 [SAScheduler] INFO: apply diff done: +1 nodes, -0 nodes
+2025-05-14 07:03:52,699 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 07:04:03,605 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 07:05:03,426 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 07:06:03,428 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 07:07:03,635 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 07:08:03,476 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 07:09:03,526 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 07:10:16,912 [ClusterMonitor.ClusterMonitor] INFO: 绑定Pod nginx-7b6d77bd77-585bl到节点pack-us-west1-n1-standard-2-30114成功
+2025-05-14 07:10:16,912 [SAScheduler] INFO: bind Pending pod default/nginx-7b6d77bd77-585bl → pack-us-west1-n1-standard-2-30114
+2025-05-14 07:10:16,913 [SAScheduler] INFO: apply diff done: +0 nodes, -0 nodes
+2025-05-14 07:10:16,913 [SAScheduler] INFO: schedule cycle finished | mode=INCREMENTAL
+2025-05-14 07:11:03,521 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 07:12:03,690 [SAScheduler] INFO: no pending pods, skip this cycle
+2025-05-14 07:13:03,493 [SAScheduler] INFO: no pending pods, skip this cycle

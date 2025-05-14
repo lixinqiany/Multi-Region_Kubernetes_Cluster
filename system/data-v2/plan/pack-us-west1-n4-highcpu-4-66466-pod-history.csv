@@ -1,0 +1,17 @@
+timestamp,action,pod
+2025-05-14 06:17:59,ADD,step-load-7d6dd98f99-r6tbv
+2025-05-14 06:18:09,ADD,step-load-7d6dd98f99-jxd2d
+2025-05-14 06:18:09,ADD,nginx-7b6d77bd77-5rnqk
+2025-05-14 06:18:20,ADD,mbw-qqxmx
+2025-05-14 06:18:25,ADD,mbw-mk6tm
+2025-05-14 06:28:30,DEL,mbw-mk6tm
+2025-05-14 06:28:30,DEL,mbw-qqxmx
+2025-05-14 06:29:06,ADD,step-load-7d6dd98f99-g2fks
+2025-05-14 06:29:06,ADD,mbw-kflr7
+2025-05-14 06:29:11,ADD,nginx-7b6d77bd77-jjnjr
+2025-05-14 06:32:53,DEL,nginx-7b6d77bd77-jjnjr
+2025-05-14 06:32:53,DEL,nginx-7b6d77bd77-5rnqk
+2025-05-14 06:32:58,DEL,step-load-7d6dd98f99-jxd2d
+2025-05-14 06:32:58,DEL,step-load-7d6dd98f99-g2fks
+2025-05-14 06:32:58,DEL,step-load-7d6dd98f99-r6tbv
+2025-05-14 06:33:34,DEL,mbw-kflr7
